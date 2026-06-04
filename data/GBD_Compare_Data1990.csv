@@ -1,0 +1,553 @@
+Population,Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+All Population,Brazil,1990,0-6 days,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",220.89697198782758,177.53240508966843,269.46314519439926
+All Population,Brazil,1990,7-27 days,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",25.472906623732563,20.202386375965443,31.95691722792587
+All Population,Brazil,1990,1-5 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",12.784519386150995,11.375715180244889,14.367320699480373
+All Population,Brazil,1990,6-11 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",9.636107843930656,8.708184048726,10.625609129579315
+All Population,Brazil,1990,12-23 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.5310138786168443,3.155502405748426,3.8901915522834267
+All Population,Brazil,1990,2-4 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.1564711464926931,1.0160766373894812,1.2855038711501552
+All Population,Brazil,1990,5-9 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.5506732624285167,0.49618372179172515,0.6107219259425528
+All Population,Brazil,1990,10-14 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.3973391887060705,0.3537452256424951,0.4363416983396401
+All Population,Brazil,1990,15-19 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.155919110459517,1.0224355039049067,1.3061744169942604
+All Population,Brazil,1990,20-24 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",4.41775604612362,3.810065181904644,4.920582437898554
+All Population,Brazil,1990,25-29 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",8.653996154880767,7.673608688316735,9.719739855022787
+All Population,Brazil,1990,30-34 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.383850518510148,10.126114351139725,12.815779821987814
+All Population,Brazil,1990,35-39 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.305944829258033,10.071144353150126,12.593408726123847
+All Population,Brazil,1990,40-44 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",10.139240484190157,9.052237567637556,11.194386178676652
+All Population,Brazil,1990,45-49 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",8.23723828644441,7.441685413051053,9.125881120056176
+All Population,Brazil,1990,50-54 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",5.265755960674225,4.736840460752904,5.811751859382295
+All Population,Brazil,1990,55-59 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",4.847579231014228,4.38859916463653,5.384545045088855
+All Population,Brazil,1990,60-64 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.3588105099608248,3.01250189321879,3.7054220205940362
+All Population,Brazil,1990,65-69 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.0875756351946344,2.7801714215337734,3.386893023729625
+All Population,Brazil,1990,70-74 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.8173575901478521,0.7183983002817858,0.9149848666941115
+All Population,Brazil,1990,75-79 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.0275143609096415,0.9111859144635276,1.169235785662124
+All Population,Brazil,1990,80-84 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.2217279973973174,1.0350265759666146,1.4210921855054899
+All Population,Brazil,1990,85-89 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.6549688210201876,1.3144466815177156,2.0394832900098825
+All Population,Brazil,1990,90-94 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.9716950613842212,1.507377179844268,2.397632268348436
+All Population,Brazil,1990,95+ years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",2.3061364394789923,1.567782791443587,2.8946740488830907
+All Population,Brazil,1990,0-6 days,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",1773.7062057107553,1619.3722446353518,1961.7152261473234
+All Population,Brazil,1990,7-27 days,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",845.6310842673233,751.2284919058885,975.5038404713291
+All Population,Brazil,1990,1-5 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",847.0058689309659,759.1060713988177,962.1115149609777
+All Population,Brazil,1990,6-11 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",384.3204906568859,341.4860816840261,433.6329602145337
+All Population,Brazil,1990,12-23 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",107.05798986571544,95.46466906355407,120.23139117097739
+All Population,Brazil,1990,2-4 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",22.348175466030444,19.814518393359158,24.86492994956209
+All Population,Brazil,1990,5-9 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",4.327848205224128,3.8819905667440393,4.8774638216931
+All Population,Brazil,1990,10-14 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",3.239017835367085,2.905498320440532,3.578853096563967
+All Population,Brazil,1990,15-19 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",4.149454082026944,3.704424006257831,4.628827514974311
+All Population,Brazil,1990,20-24 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",5.96413999975744,5.445331227889665,6.521715270271858
+All Population,Brazil,1990,25-29 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",8.619198190035524,7.8430036392818625,9.408031824908727
+All Population,Brazil,1990,30-34 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",12.333238602804062,11.35485529416393,13.445172181370655
+All Population,Brazil,1990,35-39 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",16.583401048907998,15.198239307051859,18.0200144425485
+All Population,Brazil,1990,40-44 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",21.542650875795427,19.836069013133468,23.327447506662498
+All Population,Brazil,1990,45-49 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",27.697887005122784,25.396981589886586,30.10556880607406
+All Population,Brazil,1990,50-54 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",36.83571008421144,33.541665856145215,39.82012118399422
+All Population,Brazil,1990,55-59 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",47.89679221168035,43.60652838156351,52.18150268662216
+All Population,Brazil,1990,60-64 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",66.77256899968982,60.45758020752962,73.2181017571546
+All Population,Brazil,1990,65-69 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",101.39590383600279,91.05875428714711,111.15477864719932
+All Population,Brazil,1990,70-74 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",172.96638700344047,154.68291155438916,191.43797633847512
+All Population,Brazil,1990,75-79 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",304.91495716369195,272.83018226389163,337.56089157807673
+All Population,Brazil,1990,80-84 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",592.3021814253726,510.4090499154044,663.0071101112327
+All Population,Brazil,1990,85-89 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",1027.26923744292,860.947347933543,1159.484509324966
+All Population,Brazil,1990,90-94 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",1627.1359772202002,1274.070669239016,1888.0801973230277
+All Population,Brazil,1990,95+ years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",1993.4653251058198,1391.310760792238,2440.418433169509
+All Population,Brazil,1990,0-6 days,Both,Enteric infections,"Deaths per 100,000",482.6308646777746,412.23364572845617,556.8431207455781
+All Population,Brazil,1990,7-27 days,Both,Enteric infections,"Deaths per 100,000",980.1713290839095,851.0042768757296,1115.9961909957801
+All Population,Brazil,1990,1-5 months,Both,Enteric infections,"Deaths per 100,000",1492.8099372694744,1354.5434121181722,1617.8491030543698
+All Population,Brazil,1990,6-11 months,Both,Enteric infections,"Deaths per 100,000",649.9966472167274,583.2381721463026,708.4081075906291
+All Population,Brazil,1990,12-23 months,Both,Enteric infections,"Deaths per 100,000",100.47128954186893,87.21332287794675,114.2268401836648
+All Population,Brazil,1990,2-4 years,Both,Enteric infections,"Deaths per 100,000",12.892672936644543,10.924609851608984,15.151401075004303
+All Population,Brazil,1990,5-9 years,Both,Enteric infections,"Deaths per 100,000",1.5673426128227705,1.3369452513664803,1.8429867020552564
+All Population,Brazil,1990,10-14 years,Both,Enteric infections,"Deaths per 100,000",0.6803886467576818,0.5909706292147116,0.7884969044220226
+All Population,Brazil,1990,15-19 years,Both,Enteric infections,"Deaths per 100,000",0.4754799930546856,0.4082249929280741,0.5512290858019457
+All Population,Brazil,1990,20-24 years,Both,Enteric infections,"Deaths per 100,000",0.6114588516959575,0.5357341038361885,0.698544816856887
+All Population,Brazil,1990,25-29 years,Both,Enteric infections,"Deaths per 100,000",0.7866229278377621,0.6911235647352755,0.8974981551536713
+All Population,Brazil,1990,30-34 years,Both,Enteric infections,"Deaths per 100,000",1.2116984250285667,1.0674769735646512,1.3707895402659036
+All Population,Brazil,1990,35-39 years,Both,Enteric infections,"Deaths per 100,000",1.662950933619694,1.454513944986858,1.8679777710998602
+All Population,Brazil,1990,40-44 years,Both,Enteric infections,"Deaths per 100,000",2.3446353675377907,2.0837520159773533,2.6307240736424373
+All Population,Brazil,1990,45-49 years,Both,Enteric infections,"Deaths per 100,000",3.46619266933421,3.134728977110971,3.874167245659806
+All Population,Brazil,1990,50-54 years,Both,Enteric infections,"Deaths per 100,000",5.055111961711283,4.525652642825686,5.603144785236372
+All Population,Brazil,1990,55-59 years,Both,Enteric infections,"Deaths per 100,000",7.277192334559394,6.596857757991801,7.9978519652826625
+All Population,Brazil,1990,60-64 years,Both,Enteric infections,"Deaths per 100,000",10.818071260453989,9.797181331648902,11.892736743441883
+All Population,Brazil,1990,65-69 years,Both,Enteric infections,"Deaths per 100,000",18.05238274384503,16.180606484783436,19.891544938854665
+All Population,Brazil,1990,70-74 years,Both,Enteric infections,"Deaths per 100,000",33.989673193377854,30.375204032025614,37.4027773020719
+All Population,Brazil,1990,75-79 years,Both,Enteric infections,"Deaths per 100,000",63.433054939634545,56.133441220859616,71.51704067461125
+All Population,Brazil,1990,80-84 years,Both,Enteric infections,"Deaths per 100,000",127.38876749039267,108.39682597562786,144.99319956170226
+All Population,Brazil,1990,85-89 years,Both,Enteric infections,"Deaths per 100,000",207.3818308005344,169.61794104729552,240.2994354402948
+All Population,Brazil,1990,90-94 years,Both,Enteric infections,"Deaths per 100,000",290.6536322926894,219.08718725355104,346.9431256078164
+All Population,Brazil,1990,95+ years,Both,Enteric infections,"Deaths per 100,000",487.1594260047855,327.53374999367657,604.1782685663198
+All Population,Brazil,1990,0-6 days,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",6.450539316300234,5.164415915362986,7.91070142610021
+All Population,Brazil,1990,7-27 days,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",11.26351203412496,5.366711366436059,22.652399381975968
+All Population,Brazil,1990,1-5 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",23.61160368883715,13.254834343147799,40.733466150599824
+All Population,Brazil,1990,6-11 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",30.00180069284681,16.723530453469845,49.17810521863358
+All Population,Brazil,1990,12-23 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",16.492535424463025,9.06954429012712,26.865654938528547
+All Population,Brazil,1990,2-4 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",7.081097460253892,3.087819470289632,12.793336323739402
+All Population,Brazil,1990,5-9 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",2.3489034924007184,1.325453526679863,3.734990727514659
+All Population,Brazil,1990,10-14 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.4372936956679654,0.8142585475624424,2.337053453162476
+All Population,Brazil,1990,15-19 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.8624446108925126,1.0592260768061525,2.951842225537819
+All Population,Brazil,1990,20-24 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",2.42870712514777,1.489919383946154,3.624132551960676
+All Population,Brazil,1990,25-29 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",3.199165082631602,2.2214786493687826,4.6133072788514
+All Population,Brazil,1990,30-34 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",4.984910077932742,3.9226748602442623,6.407944089602778
+All Population,Brazil,1990,35-39 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",7.022955149181662,5.834814698574581,8.378241411092494
+All Population,Brazil,1990,40-44 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",10.548675956821894,9.387930072324373,12.262580449477886
+All Population,Brazil,1990,45-49 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",15.518574373619247,14.196046376168152,17.180948374856968
+All Population,Brazil,1990,50-54 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",22.71002011766399,20.880886650604936,24.810815525334075
+All Population,Brazil,1990,55-59 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",29.50707156787775,26.92631677427516,32.247386353240614
+All Population,Brazil,1990,60-64 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",36.21375759205211,33.46437328894097,38.88777468952432
+All Population,Brazil,1990,65-69 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",45.79639706886366,42.08308713010089,49.724723955593944
+All Population,Brazil,1990,70-74 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",56.466386618224256,50.625451358465305,63.61615736156765
+All Population,Brazil,1990,75-79 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",74.38088577357969,66.79105003791629,83.10913270893691
+All Population,Brazil,1990,80-84 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",82.44294552898386,71.46749202315503,92.93502474651054
+All Population,Brazil,1990,85-89 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",98.38532268569135,83.12248149627008,114.61444294025628
+All Population,Brazil,1990,90-94 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",102.31840181816386,76.74011310920439,122.43036643059891
+All Population,Brazil,1990,95+ years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",136.40144498952796,90.54448655257885,178.10184721678615
+All Population,Brazil,1990,0-6 days,Both,Other infectious diseases,"Deaths per 100,000",266.9724161589387,240.7825678589158,300.6656991004243
+All Population,Brazil,1990,7-27 days,Both,Other infectious diseases,"Deaths per 100,000",265.5019587103233,231.91255344888555,302.6882672524456
+All Population,Brazil,1990,1-5 months,Both,Other infectious diseases,"Deaths per 100,000",160.33714939288936,145.30336649649834,175.72057889223106
+All Population,Brazil,1990,6-11 months,Both,Other infectious diseases,"Deaths per 100,000",99.48052733606801,90.45854111718758,110.51751034632333
+All Population,Brazil,1990,12-23 months,Both,Other infectious diseases,"Deaths per 100,000",32.78973606916916,29.300339573131417,36.14215068961399
+All Population,Brazil,1990,2-4 years,Both,Other infectious diseases,"Deaths per 100,000",11.46655339871421,10.231047850383511,12.631036983711633
+All Population,Brazil,1990,5-9 years,Both,Other infectious diseases,"Deaths per 100,000",3.8150564975400303,3.4478133363344696,4.181959231132443
+All Population,Brazil,1990,10-14 years,Both,Other infectious diseases,"Deaths per 100,000",2.5938903620513925,2.3704858000163505,2.8156120904496347
+All Population,Brazil,1990,15-19 years,Both,Other infectious diseases,"Deaths per 100,000",2.0773557114398318,1.9012604031147728,2.2743616278539274
+All Population,Brazil,1990,20-24 years,Both,Other infectious diseases,"Deaths per 100,000",1.9914636287355405,1.8187329354907595,2.1757237044288615
+All Population,Brazil,1990,25-29 years,Both,Other infectious diseases,"Deaths per 100,000",2.139735007590726,1.9526128231012467,2.318919160782318
+All Population,Brazil,1990,30-34 years,Both,Other infectious diseases,"Deaths per 100,000",2.641366155320792,2.4214282048145326,2.859841394142331
+All Population,Brazil,1990,35-39 years,Both,Other infectious diseases,"Deaths per 100,000",3.0670612878666446,2.8238941186550592,3.3486206048222704
+All Population,Brazil,1990,40-44 years,Both,Other infectious diseases,"Deaths per 100,000",3.670729157799888,3.381284978017264,4.018314349558957
+All Population,Brazil,1990,45-49 years,Both,Other infectious diseases,"Deaths per 100,000",4.676925251425577,4.251499877022586,5.08441783407236
+All Population,Brazil,1990,50-54 years,Both,Other infectious diseases,"Deaths per 100,000",5.420859790746631,4.969939918031886,5.917659590447443
+All Population,Brazil,1990,55-59 years,Both,Other infectious diseases,"Deaths per 100,000",6.248747788214836,5.755764146844233,6.885282677210153
+All Population,Brazil,1990,60-64 years,Both,Other infectious diseases,"Deaths per 100,000",7.307932198912049,6.754509699816968,8.05554836812934
+All Population,Brazil,1990,65-69 years,Both,Other infectious diseases,"Deaths per 100,000",8.25145795545977,7.507842883597964,9.148400508786473
+All Population,Brazil,1990,70-74 years,Both,Other infectious diseases,"Deaths per 100,000",10.014116465609161,9.059201160862393,10.98406355408301
+All Population,Brazil,1990,75-79 years,Both,Other infectious diseases,"Deaths per 100,000",12.789201380494081,11.514943220183385,14.208813041728918
+All Population,Brazil,1990,80-84 years,Both,Other infectious diseases,"Deaths per 100,000",14.813543721070015,13.020628980316149,16.524869231616453
+All Population,Brazil,1990,85-89 years,Both,Other infectious diseases,"Deaths per 100,000",16.910742862513946,14.324134067697576,19.20504948813691
+All Population,Brazil,1990,90-94 years,Both,Other infectious diseases,"Deaths per 100,000",18.53915945719335,14.752309322004688,21.411507112578967
+All Population,Brazil,1990,95+ years,Both,Other infectious diseases,"Deaths per 100,000",26.622188369328263,18.758974518117256,32.93859204053092
+All Population,Brazil,1990,0-6 days,Both,Maternal and neonatal disorders,"Deaths per 100,000",58868.17559998416,57019.51954830907,60753.6554197206
+All Population,Brazil,1990,7-27 days,Both,Maternal and neonatal disorders,"Deaths per 100,000",5208.779441190693,4900.116263636322,5522.084971920549
+All Population,Brazil,1990,1-5 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",504.0182580208464,443.81601201276334,575.3456569068117
+All Population,Brazil,1990,6-11 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",127.405283212827,110.68983441881797,146.3268494735769
+All Population,Brazil,1990,12-23 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",3.0598803968520367,2.628615859850024,3.5764339322325207
+All Population,Brazil,1990,2-4 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.7156681160996544,0.6146820259374219,0.8282755629213192
+All Population,Brazil,1990,5-9 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,10-14 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.15159465662511604,0.13105238634953656,0.172735052483327
+All Population,Brazil,1990,15-19 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",2.9406106805891126,2.6339747583429105,3.2612587283845684
+All Population,Brazil,1990,20-24 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",4.58621415670309,4.211520863467726,4.972695727510549
+All Population,Brazil,1990,25-29 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",5.229300071707292,4.76675505655336,5.66808713348889
+All Population,Brazil,1990,30-34 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",6.06235513433781,5.587775647666734,6.589566571416689
+All Population,Brazil,1990,35-39 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",7.312673630266751,6.656899266923742,7.890479281756203
+All Population,Brazil,1990,40-44 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",3.878412910735913,3.5208091411127485,4.294140802070109
+All Population,Brazil,1990,45-49 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",2.694321472164117,2.4528308283176017,3.0108048821674953
+All Population,Brazil,1990,50-54 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.14331061479736412,0.12970462193422916,0.15811915361839918
+All Population,Brazil,1990,55-59 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,60-64 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,65-69 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,70-74 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,75-79 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,80-84 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,85-89 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,90-94 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,95+ years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,0-6 days,Both,Nutritional deficiencies,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,7-27 days,Both,Nutritional deficiencies,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,1-5 months,Both,Nutritional deficiencies,"Deaths per 100,000",336.49763721198195,296.3656207253003,381.59053922585446
+All Population,Brazil,1990,6-11 months,Both,Nutritional deficiencies,"Deaths per 100,000",169.12716373926685,147.9141513022645,190.03278024017234
+All Population,Brazil,1990,12-23 months,Both,Nutritional deficiencies,"Deaths per 100,000",36.261169041311696,31.59183155632588,41.176594843245624
+All Population,Brazil,1990,2-4 years,Both,Nutritional deficiencies,"Deaths per 100,000",4.679793129651936,4.062325115706302,5.381522412770736
+All Population,Brazil,1990,5-9 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.9496210358869808,0.8239872283851736,1.0920714238068787
+All Population,Brazil,1990,10-14 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.534504409989368,0.46292278793406644,0.6109128579765412
+All Population,Brazil,1990,15-19 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.3570511426940885,0.3059121489921288,0.4206180764948705
+All Population,Brazil,1990,20-24 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.414997908676863,0.3546251182822539,0.4992891276945106
+All Population,Brazil,1990,25-29 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.6163926975800512,0.5201611030567659,0.742428885842761
+All Population,Brazil,1990,30-34 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.9386065554898841,0.8054744852794641,1.105022439397816
+All Population,Brazil,1990,35-39 years,Both,Nutritional deficiencies,"Deaths per 100,000",1.351437823044383,1.1572963827142744,1.6032550631237472
+All Population,Brazil,1990,40-44 years,Both,Nutritional deficiencies,"Deaths per 100,000",1.9491395266446951,1.6724854572193284,2.2676205458998946
+All Population,Brazil,1990,45-49 years,Both,Nutritional deficiencies,"Deaths per 100,000",2.8266198984925026,2.412404954822867,3.3964287217058677
+All Population,Brazil,1990,50-54 years,Both,Nutritional deficiencies,"Deaths per 100,000",4.201226788239712,3.6035081134273685,4.943093506957978
+All Population,Brazil,1990,55-59 years,Both,Nutritional deficiencies,"Deaths per 100,000",5.558218046981225,4.815956763996555,6.575438268851259
+All Population,Brazil,1990,60-64 years,Both,Nutritional deficiencies,"Deaths per 100,000",8.400283911405053,7.248582348556542,9.88552163588838
+All Population,Brazil,1990,65-69 years,Both,Nutritional deficiencies,"Deaths per 100,000",12.70328105305211,10.74821880830984,15.007165053142666
+All Population,Brazil,1990,70-74 years,Both,Nutritional deficiencies,"Deaths per 100,000",24.7028425183523,21.051868677738742,28.45648487557133
+All Population,Brazil,1990,75-79 years,Both,Nutritional deficiencies,"Deaths per 100,000",45.52893924738757,39.345964752683564,52.97824966705101
+All Population,Brazil,1990,80-84 years,Both,Nutritional deficiencies,"Deaths per 100,000",89.3906494461249,77.28432396453057,102.80326488269861
+All Population,Brazil,1990,85-89 years,Both,Nutritional deficiencies,"Deaths per 100,000",159.7697057886582,134.10860321723447,183.80965265429867
+All Population,Brazil,1990,90-94 years,Both,Nutritional deficiencies,"Deaths per 100,000",230.0253967585827,185.1965370695621,264.0104954411811
+All Population,Brazil,1990,95+ years,Both,Nutritional deficiencies,"Deaths per 100,000",326.61001418674005,228.38574646092502,412.56479894635845
+All Population,Brazil,1990,0-6 days,Both,Neoplasms,"Deaths per 100,000",29.090052839547962,27.383344913662732,30.895893098433554
+All Population,Brazil,1990,7-27 days,Both,Neoplasms,"Deaths per 100,000",10.210594659805178,9.376681160900386,11.043162372004518
+All Population,Brazil,1990,1-5 months,Both,Neoplasms,"Deaths per 100,000",12.406805793690502,11.306444251092557,13.517282239223784
+All Population,Brazil,1990,6-11 months,Both,Neoplasms,"Deaths per 100,000",10.669063925544645,9.717405389048766,11.80381580819677
+All Population,Brazil,1990,12-23 months,Both,Neoplasms,"Deaths per 100,000",10.758801913661179,9.712136413454296,11.821433145222755
+All Population,Brazil,1990,2-4 years,Both,Neoplasms,"Deaths per 100,000",8.820141202949376,8.02685260946378,9.64812394075504
+All Population,Brazil,1990,5-9 years,Both,Neoplasms,"Deaths per 100,000",6.463418678334309,5.920179653176399,7.016482742821134
+All Population,Brazil,1990,10-14 years,Both,Neoplasms,"Deaths per 100,000",5.136598161854191,4.768339936703083,5.5331477059449705
+All Population,Brazil,1990,15-19 years,Both,Neoplasms,"Deaths per 100,000",5.7858325786586775,5.466751664782585,6.125753523982361
+All Population,Brazil,1990,20-24 years,Both,Neoplasms,"Deaths per 100,000",7.547338607591245,7.16560919843757,7.980412974826343
+All Population,Brazil,1990,25-29 years,Both,Neoplasms,"Deaths per 100,000",11.434091584768622,10.896241723257548,12.046249314981937
+All Population,Brazil,1990,30-34 years,Both,Neoplasms,"Deaths per 100,000",19.700461171430057,18.75882623609251,20.896926315719167
+All Population,Brazil,1990,35-39 years,Both,Neoplasms,"Deaths per 100,000",33.84560587588071,31.997159567655572,35.61999166911792
+All Population,Brazil,1990,40-44 years,Both,Neoplasms,"Deaths per 100,000",60.513175127294744,57.66115698730848,63.79529122150146
+All Population,Brazil,1990,45-49 years,Both,Neoplasms,"Deaths per 100,000",105.34787974754872,100.68673486912053,109.84141376058294
+All Population,Brazil,1990,50-54 years,Both,Neoplasms,"Deaths per 100,000",176.78700504734607,169.25676469114782,184.3672976658658
+All Population,Brazil,1990,55-59 years,Both,Neoplasms,"Deaths per 100,000",264.50303049349156,253.6159168709193,275.42902247794143
+All Population,Brazil,1990,60-64 years,Both,Neoplasms,"Deaths per 100,000",372.99015809926817,358.24743634709887,389.39782293216183
+All Population,Brazil,1990,65-69 years,Both,Neoplasms,"Deaths per 100,000",510.73209807095014,489.49446725816534,532.6905620846813
+All Population,Brazil,1990,70-74 years,Both,Neoplasms,"Deaths per 100,000",691.7924528352246,660.5797102093024,723.293310339973
+All Population,Brazil,1990,75-79 years,Both,Neoplasms,"Deaths per 100,000",917.5623839536684,856.7431410552358,959.8781119242357
+All Population,Brazil,1990,80-84 years,Both,Neoplasms,"Deaths per 100,000",1186.5247331916592,1089.43141681013,1264.95129223511
+All Population,Brazil,1990,85-89 years,Both,Neoplasms,"Deaths per 100,000",1463.5781944846756,1263.2361112999577,1593.9242622459917
+All Population,Brazil,1990,90-94 years,Both,Neoplasms,"Deaths per 100,000",1444.7309693890443,1161.50593063346,1608.1370009637067
+All Population,Brazil,1990,95+ years,Both,Neoplasms,"Deaths per 100,000",1305.9914287218642,921.0017990060576,1543.7741739759279
+All Population,Brazil,1990,0-6 days,Both,Cardiovascular diseases,"Deaths per 100,000",55.17283427365913,48.80290793120481,62.95204106476653
+All Population,Brazil,1990,7-27 days,Both,Cardiovascular diseases,"Deaths per 100,000",14.390887938387246,12.413435644561343,16.367202560555146
+All Population,Brazil,1990,1-5 months,Both,Cardiovascular diseases,"Deaths per 100,000",28.719321684172225,25.061811346533833,33.73740572850412
+All Population,Brazil,1990,6-11 months,Both,Cardiovascular diseases,"Deaths per 100,000",15.707828774968782,13.587356336584506,18.764210105910543
+All Population,Brazil,1990,12-23 months,Both,Cardiovascular diseases,"Deaths per 100,000",5.748803324291834,4.995381431285352,6.833202416861102
+All Population,Brazil,1990,2-4 years,Both,Cardiovascular diseases,"Deaths per 100,000",1.940073806704371,1.700308192831015,2.2331466847506327
+All Population,Brazil,1990,5-9 years,Both,Cardiovascular diseases,"Deaths per 100,000",1.4167277630253938,1.2323866833190913,1.609683162485315
+All Population,Brazil,1990,10-14 years,Both,Cardiovascular diseases,"Deaths per 100,000",2.1949892864176834,1.978427349298851,2.389640893073525
+All Population,Brazil,1990,15-19 years,Both,Cardiovascular diseases,"Deaths per 100,000",5.095871066705287,4.687016660013837,5.537796284917124
+All Population,Brazil,1990,20-24 years,Both,Cardiovascular diseases,"Deaths per 100,000",8.58768858163257,7.866659603552368,9.376306387424584
+All Population,Brazil,1990,25-29 years,Both,Cardiovascular diseases,"Deaths per 100,000",15.45096533858306,14.18038415342122,16.926377516894462
+All Population,Brazil,1990,30-34 years,Both,Cardiovascular diseases,"Deaths per 100,000",31.21054015850591,29.099852918497405,33.745344973399824
+All Population,Brazil,1990,35-39 years,Both,Cardiovascular diseases,"Deaths per 100,000",57.26263795431768,53.30242797303051,61.554873412443314
+All Population,Brazil,1990,40-44 years,Both,Cardiovascular diseases,"Deaths per 100,000",105.16474292174955,98.73287813910645,111.95864533226995
+All Population,Brazil,1990,45-49 years,Both,Cardiovascular diseases,"Deaths per 100,000",183.0231970711578,173.67668292676817,192.13701603494334
+All Population,Brazil,1990,50-54 years,Both,Cardiovascular diseases,"Deaths per 100,000",304.3246522225276,290.7516432086644,317.0776900548971
+All Population,Brazil,1990,55-59 years,Both,Cardiovascular diseases,"Deaths per 100,000",462.68525379623384,443.6952652183058,480.49964948021926
+All Population,Brazil,1990,60-64 years,Both,Cardiovascular diseases,"Deaths per 100,000",706.4714388478837,677.2202618129692,736.5893027511994
+All Population,Brazil,1990,65-69 years,Both,Cardiovascular diseases,"Deaths per 100,000",1077.5677478792968,1035.6944795805127,1120.6754553258302
+All Population,Brazil,1990,70-74 years,Both,Cardiovascular diseases,"Deaths per 100,000",1729.7883695884275,1661.9237509189772,1799.5200327072303
+All Population,Brazil,1990,75-79 years,Both,Cardiovascular diseases,"Deaths per 100,000",2744.698503659169,2584.4284988987224,2873.417889982519
+All Population,Brazil,1990,80-84 years,Both,Cardiovascular diseases,"Deaths per 100,000",4504.276556331803,4051.274134188116,4795.320498088458
+All Population,Brazil,1990,85-89 years,Both,Cardiovascular diseases,"Deaths per 100,000",7192.287314421695,6181.414351013106,7776.34381798831
+All Population,Brazil,1990,90-94 years,Both,Cardiovascular diseases,"Deaths per 100,000",9020.490808842775,7111.913363703879,9960.724495013317
+All Population,Brazil,1990,95+ years,Both,Cardiovascular diseases,"Deaths per 100,000",9821.452048668965,6968.83845238821,11641.37588437673
+All Population,Brazil,1990,0-6 days,Both,Chronic respiratory diseases,"Deaths per 100,000",6.424550309055366,5.778910639297574,7.2008821042433295
+All Population,Brazil,1990,7-27 days,Both,Chronic respiratory diseases,"Deaths per 100,000",0.00042281812884578456,0.00032197628030387725,0.0005697869722347429
+All Population,Brazil,1990,1-5 months,Both,Chronic respiratory diseases,"Deaths per 100,000",9.225123332553256,7.576196221414927,11.367893908031656
+All Population,Brazil,1990,6-11 months,Both,Chronic respiratory diseases,"Deaths per 100,000",4.636244691476316,3.989243288128727,5.307695944702425
+All Population,Brazil,1990,12-23 months,Both,Chronic respiratory diseases,"Deaths per 100,000",9.381217412764126,8.058792360436563,10.781789685746348
+All Population,Brazil,1990,2-4 years,Both,Chronic respiratory diseases,"Deaths per 100,000",2.200409660289697,1.86959595269355,2.5505381710713815
+All Population,Brazil,1990,5-9 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.5292942427676041,0.4630544063386975,0.6049618141637132
+All Population,Brazil,1990,10-14 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.4405744238360979,0.393370418309766,0.49606985280859267
+All Population,Brazil,1990,15-19 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.753663851414924,0.6849745045019145,0.827651782395048
+All Population,Brazil,1990,20-24 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1.0548495123295454,0.9553972422265458,1.1622765491383793
+All Population,Brazil,1990,25-29 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1.5543410618597657,1.421652341415262,1.690400476836301
+All Population,Brazil,1990,30-34 years,Both,Chronic respiratory diseases,"Deaths per 100,000",2.2738699524159007,2.0572239452409624,2.514871838197793
+All Population,Brazil,1990,35-39 years,Both,Chronic respiratory diseases,"Deaths per 100,000",3.638294966267244,3.3121703331786696,4.001933402048873
+All Population,Brazil,1990,40-44 years,Both,Chronic respiratory diseases,"Deaths per 100,000",6.194993674964339,5.711478466534996,6.650643016261088
+All Population,Brazil,1990,45-49 years,Both,Chronic respiratory diseases,"Deaths per 100,000",12.088634380108825,11.111670224166708,13.024463519580769
+All Population,Brazil,1990,50-54 years,Both,Chronic respiratory diseases,"Deaths per 100,000",24.821753802288185,22.722969579101143,26.96880228875343
+All Population,Brazil,1990,55-59 years,Both,Chronic respiratory diseases,"Deaths per 100,000",45.446060677298384,42.1221637371854,49.62917876496106
+All Population,Brazil,1990,60-64 years,Both,Chronic respiratory diseases,"Deaths per 100,000",89.47155048513578,82.9292662036974,97.2301320515672
+All Population,Brazil,1990,65-69 years,Both,Chronic respiratory diseases,"Deaths per 100,000",156.9032861715901,145.8894097566415,168.94920411043412
+All Population,Brazil,1990,70-74 years,Both,Chronic respiratory diseases,"Deaths per 100,000",289.37589523680646,267.8143244434252,312.30910080501445
+All Population,Brazil,1990,75-79 years,Both,Chronic respiratory diseases,"Deaths per 100,000",468.3836959996056,427.3380826386068,502.3387578731024
+All Population,Brazil,1990,80-84 years,Both,Chronic respiratory diseases,"Deaths per 100,000",786.2581945179907,695.9083899144682,860.991394100875
+All Population,Brazil,1990,85-89 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1140.6219068784014,944.0801891445744,1270.2376123861463
+All Population,Brazil,1990,90-94 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1460.9132292234021,1138.5589691057066,1694.0676286366593
+All Population,Brazil,1990,95+ years,Both,Chronic respiratory diseases,"Deaths per 100,000",1746.25332329901,1234.8072493092884,2154.434918617033
+All Population,Brazil,1990,0-6 days,Both,Digestive diseases,"Deaths per 100,000",66.16262415770196,59.13388270104684,75.38707908340368
+All Population,Brazil,1990,7-27 days,Both,Digestive diseases,"Deaths per 100,000",17.65289941024623,15.473499149343153,20.579449247542097
+All Population,Brazil,1990,1-5 months,Both,Digestive diseases,"Deaths per 100,000",28.44816528990031,25.12957738632439,33.55711041713437
+All Population,Brazil,1990,6-11 months,Both,Digestive diseases,"Deaths per 100,000",9.85115170168983,8.432831915866082,12.11371214136182
+All Population,Brazil,1990,12-23 months,Both,Digestive diseases,"Deaths per 100,000",5.863107298292658,5.066386525722636,6.989946601363678
+All Population,Brazil,1990,2-4 years,Both,Digestive diseases,"Deaths per 100,000",2.303016176942604,2.016251390501461,2.72032470090489
+All Population,Brazil,1990,5-9 years,Both,Digestive diseases,"Deaths per 100,000",1.2448485853073394,1.0866929060175323,1.4474761766535635
+All Population,Brazil,1990,10-14 years,Both,Digestive diseases,"Deaths per 100,000",1.206673806153932,1.0725785920733262,1.3677440558656704
+All Population,Brazil,1990,15-19 years,Both,Digestive diseases,"Deaths per 100,000",2.0938874182155307,1.881136023026927,2.3031470261789466
+All Population,Brazil,1990,20-24 years,Both,Digestive diseases,"Deaths per 100,000",3.901030572395732,3.58959348391406,4.259744981191632
+All Population,Brazil,1990,25-29 years,Both,Digestive diseases,"Deaths per 100,000",8.072047262238916,7.402538932764427,8.74052976613184
+All Population,Brazil,1990,30-34 years,Both,Digestive diseases,"Deaths per 100,000",16.212905696482505,14.861531108708952,17.65023619192801
+All Population,Brazil,1990,35-39 years,Both,Digestive diseases,"Deaths per 100,000",26.344134475238228,24.18363540646839,28.759097009647803
+All Population,Brazil,1990,40-44 years,Both,Digestive diseases,"Deaths per 100,000",39.39496781442491,36.765312548309566,42.13724550576914
+All Population,Brazil,1990,45-49 years,Both,Digestive diseases,"Deaths per 100,000",53.65465645727764,49.880785951348805,57.72200965073645
+All Population,Brazil,1990,50-54 years,Both,Digestive diseases,"Deaths per 100,000",68.56712167108834,63.789199764467966,73.69529862001615
+All Population,Brazil,1990,55-59 years,Both,Digestive diseases,"Deaths per 100,000",82.04560227758353,76.57277104912666,88.44880613204823
+All Population,Brazil,1990,60-64 years,Both,Digestive diseases,"Deaths per 100,000",96.70812466123238,89.712206156637,104.09582118363554
+All Population,Brazil,1990,65-69 years,Both,Digestive diseases,"Deaths per 100,000",124.75080919734346,115.78006374303503,134.4756065147444
+All Population,Brazil,1990,70-74 years,Both,Digestive diseases,"Deaths per 100,000",169.0737385909822,156.82141455965,184.04141624647204
+All Population,Brazil,1990,75-79 years,Both,Digestive diseases,"Deaths per 100,000",234.2351771333208,213.65101005554112,254.7259411519517
+All Population,Brazil,1990,80-84 years,Both,Digestive diseases,"Deaths per 100,000",340.5941238571531,299.2982967780186,372.77033226172085
+All Population,Brazil,1990,85-89 years,Both,Digestive diseases,"Deaths per 100,000",504.2619811212381,426.9644700226305,568.3857791239493
+All Population,Brazil,1990,90-94 years,Both,Digestive diseases,"Deaths per 100,000",564.2083919787151,455.33751248216697,647.3804052413154
+All Population,Brazil,1990,95+ years,Both,Digestive diseases,"Deaths per 100,000",563.4487543094897,394.7029966181054,684.2387712335533
+All Population,Brazil,1990,0-6 days,Both,Neurological disorders,"Deaths per 100,000",5.493346959049862,5.017598248366907,5.928345879297235
+All Population,Brazil,1990,7-27 days,Both,Neurological disorders,"Deaths per 100,000",1.7667854908093044,1.5825846535658838,1.9366315509453556
+All Population,Brazil,1990,1-5 months,Both,Neurological disorders,"Deaths per 100,000",6.720248115851498,5.9583417296794625,7.531102629821515
+All Population,Brazil,1990,6-11 months,Both,Neurological disorders,"Deaths per 100,000",6.631530432064319,5.839072439744348,7.446871953752543
+All Population,Brazil,1990,12-23 months,Both,Neurological disorders,"Deaths per 100,000",2.6858820830891785,2.3737758774239603,3.0753240216165136
+All Population,Brazil,1990,2-4 years,Both,Neurological disorders,"Deaths per 100,000",1.1264381911347505,0.9942402836695328,1.2701307513324165
+All Population,Brazil,1990,5-9 years,Both,Neurological disorders,"Deaths per 100,000",0.5869391282472622,0.528497161942346,0.6519893930393765
+All Population,Brazil,1990,10-14 years,Both,Neurological disorders,"Deaths per 100,000",0.6704197188353669,0.5940906309248863,0.7480101130789378
+All Population,Brazil,1990,15-19 years,Both,Neurological disorders,"Deaths per 100,000",1.0396704196364739,0.9523937755226949,1.1272204332921345
+All Population,Brazil,1990,20-24 years,Both,Neurological disorders,"Deaths per 100,000",1.2909632062282017,1.1873491306288313,1.3807834130945962
+All Population,Brazil,1990,25-29 years,Both,Neurological disorders,"Deaths per 100,000",1.6230943654917371,1.4830479208797038,1.7621707691434263
+All Population,Brazil,1990,30-34 years,Both,Neurological disorders,"Deaths per 100,000",1.935061154135433,1.788061626558427,2.078670352521915
+All Population,Brazil,1990,35-39 years,Both,Neurological disorders,"Deaths per 100,000",2.3614896151234497,2.17307878903884,2.5456060806191125
+All Population,Brazil,1990,40-44 years,Both,Neurological disorders,"Deaths per 100,000",2.751040234801786,2.526905935154037,2.976005867256135
+All Population,Brazil,1990,45-49 years,Both,Neurological disorders,"Deaths per 100,000",3.627186115290755,3.167323650678781,4.4988260755623095
+All Population,Brazil,1990,50-54 years,Both,Neurological disorders,"Deaths per 100,000",5.71390800904087,4.059935964753854,9.649457709510813
+All Population,Brazil,1990,55-59 years,Both,Neurological disorders,"Deaths per 100,000",11.892579493093056,6.142880932866103,26.13651828331945
+All Population,Brazil,1990,60-64 years,Both,Neurological disorders,"Deaths per 100,000",27.03988206001928,10.944298493456431,63.287359069277706
+All Population,Brazil,1990,65-69 years,Both,Neurological disorders,"Deaths per 100,000",57.19329143082538,21.84905620430852,141.926154307485
+All Population,Brazil,1990,70-74 years,Both,Neurological disorders,"Deaths per 100,000",118.94873655150509,48.69126173809097,276.54643026808645
+All Population,Brazil,1990,75-79 years,Both,Neurological disorders,"Deaths per 100,000",257.3221748350702,112.90963594675804,563.706676226965
+All Population,Brazil,1990,80-84 years,Both,Neurological disorders,"Deaths per 100,000",659.4166843010578,249.18650449889503,1479.2468061394043
+All Population,Brazil,1990,85-89 years,Both,Neurological disorders,"Deaths per 100,000",1309.9880601035106,451.74324349944413,3161.6518146985336
+All Population,Brazil,1990,90-94 years,Both,Neurological disorders,"Deaths per 100,000",2335.3908082623234,701.2983185482473,5558.544669651148
+All Population,Brazil,1990,95+ years,Both,Neurological disorders,"Deaths per 100,000",4155.9576507733955,1200.869506772042,9452.880185430135
+All Population,Brazil,1990,0-6 days,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,7-27 days,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,1-5 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,6-11 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,12-23 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,2-4 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,5-9 years,Both,Mental disorders,"Deaths per 100,000",0.000001454084815476111,3.9795578456958244e-7,0.00000884169335794268
+All Population,Brazil,1990,10-14 years,Both,Mental disorders,"Deaths per 100,000",0.0005568472829031653,0.00010891853462213488,0.0010115268073268317
+All Population,Brazil,1990,15-19 years,Both,Mental disorders,"Deaths per 100,000",0.0018936353047741099,0.0004557153822253243,0.0028751046246358303
+All Population,Brazil,1990,20-24 years,Both,Mental disorders,"Deaths per 100,000",0.0031751242930710137,0.0008574957563517637,0.004813376656400356
+All Population,Brazil,1990,25-29 years,Both,Mental disorders,"Deaths per 100,000",0.0023772855485346806,0.0006560934832284232,0.0037374072536278374
+All Population,Brazil,1990,30-34 years,Both,Mental disorders,"Deaths per 100,000",0.0036729340222691905,0.00097047121422784,0.005533273538659055
+All Population,Brazil,1990,35-39 years,Both,Mental disorders,"Deaths per 100,000",0.00399836302776455,0.001047753708041845,0.00599216151268307
+All Population,Brazil,1990,40-44 years,Both,Mental disorders,"Deaths per 100,000",0.00441260155953356,0.0011413046921694052,0.006694680038172327
+All Population,Brazil,1990,45-49 years,Both,Mental disorders,"Deaths per 100,000",0.005526970462379181,0.00111142903828453,0.008331105273851409
+All Population,Brazil,1990,50-54 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,55-59 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,60-64 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,65-69 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,70-74 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,75-79 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,80-84 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,85-89 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,90-94 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,95+ years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,0-6 days,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,7-27 days,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,1-5 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,6-11 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,12-23 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,2-4 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,5-9 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,10-14 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,1990,15-19 years,Both,Substance use disorders,"Deaths per 100,000",0.2518637944454565,0.2161419174311833,0.2877585711639948
+All Population,Brazil,1990,20-24 years,Both,Substance use disorders,"Deaths per 100,000",0.7058450188051912,0.6250264326304238,0.7852676770710887
+All Population,Brazil,1990,25-29 years,Both,Substance use disorders,"Deaths per 100,000",2.0393724502498323,1.8776898576516565,2.2049120049976376
+All Population,Brazil,1990,30-34 years,Both,Substance use disorders,"Deaths per 100,000",4.499853511918211,4.063367408827631,4.929862277776032
+All Population,Brazil,1990,35-39 years,Both,Substance use disorders,"Deaths per 100,000",6.639384163392966,6.034957048603212,7.192066729388825
+All Population,Brazil,1990,40-44 years,Both,Substance use disorders,"Deaths per 100,000",8.219179171564774,7.585743758178323,8.834805339230678
+All Population,Brazil,1990,45-49 years,Both,Substance use disorders,"Deaths per 100,000",9.426538619879832,8.704341198432104,10.268651750860602
+All Population,Brazil,1990,50-54 years,Both,Substance use disorders,"Deaths per 100,000",9.526604992872398,8.879325949457726,10.175086347882344
+All Population,Brazil,1990,55-59 years,Both,Substance use disorders,"Deaths per 100,000",8.974057422525823,8.360064369260053,9.58398054168179
+All Population,Brazil,1990,60-64 years,Both,Substance use disorders,"Deaths per 100,000",7.035135669653411,6.629546597934673,7.4586236333109746
+All Population,Brazil,1990,65-69 years,Both,Substance use disorders,"Deaths per 100,000",6.419506893400376,6.036921275128142,6.8202970352364805
+All Population,Brazil,1990,70-74 years,Both,Substance use disorders,"Deaths per 100,000",5.440242465727497,5.040376445831542,5.800974637508372
+All Population,Brazil,1990,75-79 years,Both,Substance use disorders,"Deaths per 100,000",4.775379791099252,4.32558272257652,5.222651901759793
+All Population,Brazil,1990,80-84 years,Both,Substance use disorders,"Deaths per 100,000",3.9319633552952844,3.389218367669542,4.592867423526183
+All Population,Brazil,1990,85-89 years,Both,Substance use disorders,"Deaths per 100,000",4.239339787915901,3.556859544524287,4.947307933399351
+All Population,Brazil,1990,90-94 years,Both,Substance use disorders,"Deaths per 100,000",4.328642842452281,3.3332845520777434,5.102733765282845
+All Population,Brazil,1990,95+ years,Both,Substance use disorders,"Deaths per 100,000",7.652277497693257,5.212499305916161,9.52836117088535
+All Population,Brazil,1990,0-6 days,Both,Diabetes and kidney diseases,"Deaths per 100,000",1.2908775216402315,1.159689879885213,1.4314409969951647
+All Population,Brazil,1990,7-27 days,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.5450952855893985,0.47035165130080214,0.635731147703805
+All Population,Brazil,1990,1-5 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",6.058770738829234,5.4691645880636495,6.847627239015065
+All Population,Brazil,1990,6-11 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",3.927320446229623,3.51616253725369,4.456523939932852
+All Population,Brazil,1990,12-23 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",2.266666431783971,2.0209258647463906,2.538685620828093
+All Population,Brazil,1990,2-4 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",1.3255562443991509,1.1755674707088006,1.4991540348351937
+All Population,Brazil,1990,5-9 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.8622867861555029,0.766244560250803,0.9538168188317624
+All Population,Brazil,1990,10-14 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.8704572146112206,0.7789395202248591,0.9652056239765046
+All Population,Brazil,1990,15-19 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",1.7503084023372104,1.6162181255085755,1.9340433988903616
+All Population,Brazil,1990,20-24 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",2.763372347683695,2.555652697075752,3.0164125121905285
+All Population,Brazil,1990,25-29 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",4.388103004924027,4.083615349830927,4.695658290320136
+All Population,Brazil,1990,30-34 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",6.826756583493811,6.3649019747171,7.324556464167954
+All Population,Brazil,1990,35-39 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",10.855679624908747,10.120326947682127,11.635659154531615
+All Population,Brazil,1990,40-44 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",17.647360738587516,16.47978335512839,19.082016015298585
+All Population,Brazil,1990,45-49 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",29.16442719555666,27.03952140096463,31.07114901157339
+All Population,Brazil,1990,50-54 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",49.986650170228884,46.45857075417717,53.478945230145264
+All Population,Brazil,1990,55-59 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",78.74655072926204,73.50702120244202,83.78949600148061
+All Population,Brazil,1990,60-64 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",123.5460263875301,115.50783858614946,131.3350104659612
+All Population,Brazil,1990,65-69 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",187.3926026887906,175.3409487429128,199.0922451601867
+All Population,Brazil,1990,70-74 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",285.19784151874296,266.6054979317645,304.09995830479454
+All Population,Brazil,1990,75-79 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",411.3756110230743,378.6908885788872,440.03465362920883
+All Population,Brazil,1990,80-84 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",584.5871748931415,523.5857888678726,634.564929213949
+All Population,Brazil,1990,85-89 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",805.6299651891599,684.4478667180042,906.5614053624502
+All Population,Brazil,1990,90-94 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",920.1499019556411,729.9732089671141,1068.3988864654216
+All Population,Brazil,1990,95+ years,Both,Diabetes and kidney diseases,"Deaths per 100,000",928.0258939038383,639.691697148016,1131.6373303034686
+All Population,Brazil,1990,0-6 days,Both,Skin and subcutaneous diseases,"Deaths per 100,000",2.138222857176052,1.8977930099888842,2.3841057131363343
+All Population,Brazil,1990,7-27 days,Both,Skin and subcutaneous diseases,"Deaths per 100,000",4.154853815231781,3.633218157009471,4.676659035772032
+All Population,Brazil,1990,1-5 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",3.76243187544659,3.1995833542001155,4.371600869170673
+All Population,Brazil,1990,6-11 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",1.8589763795206649,1.5564172969013772,2.184851602984172
+All Population,Brazil,1990,12-23 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.6586137802467729,0.5491778729943718,0.7759580100067339
+All Population,Brazil,1990,2-4 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.17133896867959547,0.1451684433917984,0.19604364008254352
+All Population,Brazil,1990,5-9 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.07675257237158463,0.0653647884512771,0.08823608746373869
+All Population,Brazil,1990,10-14 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.07869548241221551,0.06586051897480254,0.09042486072801777
+All Population,Brazil,1990,15-19 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.0989006840156203,0.08414760994029864,0.11151051214767708
+All Population,Brazil,1990,20-24 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.13642711503434013,0.1177875397717027,0.15621995850030174
+All Population,Brazil,1990,25-29 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.16640832410138331,0.146887243741977,0.18368381817407975
+All Population,Brazil,1990,30-34 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.2708306924438471,0.23924915782149894,0.30409244476745684
+All Population,Brazil,1990,35-39 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.40532890590633325,0.36106644547611644,0.4490448049148267
+All Population,Brazil,1990,40-44 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.5469912958109578,0.4890369188838209,0.6108616587357439
+All Population,Brazil,1990,45-49 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.8808981852574775,0.8101509682077966,0.9504094235086661
+All Population,Brazil,1990,50-54 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",1.307827365972413,1.20586352520685,1.4077116874624473
+All Population,Brazil,1990,55-59 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",1.8730593390307149,1.7214887755690633,2.021223867173229
+All Population,Brazil,1990,60-64 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",2.9094402839801794,2.755862754823132,3.0786459824846064
+All Population,Brazil,1990,65-69 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",4.414654549313222,4.032691990918048,4.797838571219225
+All Population,Brazil,1990,70-74 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",7.2079608801140065,6.576929567461943,7.883647983616503
+All Population,Brazil,1990,75-79 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",13.974998529179514,12.28625250396531,15.305874374358854
+All Population,Brazil,1990,80-84 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",22.957591501387313,19.92128089587999,25.849118865693026
+All Population,Brazil,1990,85-89 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",41.768197203382115,34.598619315868504,48.092974886504955
+All Population,Brazil,1990,90-94 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",51.661773511678,40.515077408455745,58.40324735617371
+All Population,Brazil,1990,95+ years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",69.53127934851405,49.5543874119691,86.75316114056474
+All Population,Brazil,1990,0-6 days,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,7-27 days,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,1-5 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,6-11 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,12-23 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,2-4 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,5-9 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,10-14 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,15-19 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,20-24 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,25-29 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,30-34 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,35-39 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,40-44 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,45-49 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,50-54 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,55-59 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,60-64 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,65-69 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,70-74 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,75-79 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,80-84 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,85-89 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,90-94 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,95+ years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,1990,0-6 days,Both,Musculoskeletal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,7-27 days,Both,Musculoskeletal disorders,"Deaths per 100,000",,,
+All Population,Brazil,1990,1-5 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.7472148146037518,0.6643292571177867,0.8367165079401203
+All Population,Brazil,1990,6-11 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.304393007800306,0.27111362765825536,0.34314959676928786
+All Population,Brazil,1990,12-23 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.09511872069997647,0.08056930909567848,0.11209545729880178
+All Population,Brazil,1990,2-4 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.0879491756261405,0.07266526571065442,0.10251061417113845
+All Population,Brazil,1990,5-9 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.1667097445989093,0.14492515039112025,0.19476553877586647
+All Population,Brazil,1990,10-14 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.3107152347707579,0.2682340747670297,0.3547088348592711
+All Population,Brazil,1990,15-19 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.4847336934128562,0.42354780067924624,0.55423094357076
+All Population,Brazil,1990,20-24 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.6575297545481562,0.5885875100594061,0.7299203036467831
+All Population,Brazil,1990,25-29 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.8149995532265765,0.7310303136945935,0.9283288933401912
+All Population,Brazil,1990,30-34 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.9298109469481863,0.8313183267324716,1.0403362388651338
+All Population,Brazil,1990,35-39 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.0595273632758373,0.9557412413414629,1.1778374959766005
+All Population,Brazil,1990,40-44 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.1464588476337267,1.0225069177840052,1.2785450711917188
+All Population,Brazil,1990,45-49 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.267518192288366,1.1247676685341295,1.4368943888958046
+All Population,Brazil,1990,50-54 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.4310809852576405,1.322641405338646,1.5447212046510768
+All Population,Brazil,1990,55-59 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.7805757901873058,1.6563454599019347,1.9103109705321626
+All Population,Brazil,1990,60-64 years,Both,Musculoskeletal disorders,"Deaths per 100,000",2.2098367882949246,2.0567481036025432,2.3764356632143704
+All Population,Brazil,1990,65-69 years,Both,Musculoskeletal disorders,"Deaths per 100,000",2.8322820723964806,2.6124420918358786,3.0829610133534544
+All Population,Brazil,1990,70-74 years,Both,Musculoskeletal disorders,"Deaths per 100,000",4.071390987821415,3.73799227970054,4.411584261933429
+All Population,Brazil,1990,75-79 years,Both,Musculoskeletal disorders,"Deaths per 100,000",6.31492571855339,5.766402877148199,6.867977521061977
+All Population,Brazil,1990,80-84 years,Both,Musculoskeletal disorders,"Deaths per 100,000",9.975301525942045,8.817214765675883,10.955774667311626
+All Population,Brazil,1990,85-89 years,Both,Musculoskeletal disorders,"Deaths per 100,000",15.32452380282085,13.17213685355529,17.082912546499166
+All Population,Brazil,1990,90-94 years,Both,Musculoskeletal disorders,"Deaths per 100,000",21.038622986525894,16.981596573252908,24.74597508994097
+All Population,Brazil,1990,95+ years,Both,Musculoskeletal disorders,"Deaths per 100,000",21.781120488486565,15.53829708324174,26.730441032135573
+All Population,Brazil,1990,0-6 days,Both,Other non-communicable diseases,"Deaths per 100,000",6190.127789381375,5614.86437461373,7041.376223010594
+All Population,Brazil,1990,7-27 days,Both,Other non-communicable diseases,"Deaths per 100,000",961.8153870684582,854.2973249773411,1091.118856470467
+All Population,Brazil,1990,1-5 months,Both,Other non-communicable diseases,"Deaths per 100,000",360.3198782522151,315.92882913615927,392.99840241629687
+All Population,Brazil,1990,6-11 months,Both,Other non-communicable diseases,"Deaths per 100,000",117.39756094125948,102.76853921664846,132.2220634504578
+All Population,Brazil,1990,12-23 months,Both,Other non-communicable diseases,"Deaths per 100,000",28.55402796835221,24.730813025243275,32.458445289810236
+All Population,Brazil,1990,2-4 years,Both,Other non-communicable diseases,"Deaths per 100,000",8.06461789473039,6.858652852521671,9.216105665141937
+All Population,Brazil,1990,5-9 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.091517469666192,2.6764056132252505,3.5132027127950636
+All Population,Brazil,1990,10-14 years,Both,Other non-communicable diseases,"Deaths per 100,000",2.3936227001840455,2.0999675659273955,2.7620897410205805
+All Population,Brazil,1990,15-19 years,Both,Other non-communicable diseases,"Deaths per 100,000",1.8949873118853027,1.6740043995296752,2.2264331389079843
+All Population,Brazil,1990,20-24 years,Both,Other non-communicable diseases,"Deaths per 100,000",2.1352597857541444,1.9184729963346447,2.4936561175556244
+All Population,Brazil,1990,25-29 years,Both,Other non-communicable diseases,"Deaths per 100,000",2.348769388047937,2.1479924187994266,2.701822782692111
+All Population,Brazil,1990,30-34 years,Both,Other non-communicable diseases,"Deaths per 100,000",2.708408867143359,2.4666265513427033,3.026117830767779
+All Population,Brazil,1990,35-39 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.2889308705324685,3.0345681977243983,3.618656746688053
+All Population,Brazil,1990,40-44 years,Both,Other non-communicable diseases,"Deaths per 100,000",4.243965700747269,3.936509767033091,4.632124520589035
+All Population,Brazil,1990,45-49 years,Both,Other non-communicable diseases,"Deaths per 100,000",5.319942298156289,4.966112771424341,5.8468095242546445
+All Population,Brazil,1990,50-54 years,Both,Other non-communicable diseases,"Deaths per 100,000",6.905207163983681,6.485862194525667,7.539988584700648
+All Population,Brazil,1990,55-59 years,Both,Other non-communicable diseases,"Deaths per 100,000",9.468064519923379,8.87796708163854,10.210935353985933
+All Population,Brazil,1990,60-64 years,Both,Other non-communicable diseases,"Deaths per 100,000",13.116685884769135,12.387295769024234,13.98755462221128
+All Population,Brazil,1990,65-69 years,Both,Other non-communicable diseases,"Deaths per 100,000",19.86535592620589,18.70507193388263,21.19075210027548
+All Population,Brazil,1990,70-74 years,Both,Other non-communicable diseases,"Deaths per 100,000",31.343500651152308,29.454230195672082,33.591495365859586
+All Population,Brazil,1990,75-79 years,Both,Other non-communicable diseases,"Deaths per 100,000",54.38633902924945,50.593659862397146,58.66779361260165
+All Population,Brazil,1990,80-84 years,Both,Other non-communicable diseases,"Deaths per 100,000",97.00431739457413,87.0108561462932,107.30933324634135
+All Population,Brazil,1990,85-89 years,Both,Other non-communicable diseases,"Deaths per 100,000",147.62524740258718,128.9498740187582,161.34058623876285
+All Population,Brazil,1990,90-94 years,Both,Other non-communicable diseases,"Deaths per 100,000",194.12855935698647,155.13316817984645,217.38875280836874
+All Population,Brazil,1990,95+ years,Both,Other non-communicable diseases,"Deaths per 100,000",234.80925888840235,173.30367949576598,281.785361679594
+All Population,Brazil,1990,0-6 days,Both,Transport injuries,"Deaths per 100,000",27.522511121118555,24.22022444675164,31.40168268616752
+All Population,Brazil,1990,7-27 days,Both,Transport injuries,"Deaths per 100,000",10.031101220619156,8.797708274038515,11.519260924187837
+All Population,Brazil,1990,1-5 months,Both,Transport injuries,"Deaths per 100,000",15.699018089317525,13.151309329698105,18.630230551272074
+All Population,Brazil,1990,6-11 months,Both,Transport injuries,"Deaths per 100,000",12.575551552823459,10.332424039797317,15.190489625131045
+All Population,Brazil,1990,12-23 months,Both,Transport injuries,"Deaths per 100,000",10.44631640372414,8.757343634137223,12.581009581004865
+All Population,Brazil,1990,2-4 years,Both,Transport injuries,"Deaths per 100,000",10.076583134153623,8.632184747697245,11.736695408975832
+All Population,Brazil,1990,5-9 years,Both,Transport injuries,"Deaths per 100,000",10.677643701352205,9.421475937689399,11.961958862313187
+All Population,Brazil,1990,10-14 years,Both,Transport injuries,"Deaths per 100,000",9.727903032157284,8.794842025719188,10.572859474381302
+All Population,Brazil,1990,15-19 years,Both,Transport injuries,"Deaths per 100,000",21.077281747176652,19.51513113864934,22.5914657551404
+All Population,Brazil,1990,20-24 years,Both,Transport injuries,"Deaths per 100,000",33.24350121067146,29.895722186536005,37.14732070019457
+All Population,Brazil,1990,25-29 years,Both,Transport injuries,"Deaths per 100,000",34.915079693104445,31.57628569223027,38.82371503295976
+All Population,Brazil,1990,30-34 years,Both,Transport injuries,"Deaths per 100,000",36.52073122119961,32.13597355499711,41.337866948550534
+All Population,Brazil,1990,35-39 years,Both,Transport injuries,"Deaths per 100,000",37.0352863890884,32.78202375260233,42.18664143573063
+All Population,Brazil,1990,40-44 years,Both,Transport injuries,"Deaths per 100,000",38.559928114370116,34.294980446725276,43.593429930590545
+All Population,Brazil,1990,45-49 years,Both,Transport injuries,"Deaths per 100,000",40.68396878894448,35.638974916899066,45.73237437496613
+All Population,Brazil,1990,50-54 years,Both,Transport injuries,"Deaths per 100,000",41.993015665799184,39.21905498327593,44.76270079177915
+All Population,Brazil,1990,55-59 years,Both,Transport injuries,"Deaths per 100,000",42.38111545192065,36.87595687022554,47.49900067701182
+All Population,Brazil,1990,60-64 years,Both,Transport injuries,"Deaths per 100,000",43.0710535951672,37.74852284812231,48.601396461574865
+All Population,Brazil,1990,65-69 years,Both,Transport injuries,"Deaths per 100,000",47.8914213991885,42.24184976471494,53.94615103129618
+All Population,Brazil,1990,70-74 years,Both,Transport injuries,"Deaths per 100,000",54.90575890457471,47.75653251775484,62.43003304572904
+All Population,Brazil,1990,75-79 years,Both,Transport injuries,"Deaths per 100,000",68.10423819812196,59.15696798639145,77.08849006443985
+All Population,Brazil,1990,80-84 years,Both,Transport injuries,"Deaths per 100,000",76.47681563398655,64.60263410839717,86.70109249731367
+All Population,Brazil,1990,85-89 years,Both,Transport injuries,"Deaths per 100,000",83.57895817953249,70.24793650343248,96.18552987945327
+All Population,Brazil,1990,90-94 years,Both,Transport injuries,"Deaths per 100,000",66.31034517752882,51.791050801020695,77.75651439452595
+All Population,Brazil,1990,95+ years,Both,Transport injuries,"Deaths per 100,000",68.44869456883202,48.10947660133297,86.9238716326051
+All Population,Brazil,1990,0-6 days,Both,Unintentional injuries,"Deaths per 100,000",130.82013664730525,121.22652505607145,139.45785747131296
+All Population,Brazil,1990,7-27 days,Both,Unintentional injuries,"Deaths per 100,000",59.73985108416437,53.93082752813791,65.36314630290163
+All Population,Brazil,1990,1-5 months,Both,Unintentional injuries,"Deaths per 100,000",77.23592902646836,69.70258217170691,84.9146215573065
+All Population,Brazil,1990,6-11 months,Both,Unintentional injuries,"Deaths per 100,000",41.809374348042354,38.29912487219079,45.41006762473839
+All Population,Brazil,1990,12-23 months,Both,Unintentional injuries,"Deaths per 100,000",32.266668893739244,29.20363991886772,35.462276480017564
+All Population,Brazil,1990,2-4 years,Both,Unintentional injuries,"Deaths per 100,000",14.706356274167637,13.378381906223717,16.058314428113757
+All Population,Brazil,1990,5-9 years,Both,Unintentional injuries,"Deaths per 100,000",9.607240090974372,8.801108077217307,10.469252778684886
+All Population,Brazil,1990,10-14 years,Both,Unintentional injuries,"Deaths per 100,000",10.232092849243514,9.420180260984086,11.03837133666466
+All Population,Brazil,1990,15-19 years,Both,Unintentional injuries,"Deaths per 100,000",14.602127991423112,13.617984434133154,15.63931447801748
+All Population,Brazil,1990,20-24 years,Both,Unintentional injuries,"Deaths per 100,000",17.71093330350317,16.560603266151862,18.908615584479875
+All Population,Brazil,1990,25-29 years,Both,Unintentional injuries,"Deaths per 100,000",17.808749213749465,16.659012101977964,18.93235924716941
+All Population,Brazil,1990,30-34 years,Both,Unintentional injuries,"Deaths per 100,000",18.69313993021774,17.365495293838197,19.97968381622197
+All Population,Brazil,1990,35-39 years,Both,Unintentional injuries,"Deaths per 100,000",19.140073995761792,17.78827289342399,20.577531069089865
+All Population,Brazil,1990,40-44 years,Both,Unintentional injuries,"Deaths per 100,000",19.903574379694103,18.560028275796114,21.42055341623187
+All Population,Brazil,1990,45-49 years,Both,Unintentional injuries,"Deaths per 100,000",20.559343758487255,19.34484143174676,22.076440335022756
+All Population,Brazil,1990,50-54 years,Both,Unintentional injuries,"Deaths per 100,000",22.53618639796859,21.137766064338198,23.97050357106017
+All Population,Brazil,1990,55-59 years,Both,Unintentional injuries,"Deaths per 100,000",23.43338107559448,22.030224269836683,24.947859229506516
+All Population,Brazil,1990,60-64 years,Both,Unintentional injuries,"Deaths per 100,000",26.874414099113004,25.18208585279189,28.573325069235178
+All Population,Brazil,1990,65-69 years,Both,Unintentional injuries,"Deaths per 100,000",31.947562743460423,29.978306333492934,33.80741768264294
+All Population,Brazil,1990,70-74 years,Both,Unintentional injuries,"Deaths per 100,000",48.54343578828613,44.574056545886954,52.658587200689965
+All Population,Brazil,1990,75-79 years,Both,Unintentional injuries,"Deaths per 100,000",76.84262440731047,69.87717672983923,82.3836638516259
+All Population,Brazil,1990,80-84 years,Both,Unintentional injuries,"Deaths per 100,000",143.25272882415769,124.45009804300841,156.97581700298866
+All Population,Brazil,1990,85-89 years,Both,Unintentional injuries,"Deaths per 100,000",249.47638483412575,211.18129164723015,277.6071247523663
+All Population,Brazil,1990,90-94 years,Both,Unintentional injuries,"Deaths per 100,000",356.67677449082015,282.6559874053965,409.3265080780622
+All Population,Brazil,1990,95+ years,Both,Unintentional injuries,"Deaths per 100,000",420.9074651550167,294.9869320040684,516.3860050667975
+All Population,Brazil,1990,0-6 days,Both,Self-harm and interpersonal violence,"Deaths per 100,000",76.2594315389205,65.27240859289681,88.44642439193707
+All Population,Brazil,1990,7-27 days,Both,Self-harm and interpersonal violence,"Deaths per 100,000",9.068477615477578,7.7662122846220765,10.449077189007623
+All Population,Brazil,1990,1-5 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",9.665256573700535,8.222549752121191,11.331470691139153
+All Population,Brazil,1990,6-11 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",5.8239493293782845,4.89824108312559,6.859204358645992
+All Population,Brazil,1990,12-23 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",3.4258873315389335,2.8121596989399826,4.015308692973277
+All Population,Brazil,1990,2-4 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",1.941365821668018,1.6359735816264585,2.212005437370542
+All Population,Brazil,1990,5-9 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",1.4807574142680462,1.2667368874328735,1.6734661568329405
+All Population,Brazil,1990,10-14 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",4.322528223724053,3.8548713691853003,4.855429832771094
+All Population,Brazil,1990,15-19 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",38.36297872070263,36.059148691462454,40.67183215504531
+All Population,Brazil,1990,20-24 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",64.14049593929366,60.69475998482361,67.53937815860488
+All Population,Brazil,1990,25-29 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",64.4080659844975,60.77280334875964,68.23286331410604
+All Population,Brazil,1990,30-34 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",59.617406147806264,54.749757775600905,64.38281220165443
+All Population,Brazil,1990,35-39 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",52.547225709290636,47.81285284978176,57.16056590697021
+All Population,Brazil,1990,40-44 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",46.27441833400615,42.35151846483602,50.66653350733746
+All Population,Brazil,1990,45-49 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",42.39249917906052,38.95140818217252,46.236287869102945
+All Population,Brazil,1990,50-54 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",36.400495430951715,32.879067887453076,39.838311336911765
+All Population,Brazil,1990,55-59 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",32.21091588628778,29.56340949652381,35.432221485491844
+All Population,Brazil,1990,60-64 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",27.78516697716322,25.403598817283356,30.462126507461154
+All Population,Brazil,1990,65-69 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",26.325671077343394,23.753477096820387,28.67841878280432
+All Population,Brazil,1990,70-74 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",27.023177062740317,24.90900855370477,29.59023067137478
+All Population,Brazil,1990,75-79 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",27.962690786040582,25.458594261544864,30.840595469420823
+All Population,Brazil,1990,80-84 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",21.132442994563466,18.71896580298769,23.54226694098994
+All Population,Brazil,1990,85-89 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",22.305092736814085,19.375848329068273,25.141440778290733
+All Population,Brazil,1990,90-94 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",20.69552545821239,16.73230340913827,23.856204316724504
+All Population,Brazil,1990,95+ years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",35.95127851250214,26.982467308522665,44.33465706147591
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2023. Seattle, WA: IHME, University of Washington, 2025. Available from https://vizhub.healthdata.org/gbd-compare/. (Accessed 6/4/2026). For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"

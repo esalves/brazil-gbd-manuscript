@@ -1,0 +1,553 @@
+Population,Location,Year,Age,Sex,Cause of death or injury,Measure,Value,Lower bound,Upper bound
+All Population,Brazil,2023,0-6 days,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",207.29405159256206,182.8274538585398,233.57093787977195
+All Population,Brazil,2023,7-27 days,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",25.70283645758024,21.77983617045687,29.92550254193069
+All Population,Brazil,2023,1-5 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",6.511517941743808,5.5965737747074735,7.509235037422386
+All Population,Brazil,2023,6-11 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",1.8254614459478342,1.4875555842997774,2.1940066794513826
+All Population,Brazil,2023,12-23 months,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.9481427225421191,0.7766227188341307,1.1274172912681288
+All Population,Brazil,2023,2-4 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.40917627508729354,0.3376053187896022,0.4859266319096851
+All Population,Brazil,2023,5-9 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.2906911959939824,0.2413223594741357,0.3366235624863693
+All Population,Brazil,2023,10-14 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.35618309765662953,0.3048084545979301,0.4048548621296131
+All Population,Brazil,2023,15-19 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",0.8860773778110218,0.7836078026792219,0.9993186864904502
+All Population,Brazil,2023,20-24 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",2.8425091608810162,2.5768374773531884,3.11313960252189
+All Population,Brazil,2023,25-29 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",6.287206126552895,5.797332587855001,6.830147520136921
+All Population,Brazil,2023,30-34 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",8.092434702867354,7.468814868383742,8.791119160343825
+All Population,Brazil,2023,35-39 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",10.048678585458276,9.213368931355525,10.864855254637323
+All Population,Brazil,2023,40-44 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.891462404026301,11.146888560386127,12.718372957853683
+All Population,Brazil,2023,45-49 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",12.593587875605502,11.720376152881022,13.494325833937804
+All Population,Brazil,2023,50-54 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.809454388252579,10.839726664151126,12.816316095127391
+All Population,Brazil,2023,55-59 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.894327426239585,10.966481098094201,12.829882962359536
+All Population,Brazil,2023,60-64 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",10.678231080057014,9.734988623229537,11.563302129597044
+All Population,Brazil,2023,65-69 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",11.602320702674241,10.578910182307414,12.58093607367425
+All Population,Brazil,2023,70-74 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",4.310620244177358,3.8613686498783153,4.728444209366552
+All Population,Brazil,2023,75-79 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",4.1488354115443915,3.7495701487878947,4.584007786792758
+All Population,Brazil,2023,80-84 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.594012855555242,3.096893001627449,4.068052011431026
+All Population,Brazil,2023,85-89 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.581893296159816,2.84395816260617,4.140464547454935
+All Population,Brazil,2023,90-94 years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",2.893002836851506,2.229492090857948,3.4849310196595797
+All Population,Brazil,2023,95+ years,Both,HIV/AIDS and sexually transmitted infections,"Deaths per 100,000",3.359454521321713,2.2936220522186543,4.106883575010583
+All Population,Brazil,2023,0-6 days,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",153.11139829660084,140.1519755665192,167.39900243023044
+All Population,Brazil,2023,7-27 days,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",73.85990609177745,63.8326553568677,84.17712043293584
+All Population,Brazil,2023,1-5 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",90.05427948557535,77.6638256468284,103.65942560811092
+All Population,Brazil,2023,6-11 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",36.74318871524195,31.441843060930765,44.056270288964775
+All Population,Brazil,2023,12-23 months,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",18.473020647318204,15.57335382783457,21.706704193289145
+All Population,Brazil,2023,2-4 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",6.5752701801504925,5.471777081455846,7.870196314530371
+All Population,Brazil,2023,5-9 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",2.8626135738378125,2.489176392521715,3.272478179788881
+All Population,Brazil,2023,10-14 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",2.4938157957984237,2.132703060544341,2.8114981646600232
+All Population,Brazil,2023,15-19 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",3.6159142203053394,3.232412166782682,4.071567314834113
+All Population,Brazil,2023,20-24 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",5.268317373618571,4.788508673530767,5.775618078238639
+All Population,Brazil,2023,25-29 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",6.768684693020896,6.13592820076934,7.403330191051407
+All Population,Brazil,2023,30-34 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",8.137529415860753,7.400234174157914,8.825925677651114
+All Population,Brazil,2023,35-39 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",10.817258789925493,9.956940280923757,11.829684348888515
+All Population,Brazil,2023,40-44 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",15.376248304184944,14.294456090769387,16.614705241157075
+All Population,Brazil,2023,45-49 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",21.181465845063354,19.294320423929236,22.86209815893736
+All Population,Brazil,2023,50-54 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",29.914880171694136,27.634155902127407,32.25949413365016
+All Population,Brazil,2023,55-59 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",43.81650882959131,40.30214617596745,47.52590955688688
+All Population,Brazil,2023,60-64 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",66.49657198574675,60.92814225740906,72.01600519396321
+All Population,Brazil,2023,65-69 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",110.60785232326076,101.0213409454823,120.20561427723992
+All Population,Brazil,2023,70-74 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",188.34671797811885,170.3358654985032,204.13389431154602
+All Population,Brazil,2023,75-79 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",335.6843448971516,302.3849716118284,367.37996051848654
+All Population,Brazil,2023,80-84 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",629.7882657647995,537.1715004850921,700.4660597664944
+All Population,Brazil,2023,85-89 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",1177.5513953883865,951.1312309550277,1330.666351582202
+All Population,Brazil,2023,90-94 years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",2069.7693424651284,1595.678252492826,2383.6907640376435
+All Population,Brazil,2023,95+ years,Both,Respiratory infections and tuberculosis,"Deaths per 100,000",2847.8877806809405,1960.7394248304468,3428.981562050058
+All Population,Brazil,2023,0-6 days,Both,Enteric infections,"Deaths per 100,000",10.4255209660196,9.098976512080052,11.852212348550768
+All Population,Brazil,2023,7-27 days,Both,Enteric infections,"Deaths per 100,000",10.014596092468883,8.400875584909254,11.82077761208033
+All Population,Brazil,2023,1-5 months,Both,Enteric infections,"Deaths per 100,000",20.504286001972456,17.682756191915626,23.29315985156393
+All Population,Brazil,2023,6-11 months,Both,Enteric infections,"Deaths per 100,000",9.081917087740162,7.591773204571162,10.811841273306188
+All Population,Brazil,2023,12-23 months,Both,Enteric infections,"Deaths per 100,000",3.590291618970344,3.0030056444315534,4.317597479689137
+All Population,Brazil,2023,2-4 years,Both,Enteric infections,"Deaths per 100,000",0.8914828982837636,0.7210331849844758,1.0703513621686251
+All Population,Brazil,2023,5-9 years,Both,Enteric infections,"Deaths per 100,000",0.36124567694533805,0.2927981390036752,0.4390533780095722
+All Population,Brazil,2023,10-14 years,Both,Enteric infections,"Deaths per 100,000",0.2335619328457114,0.19593860353656503,0.27693488116929293
+All Population,Brazil,2023,15-19 years,Both,Enteric infections,"Deaths per 100,000",0.19809993191120162,0.15997295280185214,0.26000987812601883
+All Population,Brazil,2023,20-24 years,Both,Enteric infections,"Deaths per 100,000",0.2412138354893602,0.19591527922721136,0.29804189552972393
+All Population,Brazil,2023,25-29 years,Both,Enteric infections,"Deaths per 100,000",0.2523800421981793,0.21588246370887457,0.30454825304071614
+All Population,Brazil,2023,30-34 years,Both,Enteric infections,"Deaths per 100,000",0.34625000158980784,0.293952734156047,0.3969227835456761
+All Population,Brazil,2023,35-39 years,Both,Enteric infections,"Deaths per 100,000",0.4256488599583043,0.3690282177418048,0.4877270292799959
+All Population,Brazil,2023,40-44 years,Both,Enteric infections,"Deaths per 100,000",0.6235185813674256,0.5496134118981254,0.7167794656552775
+All Population,Brazil,2023,45-49 years,Both,Enteric infections,"Deaths per 100,000",0.8579571339463974,0.770467562834249,0.9556234915815359
+All Population,Brazil,2023,50-54 years,Both,Enteric infections,"Deaths per 100,000",1.2931408470588621,1.172645011210566,1.424473730636377
+All Population,Brazil,2023,55-59 years,Both,Enteric infections,"Deaths per 100,000",2.0953022192250566,1.9230362235554965,2.29383251818243
+All Population,Brazil,2023,60-64 years,Both,Enteric infections,"Deaths per 100,000",3.1449062579452853,2.8985454731560654,3.3768511107800374
+All Population,Brazil,2023,65-69 years,Both,Enteric infections,"Deaths per 100,000",5.74344414605565,5.305465618235878,6.114031804642712
+All Population,Brazil,2023,70-74 years,Both,Enteric infections,"Deaths per 100,000",10.01612745753441,9.148074683977795,10.827856745464617
+All Population,Brazil,2023,75-79 years,Both,Enteric infections,"Deaths per 100,000",18.903223601670554,16.80513329683916,20.474615695430145
+All Population,Brazil,2023,80-84 years,Both,Enteric infections,"Deaths per 100,000",36.629134083676064,30.790376525023877,40.12346491491124
+All Population,Brazil,2023,85-89 years,Both,Enteric infections,"Deaths per 100,000",71.40302572622534,56.50112449374431,79.93689909373589
+All Population,Brazil,2023,90-94 years,Both,Enteric infections,"Deaths per 100,000",120.3291944306243,90.39789082763986,139.0313201168147
+All Population,Brazil,2023,95+ years,Both,Enteric infections,"Deaths per 100,000",165.29340165495515,113.4361092223908,204.58593192554937
+All Population,Brazil,2023,0-6 days,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",2.543068733291508,2.079744163436021,2.9962591190706553
+All Population,Brazil,2023,7-27 days,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.2319775298693365,1.003622448790236,1.5156466012313217
+All Population,Brazil,2023,1-5 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.9659090377861275,1.5915427507997395,2.4191470676715845
+All Population,Brazil,2023,6-11 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.2773662394976077,1.0270525802278367,1.615445499954519
+All Population,Brazil,2023,12-23 months,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",3.0588046106043048,0.7273411006541349,7.727466912971274
+All Population,Brazil,2023,2-4 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",2.385171868674198,0.37528118836006247,6.308375772227117
+All Population,Brazil,2023,5-9 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",0.6584670843669244,0.2468969998031755,1.4501661738578084
+All Population,Brazil,2023,10-14 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",0.5375140470610189,0.23773046386425015,1.1091493453652654
+All Population,Brazil,2023,15-19 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",0.6429193411871905,0.30892072598641623,1.233568163983091
+All Population,Brazil,2023,20-24 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",0.7613279389417613,0.40772345755098083,1.3886610542800637
+All Population,Brazil,2023,25-29 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",0.9712286396818391,0.48473754752702486,1.9285551323021917
+All Population,Brazil,2023,30-34 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.1722395032334865,0.6220301535097925,2.3127148853286243
+All Population,Brazil,2023,35-39 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.42325087721348,0.8763973066817644,2.4143278544251925
+All Population,Brazil,2023,40-44 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",1.8557359251535863,1.3419958373308702,2.6902486401171615
+All Population,Brazil,2023,45-49 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",2.5948131990265146,2.1261112976381593,3.224542156945638
+All Population,Brazil,2023,50-54 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",3.5926701774316334,3.0383315519109915,4.374516314891638
+All Population,Brazil,2023,55-59 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",5.236062724065113,4.479430906336419,5.983885768446105
+All Population,Brazil,2023,60-64 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",7.625216379056919,6.626504945589239,8.60574365049489
+All Population,Brazil,2023,65-69 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",11.500063858986618,10.23955445012118,12.718895697913279
+All Population,Brazil,2023,70-74 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",16.54873080445311,14.677466152237482,18.45249165349955
+All Population,Brazil,2023,75-79 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",25.294458757603945,21.896031986297444,28.338586047664347
+All Population,Brazil,2023,80-84 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",33.2054277712052,28.223498717030402,37.58372977301255
+All Population,Brazil,2023,85-89 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",45.60556080954509,36.67696727246261,54.25997347786408
+All Population,Brazil,2023,90-94 years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",54.19296586197344,40.51190510044455,64.50615416071125
+All Population,Brazil,2023,95+ years,Both,Neglected tropical diseases and malaria,"Deaths per 100,000",54.83670845629113,35.27883400311359,68.14145528365006
+All Population,Brazil,2023,0-6 days,Both,Other infectious diseases,"Deaths per 100,000",38.85646081658009,34.71255367730595,42.73126643968134
+All Population,Brazil,2023,7-27 days,Both,Other infectious diseases,"Deaths per 100,000",24.660990415581423,21.614700133055553,27.89629550558415
+All Population,Brazil,2023,1-5 months,Both,Other infectious diseases,"Deaths per 100,000",13.130500812498386,11.565836132673278,14.598769176184017
+All Population,Brazil,2023,6-11 months,Both,Other infectious diseases,"Deaths per 100,000",4.887538533861725,4.043197387998307,5.925906855174145
+All Population,Brazil,2023,12-23 months,Both,Other infectious diseases,"Deaths per 100,000",2.7421112991008574,2.2653546736366375,3.2797054743940803
+All Population,Brazil,2023,2-4 years,Both,Other infectious diseases,"Deaths per 100,000",1.5924090095217334,1.3347045939287707,1.8732545493118251
+All Population,Brazil,2023,5-9 years,Both,Other infectious diseases,"Deaths per 100,000",0.9693680351803688,0.8366550452033081,1.116255070669125
+All Population,Brazil,2023,10-14 years,Both,Other infectious diseases,"Deaths per 100,000",0.831246749683699,0.7131727701966306,0.9421203897055375
+All Population,Brazil,2023,15-19 years,Both,Other infectious diseases,"Deaths per 100,000",0.8122428118082515,0.7294510374835517,0.9064214763250507
+All Population,Brazil,2023,20-24 years,Both,Other infectious diseases,"Deaths per 100,000",0.9139181037930685,0.8267284959612387,0.9922226756414214
+All Population,Brazil,2023,25-29 years,Both,Other infectious diseases,"Deaths per 100,000",0.9638262476675395,0.8855036720937386,1.0462300987934638
+All Population,Brazil,2023,30-34 years,Both,Other infectious diseases,"Deaths per 100,000",1.0707985297477536,0.9831210908054414,1.1559994639426
+All Population,Brazil,2023,35-39 years,Both,Other infectious diseases,"Deaths per 100,000",1.2155653672877218,1.1261072220060904,1.3049065049878437
+All Population,Brazil,2023,40-44 years,Both,Other infectious diseases,"Deaths per 100,000",1.5274290323828061,1.4261530836474028,1.6274882631761025
+All Population,Brazil,2023,45-49 years,Both,Other infectious diseases,"Deaths per 100,000",1.8720699586117304,1.7595674713330787,1.9880273915838704
+All Population,Brazil,2023,50-54 years,Both,Other infectious diseases,"Deaths per 100,000",2.1198650200803426,1.9696319466498742,2.2549870345672813
+All Population,Brazil,2023,55-59 years,Both,Other infectious diseases,"Deaths per 100,000",2.6866526559590995,2.5127032540558134,2.8530577316091277
+All Population,Brazil,2023,60-64 years,Both,Other infectious diseases,"Deaths per 100,000",3.3272210605972234,3.1151991184038526,3.534879851149973
+All Population,Brazil,2023,65-69 years,Both,Other infectious diseases,"Deaths per 100,000",3.9337674264145277,3.6415255007361016,4.213198960159468
+All Population,Brazil,2023,70-74 years,Both,Other infectious diseases,"Deaths per 100,000",5.0913509307110525,4.691591006258269,5.507203914953708
+All Population,Brazil,2023,75-79 years,Both,Other infectious diseases,"Deaths per 100,000",6.651067888101792,6.010432281372525,7.160698957110225
+All Population,Brazil,2023,80-84 years,Both,Other infectious diseases,"Deaths per 100,000",7.942651556091065,6.761530636712076,8.825269140902506
+All Population,Brazil,2023,85-89 years,Both,Other infectious diseases,"Deaths per 100,000",10.280427582041527,8.103983780298098,11.620598239574283
+All Population,Brazil,2023,90-94 years,Both,Other infectious diseases,"Deaths per 100,000",13.660328270480573,10.35979775134214,15.721023926312062
+All Population,Brazil,2023,95+ years,Both,Other infectious diseases,"Deaths per 100,000",18.59530993531662,12.753449972784583,22.601091499427582
+All Population,Brazil,2023,0-6 days,Both,Maternal and neonatal disorders,"Deaths per 100,000",22987.702202904547,21206.011111293505,24791.927755118486
+All Population,Brazil,2023,7-27 days,Both,Maternal and neonatal disorders,"Deaths per 100,000",2436.968984087079,2147.883187785021,2714.2468142913685
+All Population,Brazil,2023,1-5 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",184.82018819650844,160.5949470872776,209.41358322645038
+All Population,Brazil,2023,6-11 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",27.729742866827234,23.219593093242676,33.65371362932943
+All Population,Brazil,2023,12-23 months,Both,Maternal and neonatal disorders,"Deaths per 100,000",1.7445725746176788,1.4318061024234785,2.122892368311516
+All Population,Brazil,2023,2-4 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.5057612634721863,0.41935922750219295,0.6152915331977431
+All Population,Brazil,2023,5-9 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,10-14 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.06232722442108961,0.0503502999814472,0.07484513978985895
+All Population,Brazil,2023,15-19 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.9836267611089808,0.837320682550429,1.1302710889289094
+All Population,Brazil,2023,20-24 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",1.834463233105605,1.6192524734266005,2.0308614366627182
+All Population,Brazil,2023,25-29 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",2.4020123545581478,2.1329945421444636,2.700730679984356
+All Population,Brazil,2023,30-34 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",2.212490298070885,2.0056908093839443,2.469760633825284
+All Population,Brazil,2023,35-39 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",2.247403120223615,2.0457728035441387,2.4603072228324576
+All Population,Brazil,2023,40-44 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",1.0855049014409708,0.9883595319543843,1.2012508807678068
+All Population,Brazil,2023,45-49 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.36107989945773383,0.3307109617320523,0.3948086424705664
+All Population,Brazil,2023,50-54 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",0.04714032565076216,0.04266665306278059,0.05186208811755231
+All Population,Brazil,2023,55-59 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,60-64 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,65-69 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,70-74 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,75-79 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,80-84 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,85-89 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,90-94 years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,95+ years,Both,Maternal and neonatal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,0-6 days,Both,Nutritional deficiencies,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,7-27 days,Both,Nutritional deficiencies,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,1-5 months,Both,Nutritional deficiencies,"Deaths per 100,000",8.69680560875196,7.543410314100168,9.995446717737972
+All Population,Brazil,2023,6-11 months,Both,Nutritional deficiencies,"Deaths per 100,000",3.328329084847383,2.7170944204775798,3.9817518187743204
+All Population,Brazil,2023,12-23 months,Both,Nutritional deficiencies,"Deaths per 100,000",2.059830984388817,1.668454191296906,2.4766387231009594
+All Population,Brazil,2023,2-4 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.6607789981927406,0.5406515754900504,0.8046952951036106
+All Population,Brazil,2023,5-9 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.288625062138287,0.24416015350913334,0.34280359249047654
+All Population,Brazil,2023,10-14 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.25649998398634766,0.21260118291609995,0.30346945809212406
+All Population,Brazil,2023,15-19 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.2467007483164642,0.20873072066599382,0.28106074557423516
+All Population,Brazil,2023,20-24 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.24895296503030648,0.21681049983615744,0.2879208077624379
+All Population,Brazil,2023,25-29 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.288804928815565,0.2514363059091175,0.3281899261134475
+All Population,Brazil,2023,30-34 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.31196720327449884,0.2787429122286078,0.35545218133371054
+All Population,Brazil,2023,35-39 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.4060723009174663,0.354326280653919,0.4769665685374676
+All Population,Brazil,2023,40-44 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.5749419564704218,0.5057765716240316,0.6569145481985466
+All Population,Brazil,2023,45-49 years,Both,Nutritional deficiencies,"Deaths per 100,000",0.788570328193709,0.6905823407624307,0.9305001220941091
+All Population,Brazil,2023,50-54 years,Both,Nutritional deficiencies,"Deaths per 100,000",1.1056668645925416,0.9720606163148117,1.2820692119772517
+All Population,Brazil,2023,55-59 years,Both,Nutritional deficiencies,"Deaths per 100,000",1.4707638297414145,1.2952572042290098,1.743530242876465
+All Population,Brazil,2023,60-64 years,Both,Nutritional deficiencies,"Deaths per 100,000",2.2132988217433214,1.9126611994264788,2.657246515968239
+All Population,Brazil,2023,65-69 years,Both,Nutritional deficiencies,"Deaths per 100,000",3.607863557590117,3.0687629528923552,4.259699571937768
+All Population,Brazil,2023,70-74 years,Both,Nutritional deficiencies,"Deaths per 100,000",6.8407559985120185,5.898281096863384,7.937883564906226
+All Population,Brazil,2023,75-79 years,Both,Nutritional deficiencies,"Deaths per 100,000",13.070447275429606,11.151182229844776,15.182214805393318
+All Population,Brazil,2023,80-84 years,Both,Nutritional deficiencies,"Deaths per 100,000",26.206951959656617,21.28772923798304,30.246210716773884
+All Population,Brazil,2023,85-89 years,Both,Nutritional deficiencies,"Deaths per 100,000",54.28763259239201,41.6625776356092,62.35729454120899
+All Population,Brazil,2023,90-94 years,Both,Nutritional deficiencies,"Deaths per 100,000",104.25876933141095,77.64873072105722,121.13420822255283
+All Population,Brazil,2023,95+ years,Both,Nutritional deficiencies,"Deaths per 100,000",163.75766469748444,112.8838579895563,195.8101097492177
+All Population,Brazil,2023,0-6 days,Both,Neoplasms,"Deaths per 100,000",17.036801922521896,15.62819165017016,18.465698024453825
+All Population,Brazil,2023,7-27 days,Both,Neoplasms,"Deaths per 100,000",5.51607626730534,4.814751375974138,6.150014039687882
+All Population,Brazil,2023,1-5 months,Both,Neoplasms,"Deaths per 100,000",4.151724550846591,3.7067033251831516,4.735453320604367
+All Population,Brazil,2023,6-11 months,Both,Neoplasms,"Deaths per 100,000",2.6794269725076787,2.1703085103230904,3.1627495449516734
+All Population,Brazil,2023,12-23 months,Both,Neoplasms,"Deaths per 100,000",4.810163031475265,3.9790733733065995,5.6233771045426755
+All Population,Brazil,2023,2-4 years,Both,Neoplasms,"Deaths per 100,000",5.337398534735274,4.505557689798194,6.327971337964682
+All Population,Brazil,2023,5-9 years,Both,Neoplasms,"Deaths per 100,000",4.844933388834208,4.222093851080863,5.512904768642545
+All Population,Brazil,2023,10-14 years,Both,Neoplasms,"Deaths per 100,000",4.666511522696857,4.093384855155257,5.222728348800047
+All Population,Brazil,2023,15-19 years,Both,Neoplasms,"Deaths per 100,000",5.929434538476084,5.434619463487209,6.490772279781531
+All Population,Brazil,2023,20-24 years,Both,Neoplasms,"Deaths per 100,000",8.07171728353328,7.511446603899983,8.52172758365437
+All Population,Brazil,2023,25-29 years,Both,Neoplasms,"Deaths per 100,000",12.403273375022632,11.580674992146438,13.352456509916927
+All Population,Brazil,2023,30-34 years,Both,Neoplasms,"Deaths per 100,000",19.90356373696731,18.616191293433154,21.293668037843062
+All Population,Brazil,2023,35-39 years,Both,Neoplasms,"Deaths per 100,000",31.216760818913635,29.483676399674703,33.16123159571413
+All Population,Brazil,2023,40-44 years,Both,Neoplasms,"Deaths per 100,000",51.66874668845359,49.51506187248467,54.03933553147747
+All Population,Brazil,2023,45-49 years,Both,Neoplasms,"Deaths per 100,000",85.22477363134698,81.67995397846694,89.07360269195074
+All Population,Brazil,2023,50-54 years,Both,Neoplasms,"Deaths per 100,000",139.1458410432134,133.03517941233204,144.28384796243333
+All Population,Brazil,2023,55-59 years,Both,Neoplasms,"Deaths per 100,000",219.0493685085369,210.1235412349173,227.22913340047566
+All Population,Brazil,2023,60-64 years,Both,Neoplasms,"Deaths per 100,000",327.09621361299816,313.41615622712357,339.430736906153
+All Population,Brazil,2023,65-69 years,Both,Neoplasms,"Deaths per 100,000",474.2453341588673,449.2677480087979,493.23440477212984
+All Population,Brazil,2023,70-74 years,Both,Neoplasms,"Deaths per 100,000",635.5027378034202,597.1748256157954,665.6853217060673
+All Population,Brazil,2023,75-79 years,Both,Neoplasms,"Deaths per 100,000",842.3945562454614,770.9636701721512,885.2792700820916
+All Population,Brazil,2023,80-84 years,Both,Neoplasms,"Deaths per 100,000",1095.6013551336937,947.8193721799436,1176.9000040272656
+All Population,Brazil,2023,85-89 years,Both,Neoplasms,"Deaths per 100,000",1406.2780033901538,1143.926595090265,1547.0019966912325
+All Population,Brazil,2023,90-94 years,Both,Neoplasms,"Deaths per 100,000",1700.193936270443,1335.414317319513,1910.6899067926488
+All Population,Brazil,2023,95+ years,Both,Neoplasms,"Deaths per 100,000",1578.0376438885194,1084.5541579445173,1888.9362939473158
+All Population,Brazil,2023,0-6 days,Both,Cardiovascular diseases,"Deaths per 100,000",10.939011378587564,9.71966309688753,12.251496962054526
+All Population,Brazil,2023,7-27 days,Both,Cardiovascular diseases,"Deaths per 100,000",3.1747110602716675,2.746923732890219,3.632137921737554
+All Population,Brazil,2023,1-5 months,Both,Cardiovascular diseases,"Deaths per 100,000",9.54476809960443,8.441196920173747,10.739796828224515
+All Population,Brazil,2023,6-11 months,Both,Cardiovascular diseases,"Deaths per 100,000",3.02402704236438,2.45428014773387,3.705496853916471
+All Population,Brazil,2023,12-23 months,Both,Cardiovascular diseases,"Deaths per 100,000",2.224778347522496,1.8530855493521858,2.735285209227422
+All Population,Brazil,2023,2-4 years,Both,Cardiovascular diseases,"Deaths per 100,000",1.0634577967733827,0.8738909392782034,1.2737983663806582
+All Population,Brazil,2023,5-9 years,Both,Cardiovascular diseases,"Deaths per 100,000",0.9050960580523115,0.7708922370505957,1.0552199497975427
+All Population,Brazil,2023,10-14 years,Both,Cardiovascular diseases,"Deaths per 100,000",1.3082833751442047,1.1475898023066575,1.516825014520414
+All Population,Brazil,2023,15-19 years,Both,Cardiovascular diseases,"Deaths per 100,000",3.5529316037147276,3.228898961527275,3.904125738059542
+All Population,Brazil,2023,20-24 years,Both,Cardiovascular diseases,"Deaths per 100,000",5.945390908221021,5.428982754647505,6.394787199312367
+All Population,Brazil,2023,25-29 years,Both,Cardiovascular diseases,"Deaths per 100,000",10.002966904271368,9.228706938301283,11.017525747260413
+All Population,Brazil,2023,30-34 years,Both,Cardiovascular diseases,"Deaths per 100,000",16.532189966352515,15.471598895576939,17.55732158274688
+All Population,Brazil,2023,35-39 years,Both,Cardiovascular diseases,"Deaths per 100,000",27.478060947218136,25.953157941953016,29.444527538195985
+All Population,Brazil,2023,40-44 years,Both,Cardiovascular diseases,"Deaths per 100,000",48.90014724554742,46.76571133495072,51.21174417404481
+All Population,Brazil,2023,45-49 years,Both,Cardiovascular diseases,"Deaths per 100,000",83.79777697927773,80.25404945665429,87.27034384167756
+All Population,Brazil,2023,50-54 years,Both,Cardiovascular diseases,"Deaths per 100,000",136.1559184108678,129.96452854806478,142.47487484412503
+All Population,Brazil,2023,55-59 years,Both,Cardiovascular diseases,"Deaths per 100,000",209.97078898922788,200.62890165817288,219.22525019046978
+All Population,Brazil,2023,60-64 years,Both,Cardiovascular diseases,"Deaths per 100,000",325.4347943226914,309.6751173069785,339.4059956307647
+All Population,Brazil,2023,65-69 years,Both,Cardiovascular diseases,"Deaths per 100,000",510.7983831150454,484.94444734725795,534.2354326433189
+All Population,Brazil,2023,70-74 years,Both,Cardiovascular diseases,"Deaths per 100,000",773.7992951173852,721.4401765296723,811.2569372437633
+All Population,Brazil,2023,75-79 years,Both,Cardiovascular diseases,"Deaths per 100,000",1205.292310524644,1100.6610932843912,1274.0296199971685
+All Population,Brazil,2023,80-84 years,Both,Cardiovascular diseases,"Deaths per 100,000",1885.0440977327191,1623.911995549801,2029.3861352025901
+All Population,Brazil,2023,85-89 years,Both,Cardiovascular diseases,"Deaths per 100,000",2975.4049285629344,2384.7664185513654,3289.8240524691155
+All Population,Brazil,2023,90-94 years,Both,Cardiovascular diseases,"Deaths per 100,000",4604.817401008929,3510.702107665077,5260.178270829394
+All Population,Brazil,2023,95+ years,Both,Cardiovascular diseases,"Deaths per 100,000",5659.631716802466,3927.4013975976663,6877.695779222742
+All Population,Brazil,2023,0-6 days,Both,Chronic respiratory diseases,"Deaths per 100,000",1.0747549427029421,0.9418156710852488,1.1793912637127963
+All Population,Brazil,2023,7-27 days,Both,Chronic respiratory diseases,"Deaths per 100,000",0.00007019138766017973,0.000054678422419202794,0.00009404867845320887
+All Population,Brazil,2023,1-5 months,Both,Chronic respiratory diseases,"Deaths per 100,000",1.573838176209507,1.252731832116595,1.8850910494893085
+All Population,Brazil,2023,6-11 months,Both,Chronic respiratory diseases,"Deaths per 100,000",0.4943184916898033,0.40844235604123064,0.6038352659497174
+All Population,Brazil,2023,12-23 months,Both,Chronic respiratory diseases,"Deaths per 100,000",1.3289905100394566,1.0729069399680002,1.6054897558377061
+All Population,Brazil,2023,2-4 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.6994639943648358,0.58417557838684,0.8521951852370947
+All Population,Brazil,2023,5-9 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.36890434261546207,0.313996997344414,0.42710697360044636
+All Population,Brazil,2023,10-14 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.38230680119757593,0.3293897863678533,0.4460389737979995
+All Population,Brazil,2023,15-19 years,Both,Chronic respiratory diseases,"Deaths per 100,000",0.7297502799732363,0.6390054939116739,0.8196185691178011
+All Population,Brazil,2023,20-24 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1.0429149323690445,0.9484873109413258,1.1411124506285009
+All Population,Brazil,2023,25-29 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1.3872672068665748,1.2462206296498763,1.5091447202918498
+All Population,Brazil,2023,30-34 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1.781735255660168,1.6052977106603628,1.9740604996618842
+All Population,Brazil,2023,35-39 years,Both,Chronic respiratory diseases,"Deaths per 100,000",2.569506995459172,2.3428830546605846,2.825155741481126
+All Population,Brazil,2023,40-44 years,Both,Chronic respiratory diseases,"Deaths per 100,000",4.264348354057881,3.932004641359227,4.6152925656727435
+All Population,Brazil,2023,45-49 years,Both,Chronic respiratory diseases,"Deaths per 100,000",7.114095990643895,6.6720980956399005,7.61371271937579
+All Population,Brazil,2023,50-54 years,Both,Chronic respiratory diseases,"Deaths per 100,000",13.731645790002403,12.960474176461961,14.580848334929613
+All Population,Brazil,2023,55-59 years,Both,Chronic respiratory diseases,"Deaths per 100,000",26.107978158591973,24.576126677403238,27.665809227084086
+All Population,Brazil,2023,60-64 years,Both,Chronic respiratory diseases,"Deaths per 100,000",51.64514607356262,48.710717302645335,54.36584280952435
+All Population,Brazil,2023,65-69 years,Both,Chronic respiratory diseases,"Deaths per 100,000",94.19534714176577,88.61044584400486,99.95461980194754
+All Population,Brazil,2023,70-74 years,Both,Chronic respiratory diseases,"Deaths per 100,000",163.8936473877233,151.69593999645954,174.63228963866902
+All Population,Brazil,2023,75-79 years,Both,Chronic respiratory diseases,"Deaths per 100,000",273.64275003274696,247.14592887140168,290.1090838366464
+All Population,Brazil,2023,80-84 years,Both,Chronic respiratory diseases,"Deaths per 100,000",457.2298107895379,394.2338896644605,495.3652043146268
+All Population,Brazil,2023,85-89 years,Both,Chronic respiratory diseases,"Deaths per 100,000",730.7518838529683,589.7356500138803,816.2011200747138
+All Population,Brazil,2023,90-94 years,Both,Chronic respiratory diseases,"Deaths per 100,000",1022.4628195617493,770.964365424434,1174.4322857952525
+All Population,Brazil,2023,95+ years,Both,Chronic respiratory diseases,"Deaths per 100,000",1244.017196592499,847.7820557503277,1496.5379235396545
+All Population,Brazil,2023,0-6 days,Both,Digestive diseases,"Deaths per 100,000",11.301293052794898,9.94396315128608,12.651983523853254
+All Population,Brazil,2023,7-27 days,Both,Digestive diseases,"Deaths per 100,000",4.02226722184135,3.3806796925024414,4.681831447540982
+All Population,Brazil,2023,1-5 months,Both,Digestive diseases,"Deaths per 100,000",9.462199421777926,8.154948391353914,10.829789890228621
+All Population,Brazil,2023,6-11 months,Both,Digestive diseases,"Deaths per 100,000",2.179454465712334,1.7960784240774796,2.672200802969876
+All Population,Brazil,2023,12-23 months,Both,Digestive diseases,"Deaths per 100,000",2.310482001174501,1.8899837018532624,2.778811027293308
+All Population,Brazil,2023,2-4 years,Both,Digestive diseases,"Deaths per 100,000",1.159278521753266,0.9355445838179781,1.3907392048892329
+All Population,Brazil,2023,5-9 years,Both,Digestive diseases,"Deaths per 100,000",0.7894338849999464,0.6640067644384298,0.9248853277202894
+All Population,Brazil,2023,10-14 years,Both,Digestive diseases,"Deaths per 100,000",0.9340165738238082,0.8113549314781052,1.081906152522833
+All Population,Brazil,2023,15-19 years,Both,Digestive diseases,"Deaths per 100,000",1.7819841305235329,1.6122867213619656,1.959150080026526
+All Population,Brazil,2023,20-24 years,Both,Digestive diseases,"Deaths per 100,000",2.7767963981640413,2.572848621322351,2.976170460927614
+All Population,Brazil,2023,25-29 years,Both,Digestive diseases,"Deaths per 100,000",4.695042815297041,4.339684880597335,5.054670277082624
+All Population,Brazil,2023,30-34 years,Both,Digestive diseases,"Deaths per 100,000",8.002813327415383,7.399290343523702,8.641974270069671
+All Population,Brazil,2023,35-39 years,Both,Digestive diseases,"Deaths per 100,000",13.080123946943457,12.032633420963158,14.21070237450241
+All Population,Brazil,2023,40-44 years,Both,Digestive diseases,"Deaths per 100,000",20.98281144247634,19.63629520606436,22.458525690682364
+All Population,Brazil,2023,45-49 years,Both,Digestive diseases,"Deaths per 100,000",32.25684334369269,30.35302418948562,33.958847301552986
+All Population,Brazil,2023,50-54 years,Both,Digestive diseases,"Deaths per 100,000",45.59351109853009,42.96640496521018,48.093941413402625
+All Population,Brazil,2023,55-59 years,Both,Digestive diseases,"Deaths per 100,000",60.77995001124641,57.68462863505394,63.619812118561356
+All Population,Brazil,2023,60-64 years,Both,Digestive diseases,"Deaths per 100,000",79.07937050985413,74.27267531885384,83.4630985096832
+All Population,Brazil,2023,65-69 years,Both,Digestive diseases,"Deaths per 100,000",108.22744506749214,102.22149232547214,113.62838724301233
+All Population,Brazil,2023,70-74 years,Both,Digestive diseases,"Deaths per 100,000",143.06949706183397,132.022632747137,151.3531250337303
+All Population,Brazil,2023,75-79 years,Both,Digestive diseases,"Deaths per 100,000",202.76185312507704,183.62463006515483,213.9032102495323
+All Population,Brazil,2023,80-84 years,Both,Digestive diseases,"Deaths per 100,000",289.0595380336849,245.85781347154986,313.9402788433701
+All Population,Brazil,2023,85-89 years,Both,Digestive diseases,"Deaths per 100,000",437.21369435289904,347.90123032977357,488.2565095300437
+All Population,Brazil,2023,90-94 years,Both,Digestive diseases,"Deaths per 100,000",615.1943699616975,464.61913883015507,699.7545223000945
+All Population,Brazil,2023,95+ years,Both,Digestive diseases,"Deaths per 100,000",669.652761230022,462.4440451979334,816.3037537497856
+All Population,Brazil,2023,0-6 days,Both,Neurological disorders,"Deaths per 100,000",6.598210338551697,5.988505867532474,7.279480320982471
+All Population,Brazil,2023,7-27 days,Both,Neurological disorders,"Deaths per 100,000",1.874092406017483,1.6210326289992996,2.119910989425636
+All Population,Brazil,2023,1-5 months,Both,Neurological disorders,"Deaths per 100,000",4.0323167842559915,3.5130366396470065,4.561948688267748
+All Population,Brazil,2023,6-11 months,Both,Neurological disorders,"Deaths per 100,000",2.800297539029114,2.2595295222899487,3.392933161551243
+All Population,Brazil,2023,12-23 months,Both,Neurological disorders,"Deaths per 100,000",2.5147023688033245,2.0620258180122493,3.030788875131836
+All Population,Brazil,2023,2-4 years,Both,Neurological disorders,"Deaths per 100,000",1.5637729520954107,1.3112169762304022,1.8720992661155917
+All Population,Brazil,2023,5-9 years,Both,Neurological disorders,"Deaths per 100,000",1.0324029791677347,0.8771485403573728,1.2082986764695793
+All Population,Brazil,2023,10-14 years,Both,Neurological disorders,"Deaths per 100,000",1.20219009478815,1.007803805093289,1.3680120873393495
+All Population,Brazil,2023,15-19 years,Both,Neurological disorders,"Deaths per 100,000",1.822594855362963,1.6538404499454968,2.0274449160239523
+All Population,Brazil,2023,20-24 years,Both,Neurological disorders,"Deaths per 100,000",2.1060885724158513,1.9473603338738659,2.268114294805996
+All Population,Brazil,2023,25-29 years,Both,Neurological disorders,"Deaths per 100,000",2.2173083991658653,2.039668598801985,2.404845560333036
+All Population,Brazil,2023,30-34 years,Both,Neurological disorders,"Deaths per 100,000",2.3540733420865245,2.1856301833091694,2.5219720001987254
+All Population,Brazil,2023,35-39 years,Both,Neurological disorders,"Deaths per 100,000",3.063998363574138,2.8399777397315003,3.248345164846336
+All Population,Brazil,2023,40-44 years,Both,Neurological disorders,"Deaths per 100,000",3.9504588296942758,3.7221152139582014,4.182856903896031
+All Population,Brazil,2023,45-49 years,Both,Neurological disorders,"Deaths per 100,000",5.752529053606284,5.3102843531287585,6.675800500654298
+All Population,Brazil,2023,50-54 years,Both,Neurological disorders,"Deaths per 100,000",9.034611083116683,7.240181477746011,13.42585244635662
+All Population,Brazil,2023,55-59 years,Both,Neurological disorders,"Deaths per 100,000",17.089703848743213,11.0063522939449,31.94409080185477
+All Population,Brazil,2023,60-64 years,Both,Neurological disorders,"Deaths per 100,000",34.33084573587161,17.705946608155195,73.76753367357253
+All Population,Brazil,2023,65-69 years,Both,Neurological disorders,"Deaths per 100,000",69.39991113682171,31.949243116902284,163.77375275523968
+All Population,Brazil,2023,70-74 years,Both,Neurological disorders,"Deaths per 100,000",133.03012962168694,60.80461859857766,299.60434964261674
+All Population,Brazil,2023,75-79 years,Both,Neurological disorders,"Deaths per 100,000",276.2882657261892,127.71324265110555,576.8874989173418
+All Population,Brazil,2023,80-84 years,Both,Neurological disorders,"Deaths per 100,000",669.5125375306181,285.1697679322051,1414.34252993755
+All Population,Brazil,2023,85-89 years,Both,Neurological disorders,"Deaths per 100,000",1349.1678646852713,513.3873658044378,3048.1080668824065
+All Population,Brazil,2023,90-94 years,Both,Neurological disorders,"Deaths per 100,000",2485.9971510489113,852.28518574493,5631.9659720864465
+All Population,Brazil,2023,95+ years,Both,Neurological disorders,"Deaths per 100,000",4285.4212874672985,1371.5644534009964,9305.03263211926
+All Population,Brazil,2023,0-6 days,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,7-27 days,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,1-5 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,6-11 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,12-23 months,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,2-4 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,5-9 years,Both,Mental disorders,"Deaths per 100,000",0.0000014062333961247622,3.066169334247948e-7,0.000015183991009666993
+All Population,Brazil,2023,10-14 years,Both,Mental disorders,"Deaths per 100,000",0.0004239945452856934,0.00017452573145647053,0.0010844364610201275
+All Population,Brazil,2023,15-19 years,Both,Mental disorders,"Deaths per 100,000",0.0017215841694616975,0.0009402839503077863,0.0038978904178373296
+All Population,Brazil,2023,20-24 years,Both,Mental disorders,"Deaths per 100,000",0.0029287868089338423,0.0016275441906162303,0.007082519046895041
+All Population,Brazil,2023,25-29 years,Both,Mental disorders,"Deaths per 100,000",0.002247517864118483,0.0012073423103489526,0.006421127586770223
+All Population,Brazil,2023,30-34 years,Both,Mental disorders,"Deaths per 100,000",0.0033858637373999304,0.001605576460358769,0.008590922619030234
+All Population,Brazil,2023,35-39 years,Both,Mental disorders,"Deaths per 100,000",0.0035533792872866577,0.0021934330216937304,0.008290869963387286
+All Population,Brazil,2023,40-44 years,Both,Mental disorders,"Deaths per 100,000",0.003556112994450738,0.0021923480352469705,0.008823247089101205
+All Population,Brazil,2023,45-49 years,Both,Mental disorders,"Deaths per 100,000",0.004408389828513249,0.0022821044030420005,0.009755691108717511
+All Population,Brazil,2023,50-54 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,55-59 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,60-64 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,65-69 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,70-74 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,75-79 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,80-84 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,85-89 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,90-94 years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,95+ years,Both,Mental disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,0-6 days,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,7-27 days,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,1-5 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,6-11 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,12-23 months,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,2-4 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,5-9 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,10-14 years,Both,Substance use disorders,"Deaths per 100,000",0,0,0
+All Population,Brazil,2023,15-19 years,Both,Substance use disorders,"Deaths per 100,000",0.7623786981072687,0.6275787799184679,0.9121615421918856
+All Population,Brazil,2023,20-24 years,Both,Substance use disorders,"Deaths per 100,000",1.425057625340894,1.2079821500848216,1.7032170336277248
+All Population,Brazil,2023,25-29 years,Both,Substance use disorders,"Deaths per 100,000",2.264547525066465,1.9933189590787124,2.6075686764229653
+All Population,Brazil,2023,30-34 years,Both,Substance use disorders,"Deaths per 100,000",3.3833539961565586,3.0627915290664314,3.7126605382545095
+All Population,Brazil,2023,35-39 years,Both,Substance use disorders,"Deaths per 100,000",4.970364277184465,4.559930279241321,5.450423653498803
+All Population,Brazil,2023,40-44 years,Both,Substance use disorders,"Deaths per 100,000",7.152055696721832,6.529170596907928,7.804640738842907
+All Population,Brazil,2023,45-49 years,Both,Substance use disorders,"Deaths per 100,000",9.70789417294925,8.899990656114825,10.600246699439676
+All Population,Brazil,2023,50-54 years,Both,Substance use disorders,"Deaths per 100,000",11.261963385389897,10.555175684003352,12.062091195406335
+All Population,Brazil,2023,55-59 years,Both,Substance use disorders,"Deaths per 100,000",12.534428699859218,11.487705311258383,13.651863484853108
+All Population,Brazil,2023,60-64 years,Both,Substance use disorders,"Deaths per 100,000",11.527062126582651,10.7665872129226,12.287280619949149
+All Population,Brazil,2023,65-69 years,Both,Substance use disorders,"Deaths per 100,000",11.43608174782192,10.581616280152417,12.359700447580579
+All Population,Brazil,2023,70-74 years,Both,Substance use disorders,"Deaths per 100,000",9.187739716017179,8.50829604449361,10.03263322704322
+All Population,Brazil,2023,75-79 years,Both,Substance use disorders,"Deaths per 100,000",8.172225742876867,7.464594919001613,8.793602244849843
+All Population,Brazil,2023,80-84 years,Both,Substance use disorders,"Deaths per 100,000",6.827342495389409,5.944602603250644,7.452366662109745
+All Population,Brazil,2023,85-89 years,Both,Substance use disorders,"Deaths per 100,000",7.112964543825852,5.879233447600825,8.153115933129921
+All Population,Brazil,2023,90-94 years,Both,Substance use disorders,"Deaths per 100,000",7.406361503761209,5.789326168437192,8.562590375677923
+All Population,Brazil,2023,95+ years,Both,Substance use disorders,"Deaths per 100,000",9.683314456503274,6.6039380926658,11.810734180985872
+All Population,Brazil,2023,0-6 days,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.6555954376722887,0.5871513225929562,0.7329375614256866
+All Population,Brazil,2023,7-27 days,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.23779868149331218,0.20623961070147565,0.2756340486577736
+All Population,Brazil,2023,1-5 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",1.6587479008668957,1.4559186685764447,1.8831624079016762
+All Population,Brazil,2023,6-11 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.6103546730937599,0.5116915535173181,0.7252788965415542
+All Population,Brazil,2023,12-23 months,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.71704396507955,0.5915554141313945,0.8454911325783833
+All Population,Brazil,2023,2-4 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.5321085214569999,0.43500814358096335,0.6380106872774101
+All Population,Brazil,2023,5-9 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.4106217228504197,0.3481466924903578,0.47109471442081896
+All Population,Brazil,2023,10-14 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",0.5179260881812114,0.4390250823028412,0.610445135722337
+All Population,Brazil,2023,15-19 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",1.3171865645479237,1.1851050627177746,1.4698038042350658
+All Population,Brazil,2023,20-24 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",2.15267788308865,1.9889794341651124,2.354623238323074
+All Population,Brazil,2023,25-29 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",3.3234358551321472,3.0951371354277892,3.621435513573965
+All Population,Brazil,2023,30-34 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",4.816733543553714,4.502451582470386,5.176151860933077
+All Population,Brazil,2023,35-39 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",7.3830377252369574,6.930283052969421,7.913158969803077
+All Population,Brazil,2023,40-44 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",12.592134150502492,11.927820527220884,13.396705955303089
+All Population,Brazil,2023,45-49 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",21.986275328779538,20.647812802741274,23.376559843290575
+All Population,Brazil,2023,50-54 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",38.30163616800861,36.41475818829111,40.338797327504246
+All Population,Brazil,2023,55-59 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",62.39763933110319,58.791179632373144,65.8965507702894
+All Population,Brazil,2023,60-64 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",101.69602008945294,94.51256089861599,107.58362779698697
+All Population,Brazil,2023,65-69 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",166.35626980994581,153.0637077091249,175.96491491876483
+All Population,Brazil,2023,70-74 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",253.74621298197667,231.9013846955829,269.94052287303145
+All Population,Brazil,2023,75-79 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",383.59476469026424,344.69049471735354,407.7429618784464
+All Population,Brazil,2023,80-84 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",577.6631473963022,491.457975908427,628.2009040348906
+All Population,Brazil,2023,85-89 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",870.2816631920743,694.7382842617247,969.7912736465552
+All Population,Brazil,2023,90-94 years,Both,Diabetes and kidney diseases,"Deaths per 100,000",1294.586089882569,965.6226378521385,1475.4781487170112
+All Population,Brazil,2023,95+ years,Both,Diabetes and kidney diseases,"Deaths per 100,000",1385.4310424634493,962.2300576196933,1656.7183384639532
+All Population,Brazil,2023,0-6 days,Both,Skin and subcutaneous diseases,"Deaths per 100,000",3.063632699010388,2.712865493735677,3.418628448587224
+All Population,Brazil,2023,7-27 days,Both,Skin and subcutaneous diseases,"Deaths per 100,000",4.656553965729205,4.028291611879502,5.337672137202625
+All Population,Brazil,2023,1-5 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",2.6689658714008324,2.2980345527215773,3.10088670695413
+All Population,Brazil,2023,6-11 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.7610512984264615,0.63756900138262,0.9148574442559837
+All Population,Brazil,2023,12-23 months,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.5296761237536826,0.42515008280372973,0.643434668799876
+All Population,Brazil,2023,2-4 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.23717433672343355,0.193253867444567,0.28847011276111245
+All Population,Brazil,2023,5-9 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.1371112990797541,0.11323149340615299,0.16336215776715451
+All Population,Brazil,2023,10-14 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.17782204081839686,0.14787380236436695,0.20836120642926423
+All Population,Brazil,2023,15-19 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.2338101564855999,0.20272230496778804,0.2712310642881173
+All Population,Brazil,2023,20-24 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.34397515453695615,0.3030179466106297,0.392409215700781
+All Population,Brazil,2023,25-29 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.4746318879849273,0.4278614350948007,0.5317362401782891
+All Population,Brazil,2023,30-34 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",0.6937139059287198,0.6209251657086591,0.7716273176892662
+All Population,Brazil,2023,35-39 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",1.0131880975025824,0.9219300958418041,1.137070260399976
+All Population,Brazil,2023,40-44 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",1.5808239586403772,1.4730490119086894,1.7004919612316247
+All Population,Brazil,2023,45-49 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",2.5238861882677495,2.370598210044628,2.6995165642734094
+All Population,Brazil,2023,50-54 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",4.167805179914834,3.913792073128031,4.399669074523706
+All Population,Brazil,2023,55-59 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",6.568460595316704,6.15768555079459,6.942789595430774
+All Population,Brazil,2023,60-64 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",9.670382423755392,9.078202694454026,10.15700224215703
+All Population,Brazil,2023,65-69 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",15.574603602916365,14.639324744783973,16.379401843484466
+All Population,Brazil,2023,70-74 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",25.180160141468352,23.491182488718483,26.78428330203419
+All Population,Brazil,2023,75-79 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",42.455246379430505,38.79031448900598,45.254201961980435
+All Population,Brazil,2023,80-84 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",69.12604555317468,59.378811586343296,75.36163986644867
+All Population,Brazil,2023,85-89 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",120.74673637323052,97.21131493260378,133.54456192121503
+All Population,Brazil,2023,90-94 years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",198.6458435962706,152.63006674808764,224.756064988073
+All Population,Brazil,2023,95+ years,Both,Skin and subcutaneous diseases,"Deaths per 100,000",263.9394034000413,179.76330961936026,318.47734057388465
+All Population,Brazil,2023,0-6 days,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,7-27 days,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,1-5 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,6-11 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,12-23 months,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,2-4 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,5-9 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,10-14 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,15-19 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,20-24 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,25-29 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,30-34 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,35-39 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,40-44 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,45-49 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,50-54 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,55-59 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,60-64 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,65-69 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,70-74 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,75-79 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,80-84 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,85-89 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,90-94 years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,95+ years,Both,Sense organ diseases,"Deaths per 100,000",,,
+All Population,Brazil,2023,0-6 days,Both,Musculoskeletal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,7-27 days,Both,Musculoskeletal disorders,"Deaths per 100,000",,,
+All Population,Brazil,2023,1-5 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.25805925991250755,0.22640625552514637,0.2937819665966592
+All Population,Brazil,2023,6-11 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.07440199269735033,0.061406275650263936,0.08873033883512663
+All Population,Brazil,2023,12-23 months,Both,Musculoskeletal disorders,"Deaths per 100,000",0.045081416127020144,0.0366927117369996,0.05317516643956484
+All Population,Brazil,2023,2-4 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.07045014688869024,0.05793161527476307,0.0861247549460503
+All Population,Brazil,2023,5-9 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.14422464863260911,0.11950331036742962,0.17001430264210876
+All Population,Brazil,2023,10-14 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.35131854214455943,0.2939523975219761,0.4070574168833973
+All Population,Brazil,2023,15-19 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.5771541876993621,0.50267449103522,0.6539887533995811
+All Population,Brazil,2023,20-24 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.7814929541371769,0.7040333729679156,0.8701878723456179
+All Population,Brazil,2023,25-29 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.9424976778071209,0.8348433569303924,1.0450852365032126
+All Population,Brazil,2023,30-34 years,Both,Musculoskeletal disorders,"Deaths per 100,000",0.9166673453091757,0.817743584535988,1.0149719838384192
+All Population,Brazil,2023,35-39 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.0852263394852182,0.9916885632260742,1.1685553955606451
+All Population,Brazil,2023,40-44 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.225618915799147,1.1405499808741648,1.331157366634652
+All Population,Brazil,2023,45-49 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.4942372211456436,1.3955170859104873,1.605817379485079
+All Population,Brazil,2023,50-54 years,Both,Musculoskeletal disorders,"Deaths per 100,000",1.6188619181104742,1.5210176089675485,1.732975307417904
+All Population,Brazil,2023,55-59 years,Both,Musculoskeletal disorders,"Deaths per 100,000",2.068817717155317,1.939222149078059,2.198494819802991
+All Population,Brazil,2023,60-64 years,Both,Musculoskeletal disorders,"Deaths per 100,000",2.620609191542226,2.456635743513158,2.75347540631519
+All Population,Brazil,2023,65-69 years,Both,Musculoskeletal disorders,"Deaths per 100,000",3.7542792338923814,3.483839014909066,3.995159871973735
+All Population,Brazil,2023,70-74 years,Both,Musculoskeletal disorders,"Deaths per 100,000",5.019887473398964,4.601533393522572,5.352099277918994
+All Population,Brazil,2023,75-79 years,Both,Musculoskeletal disorders,"Deaths per 100,000",6.911317006090221,6.190631896172832,7.391412205744847
+All Population,Brazil,2023,80-84 years,Both,Musculoskeletal disorders,"Deaths per 100,000",9.822346111222652,8.326079425415276,10.890621751326664
+All Population,Brazil,2023,85-89 years,Both,Musculoskeletal disorders,"Deaths per 100,000",14.429829414920896,10.978364498043165,16.544903681090474
+All Population,Brazil,2023,90-94 years,Both,Musculoskeletal disorders,"Deaths per 100,000",23.14628468846098,17.01609510081632,26.820033182470056
+All Population,Brazil,2023,95+ years,Both,Musculoskeletal disorders,"Deaths per 100,000",26.940728419628513,17.988355578207642,32.683293837150444
+All Population,Brazil,2023,0-6 days,Both,Other non-communicable diseases,"Deaths per 100,000",5775.951287120257,5237.060182666767,6609.83298197686
+All Population,Brazil,2023,7-27 days,Both,Other non-communicable diseases,"Deaths per 100,000",867.2520271332048,766.657477521759,983.8888847100998
+All Population,Brazil,2023,1-5 months,Both,Other non-communicable diseases,"Deaths per 100,000",250.89464738025424,215.5175805586306,297.5150599947006
+All Population,Brazil,2023,6-11 months,Both,Other non-communicable diseases,"Deaths per 100,000",66.5814712915495,55.859778537061,81.60959988621758
+All Population,Brazil,2023,12-23 months,Both,Other non-communicable diseases,"Deaths per 100,000",22.671864010014406,18.317197005161365,27.420658482316185
+All Population,Brazil,2023,2-4 years,Both,Other non-communicable diseases,"Deaths per 100,000",7.791755331715768,6.376544080583054,9.266164723048377
+All Population,Brazil,2023,5-9 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.5601940705831496,3.0426632099648785,4.047792267601533
+All Population,Brazil,2023,10-14 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.2110905940090477,2.807961799212525,3.715538638211022
+All Population,Brazil,2023,15-19 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.099116224657772,2.724497631307477,3.4587871245489117
+All Population,Brazil,2023,20-24 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.587944722508849,3.218271539081633,3.9552109615502204
+All Population,Brazil,2023,25-29 years,Both,Other non-communicable diseases,"Deaths per 100,000",3.833178102751312,3.476804311133149,4.1905529754401245
+All Population,Brazil,2023,30-34 years,Both,Other non-communicable diseases,"Deaths per 100,000",4.335756732110936,3.994575038035687,4.698448771892843
+All Population,Brazil,2023,35-39 years,Both,Other non-communicable diseases,"Deaths per 100,000",5.422740873229008,5.024740821424397,5.904340013600863
+All Population,Brazil,2023,40-44 years,Both,Other non-communicable diseases,"Deaths per 100,000",7.261360928906757,6.923293178286701,7.6826229169826465
+All Population,Brazil,2023,45-49 years,Both,Other non-communicable diseases,"Deaths per 100,000",10.26713734826678,9.733141246769707,10.866656951731864
+All Population,Brazil,2023,50-54 years,Both,Other non-communicable diseases,"Deaths per 100,000",14.183469494240294,13.479134855257216,14.987880054510391
+All Population,Brazil,2023,55-59 years,Both,Other non-communicable diseases,"Deaths per 100,000",20.339831852479087,19.284840547198144,21.40252341923009
+All Population,Brazil,2023,60-64 years,Both,Other non-communicable diseases,"Deaths per 100,000",30.637914918496875,29.229901738559345,32.25376422035254
+All Population,Brazil,2023,65-69 years,Both,Other non-communicable diseases,"Deaths per 100,000",48.928594536509955,46.04255012408787,51.48428251928344
+All Population,Brazil,2023,70-74 years,Both,Other non-communicable diseases,"Deaths per 100,000",82.78718804015797,76.67295171133784,87.17161273508496
+All Population,Brazil,2023,75-79 years,Both,Other non-communicable diseases,"Deaths per 100,000",155.17573162533515,139.978047056504,166.5667493853316
+All Population,Brazil,2023,80-84 years,Both,Other non-communicable diseases,"Deaths per 100,000",282.71597306106196,243.33153702040426,309.5351361622156
+All Population,Brazil,2023,85-89 years,Both,Other non-communicable diseases,"Deaths per 100,000",532.5040645951807,431.7204269052166,602.6626991347878
+All Population,Brazil,2023,90-94 years,Both,Other non-communicable diseases,"Deaths per 100,000",926.3356010698161,705.0826716543403,1057.7988668010048
+All Population,Brazil,2023,95+ years,Both,Other non-communicable diseases,"Deaths per 100,000",1220.9594015828507,823.0189512101113,1468.3192560742937
+All Population,Brazil,2023,0-6 days,Both,Transport injuries,"Deaths per 100,000",7.433151043776962,6.569762221331843,8.380320232993157
+All Population,Brazil,2023,7-27 days,Both,Transport injuries,"Deaths per 100,000",2.6639738782525533,2.2520998531370338,3.1023067139259908
+All Population,Brazil,2023,1-5 months,Both,Transport injuries,"Deaths per 100,000",3.4727875753255026,3.0293182664938976,3.996156365492931
+All Population,Brazil,2023,6-11 months,Both,Transport injuries,"Deaths per 100,000",1.9005016446062724,1.5291948484263755,2.269698278144062
+All Population,Brazil,2023,12-23 months,Both,Transport injuries,"Deaths per 100,000",2.7982655810207424,2.337722523806825,3.3511648972299555
+All Population,Brazil,2023,2-4 years,Both,Transport injuries,"Deaths per 100,000",2.378763400641844,1.999450981503669,2.829619968749429
+All Population,Brazil,2023,5-9 years,Both,Transport injuries,"Deaths per 100,000",2.282929915905716,1.895278740447572,2.670716458394871
+All Population,Brazil,2023,10-14 years,Both,Transport injuries,"Deaths per 100,000",3.178499154257451,2.735542956478348,3.628504770926989
+All Population,Brazil,2023,15-19 years,Both,Transport injuries,"Deaths per 100,000",14.458520788076004,12.762159118838744,16.29642691619664
+All Population,Brazil,2023,20-24 years,Both,Transport injuries,"Deaths per 100,000",26.534675388788138,24.62777301827921,28.258465792048685
+All Population,Brazil,2023,25-29 years,Both,Transport injuries,"Deaths per 100,000",25.623807960811963,24.266093109526803,27.351528934289924
+All Population,Brazil,2023,30-34 years,Both,Transport injuries,"Deaths per 100,000",23.72627066041758,22.34026430856889,25.43015110083998
+All Population,Brazil,2023,35-39 years,Both,Transport injuries,"Deaths per 100,000",23.174367848947774,21.775479687518985,24.699923072676373
+All Population,Brazil,2023,40-44 years,Both,Transport injuries,"Deaths per 100,000",23.510755048753765,22.277653725688975,24.83160782081935
+All Population,Brazil,2023,45-49 years,Both,Transport injuries,"Deaths per 100,000",23.881987827525343,22.87417909997563,24.98321230697989
+All Population,Brazil,2023,50-54 years,Both,Transport injuries,"Deaths per 100,000",23.523444720030945,21.951594086033726,25.141375862493298
+All Population,Brazil,2023,55-59 years,Both,Transport injuries,"Deaths per 100,000",23.70613188642132,22.456602237340206,24.93576834951538
+All Population,Brazil,2023,60-64 years,Both,Transport injuries,"Deaths per 100,000",22.67459249257203,21.343744410750908,23.977929076598908
+All Population,Brazil,2023,65-69 years,Both,Transport injuries,"Deaths per 100,000",23.919669798673315,22.278633759304107,25.337448228056495
+All Population,Brazil,2023,70-74 years,Both,Transport injuries,"Deaths per 100,000",23.786502627191457,22.331113779907326,25.365825057017926
+All Population,Brazil,2023,75-79 years,Both,Transport injuries,"Deaths per 100,000",25.781310437593685,23.636275838536104,27.596775840207727
+All Population,Brazil,2023,80-84 years,Both,Transport injuries,"Deaths per 100,000",24.97282684590051,21.55100020512456,27.3149885820391
+All Population,Brazil,2023,85-89 years,Both,Transport injuries,"Deaths per 100,000",25.579332344545985,20.747349894685996,29.263422604387785
+All Population,Brazil,2023,90-94 years,Both,Transport injuries,"Deaths per 100,000",21.839660459078313,16.32881482842151,25.31303315315451
+All Population,Brazil,2023,95+ years,Both,Transport injuries,"Deaths per 100,000",19.429211052449787,12.99045753225479,23.673240775718913
+All Population,Brazil,2023,0-6 days,Both,Unintentional injuries,"Deaths per 100,000",84.27398689815415,77.26813286260162,92.39762005380402
+All Population,Brazil,2023,7-27 days,Both,Unintentional injuries,"Deaths per 100,000",45.72829580976429,38.81913083314925,51.75007568707098
+All Population,Brazil,2023,1-5 months,Both,Unintentional injuries,"Deaths per 100,000",50.714158716862656,45.16627851150395,56.55055478381935
+All Population,Brazil,2023,6-11 months,Both,Unintentional injuries,"Deaths per 100,000",12.302118744112828,10.258102786678933,14.587764349208848
+All Population,Brazil,2023,12-23 months,Both,Unintentional injuries,"Deaths per 100,000",13.167984779191126,11.003525201442201,15.544837576328963
+All Population,Brazil,2023,2-4 years,Both,Unintentional injuries,"Deaths per 100,000",6.677653535264951,5.61427131553966,7.937803363109001
+All Population,Brazil,2023,5-9 years,Both,Unintentional injuries,"Deaths per 100,000",3.6464689377995683,3.1542027784876745,4.175162528533064
+All Population,Brazil,2023,10-14 years,Both,Unintentional injuries,"Deaths per 100,000",4.097050627714307,3.5642842229479044,4.691309176498406
+All Population,Brazil,2023,15-19 years,Both,Unintentional injuries,"Deaths per 100,000",7.0629304756078515,6.41855395304131,7.739891842874631
+All Population,Brazil,2023,20-24 years,Both,Unintentional injuries,"Deaths per 100,000",9.142969560332991,8.446302063083579,9.7769918605139
+All Population,Brazil,2023,25-29 years,Both,Unintentional injuries,"Deaths per 100,000",9.53118407089558,8.867295134240313,10.233569621284621
+All Population,Brazil,2023,30-34 years,Both,Unintentional injuries,"Deaths per 100,000",10.057957672195217,9.378457570204686,10.80501090858153
+All Population,Brazil,2023,35-39 years,Both,Unintentional injuries,"Deaths per 100,000",11.199018719904519,10.431923827204725,12.007270493340055
+All Population,Brazil,2023,40-44 years,Both,Unintentional injuries,"Deaths per 100,000",12.714882582255463,11.99846238382286,13.4212332511668
+All Population,Brazil,2023,45-49 years,Both,Unintentional injuries,"Deaths per 100,000",14.99896662179969,14.274006551166666,15.789058413670038
+All Population,Brazil,2023,50-54 years,Both,Unintentional injuries,"Deaths per 100,000",18.49943755720537,17.439473013833553,19.55191679532799
+All Population,Brazil,2023,55-59 years,Both,Unintentional injuries,"Deaths per 100,000",22.55334699301518,21.39837995975132,23.748569949338734
+All Population,Brazil,2023,60-64 years,Both,Unintentional injuries,"Deaths per 100,000",28.359697341721912,26.752209645913926,30.042117114098858
+All Population,Brazil,2023,65-69 years,Both,Unintentional injuries,"Deaths per 100,000",38.84975389717738,36.549361237023575,41.188258978456666
+All Population,Brazil,2023,70-74 years,Both,Unintentional injuries,"Deaths per 100,000",59.50278561244507,55.46556730744466,63.99862319739621
+All Population,Brazil,2023,75-79 years,Both,Unintentional injuries,"Deaths per 100,000",99.96388836499553,91.06878142821743,107.52380504381522
+All Population,Brazil,2023,80-84 years,Both,Unintentional injuries,"Deaths per 100,000",189.22405085591072,162.61102084659308,208.58646085708267
+All Population,Brazil,2023,85-89 years,Both,Unintentional injuries,"Deaths per 100,000",344.25383134950573,281.1226218790422,387.2351687813474
+All Population,Brazil,2023,90-94 years,Both,Unintentional injuries,"Deaths per 100,000",597.5992799018136,456.2124166276592,687.7034568327714
+All Population,Brazil,2023,95+ years,Both,Unintentional injuries,"Deaths per 100,000",709.7735886691939,487.58074944161126,856.8418240545352
+All Population,Brazil,2023,0-6 days,Both,Self-harm and interpersonal violence,"Deaths per 100,000",33.03007220952812,28.707079259351516,37.69900133291227
+All Population,Brazil,2023,7-27 days,Both,Self-harm and interpersonal violence,"Deaths per 100,000",3.9050770062469464,3.3191781139133414,4.483035713088306
+All Population,Brazil,2023,1-5 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",4.556176882686253,3.96826630294845,5.196226198981344
+All Population,Brazil,2023,6-11 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",1.7988922045533358,1.47964659512333,2.1847404953283065
+All Population,Brazil,2023,12-23 months,Both,Self-harm and interpersonal violence,"Deaths per 100,000",1.634412020303049,1.3522903801012416,1.9721785090976665
+All Population,Brazil,2023,2-4 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",1.085137778796919,0.9002001346409902,1.2974234523905437
+All Population,Brazil,2023,5-9 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",0.8360717947715701,0.6974277047771689,0.9860021453381521
+All Population,Brazil,2023,10-14 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",4.01946468350678,3.480517178285592,4.5629498657974805
+All Population,Brazil,2023,15-19 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",44.435920862688064,40.86742464365601,48.826521927354825
+All Population,Brazil,2023,20-24 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",74.4661209081502,69.60029114818981,79.42317856350746
+All Population,Brazil,2023,25-29 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",70.64835527376384,66.34740573474599,75.48339510518345
+All Population,Brazil,2023,30-34 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",58.23459096993836,55.15629230826928,62.01741902809364
+All Population,Brazil,2023,35-39 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",49.49473712053472,46.430339318405494,52.676679211887475
+All Population,Brazil,2023,40-44 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",42.1165919372641,39.148971736651134,44.97244866023238
+All Population,Brazil,2023,45-49 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",36.57865825275535,34.14066218308003,39.23732268176449
+All Population,Brazil,2023,50-54 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",30.158041006374415,28.071759009888748,32.208502048214605
+All Population,Brazil,2023,55-59 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",26.61497887857987,24.853181735692402,28.845744477386805
+All Population,Brazil,2023,60-64 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",22.463243466687583,20.730207302852264,24.081964722995295
+All Population,Brazil,2023,65-69 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",21.996715219915252,20.360865491971293,24.039334783786384
+All Population,Brazil,2023,70-74 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",20.930923567196636,19.038322307457612,22.903058933663196
+All Population,Brazil,2023,75-79 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",21.7425514931868,19.452413581591916,23.924451089345897
+All Population,Brazil,2023,80-84 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",15.794024516686735,13.647407373372404,17.621103333205188
+All Population,Brazil,2023,85-89 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",17.27876013424732,14.087668581774848,19.503790009645837
+All Population,Brazil,2023,90-94 years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",16.78058953109105,13.341915725843291,19.30029615157675
+All Population,Brazil,2023,95+ years,Both,Self-harm and interpersonal violence,"Deaths per 100,000",19.266436360812772,13.254719596030704,23.526277364346438
+
+"Institute for Health Metrics and Evaluation (IHME). GBD Compare Data Visualization. Global Burden of Disease (GBD) Study 2023. Seattle, WA: IHME, University of Washington, 2025. Available from https://vizhub.healthdata.org/gbd-compare/. (Accessed 6/4/2026). For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions"
