@@ -47,6 +47,16 @@
   ]
   #v(0.4em)
   #text(size: 10pt)[June 2026]
+
+  #v(0.8em)
+  #text(size: 11pt, weight: "medium")[
+    Eduardo S. A. Santos #footnote[Corresponding author: #link("mailto:esantos2@ualberta.ca")[esantos2\@ualberta.ca]]
+  ] \
+  #v(0.2em)
+  #text(size: 9pt, fill: rgb("#555555"))[
+    Department of Biological Sciences, Faculty of Science, University of Alberta, Edmonton, AB, Canada \
+    #text(size: 8.5pt)[ORCID: #link("https://orcid.org/0000-0002-0434-3655")[0000-0002-0434-3655]]
+  ]
 ]
 
 #v(1.5em)
@@ -305,7 +315,7 @@ a relative increase by 2023, consistent with an ageing population surviving
 to older age and becoming susceptible to respiratory death.
 
 #figure(
-  image("figures/fig1_decreased_fixed.png", width: 100%),
+  image("figures/fig1_decreased.jpg", width: 100%),
   caption: [
     *Brazil — Causes with Greatest Mortality Reductions, 1990–2023.*
     Age-specific death rate (deaths per 100,000) by age group, both sexes.
@@ -350,7 +360,7 @@ age groups substantially exceeds 1990, again consistent with demographic
 ageing.
 
 #figure(
-  image("figures/fig2_increased_fixed.png", width: 100%),
+  image("figures/fig2_increased.jpg", width: 100%),
   caption: [
     *Brazil — Causes with Rising Mortality Burden, 1990–2023.*
     Age-specific death rate (deaths per 100,000) by age group, both sexes.
