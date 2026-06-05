@@ -31,8 +31,8 @@ def load_data(filepath: str) -> dict[str, list[float]]:
     with open(filepath, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            cause = row.get("Cause of death or injury", "").strip()
-            val_str = row.get("Value", "").strip()
+            cause = (row.get("Cause of death or injury") or "").strip()
+            val_str = (row.get("Value") or "").strip()
             if cause and val_str:
                 try:
                     data.setdefault(cause, []).append(float(val_str))

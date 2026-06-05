@@ -16,9 +16,9 @@
 #set par(justify: true, leading: 0.65em, spacing: 1.2em)
 
 // ── Colour helpers ───────────────────────────────────────────────────────────
-#let green-dark  = rgb("#1a7a4a")
-#let red-dark    = rgb("#c0392b")
-#let grey-light  = rgb("#f5f5f5")
+#let green-dark = rgb("#1a7a4a")
+#let red-dark = rgb("#c0392b")
+#let grey-light = rgb("#f5f5f5")
 #let grey-border = rgb("#cccccc")
 
 // ── Reusable components ──────────────────────────────────────────────────────
@@ -31,7 +31,7 @@
 )
 
 // Bold percentage-change tag used inline
-#let pct-up(v)   = text(fill: red-dark,   weight: "bold", v)
+#let pct-up(v) = text(fill: red-dark, weight: "bold", v)
 #let pct-down(v) = text(fill: green-dark, weight: "bold", v)
 
 // ── Title block ──────────────────────────────────────────────────────────────
@@ -66,10 +66,7 @@
 // ── Abstract ─────────────────────────────────────────────────────────────────
 = Abstract
 
-*Background.* Brazil has undergone dramatic epidemiological transition over
-the past three decades. Understanding which cause-of-death categories have
-driven improvements versus which are imposing growing burdens is essential for
-health-system planning.
+*Background.* Brazil has undergone a dramatic epidemiological transition over the past three decades. Understanding which cause-of-death categories have driven improvements versus which are imposing growing burdens is essential for health-system planning.
 
 *Methods.* Using age-specific death rates (deaths per 100,000) from the Global
 Burden of Disease (GBD) Study 2023 for Brazil (1990 and 2023, both sexes,
@@ -78,15 +75,20 @@ bands for each of 22 cause categories and derived relative percent changes.
 Categories were classified as "improved" or "worsening" based on the
 direction of change.
 
-*Results.* Thirteen of 22 cause categories showed decreased mean age-specific
-mortality rates. The largest reductions were in enteric infections (#pct-down[−90.1%]),
-nutritional deficiencies (#pct-down[−73.0%]), neglected tropical diseases and
-malaria (#pct-down[−66.1%]), maternal and neonatal disorders (#pct-down[−60.4%]),
-and cardiovascular diseases (#pct-down[−51.4%]). Conversely, eight categories
-showed increased rates, most prominently skin and subcutaneous diseases
-(#pct-up[+232.7%]), substance use disorders (#pct-up[+32.6%]), unintentional
-injuries (#pct-up[+26.2%]), other non-communicable diseases (#pct-up[+21.7%]),
-and diabetes and kidney diseases (#pct-up[+16.3%]).
+*Results.* Of the 21 cause categories with available mortality data, 12 showed
+decreased mean age-specific rates, eight showed increases, and one (neoplasms)
+was essentially unchanged. The largest crude reductions were in enteric
+infections (#pct-down[−90.1%]), nutritional deficiencies (#pct-down[−73.0%]),
+neglected tropical diseases and malaria (#pct-down[−66.1%]), maternal and
+neonatal disorders (#pct-down[−60.4%]), and cardiovascular diseases
+(#pct-down[−51.4%]). Crude rate increases were most prominent for skin and
+subcutaneous diseases (#pct-up[+232.7%]), substance use disorders
+(#pct-up[+32.6%]), and other non-communicable diseases (#pct-up[+21.7%]).
+However, age-standardised analysis showed that two apparent crude increases —
+unintentional injuries (#pct-up[+26.2%] crude; #pct-down[−13.7%] standardised)
+and diabetes and kidney diseases (#pct-up[+16.3%] crude; #pct-down[−7.9%]
+standardised) — reflect population ageing rather than true rises in
+age-specific risk.
 
 *Interpretation.* Brazil's mortality profile has shifted substantially from
 communicable, perinatal, and nutritional causes toward non-communicable
@@ -159,12 +161,9 @@ For each cause category and each year (1990 and 2023), we computed the
 *mean age-specific death rate* as the arithmetic mean of the 25 age-group
 point estimates:
 
-$ macron(r)_"cause, year" = 1/25 sum_(i=1)^{25} r_{i, "cause, year"} $
+$ macron(r)_"cause, year" = 1/25 sum_(i=1)^25 r_{i, "cause, year"} $
 
-where $r_{i, "cause, year"}$ denotes the death rate (per 100,000) in age
-group $i$. This summary statistic weights each age group equally and mirrors
-the "% change in mean age-specific rate across 25 GBD age groups" metric
-displayed in the published figures.
+where $r_{i, "cause, year"}$ denotes the death rate (per 100,000) in age group $i$. This summary statistic weights each age group equally and mirrors the "% change in mean age-specific rate across 25 GBD age groups" metric displayed in the published figures.
 
 The relative percent change between years was calculated as:
 
@@ -228,10 +227,12 @@ approval was not required.
 
 == Summary Statistics
 
-Of 22 cause categories, 13 showed decreased mean age-specific mortality
-between 1990 and 2023, eight showed increases, and one (neoplasms) was
-essentially unchanged ($Delta% = +0.1%$). Table 1 presents the complete
-results sorted by direction of change.
+Of 22 Level-2 cause categories, one (sense organ diseases) had no mortality
+data available in GBD Compare and was excluded from computation. Of the
+remaining 21, *12 showed decreased* mean age-specific mortality between 1990
+and 2023, eight showed increases, and one (neoplasms) was essentially unchanged
+($Delta% = +0.1%$). Table 1 presents the complete results sorted by direction
+of change.
 
 #figure(
   caption: [Mean age-specific death rates (deaths per 100,000) per cause category in Brazil, 1990 and 2023, sorted by percent change. Values are arithmetic means across 25 GBD age groups.],
@@ -252,87 +253,68 @@ results sorted by direction of change.
     text(fill: white, weight: "bold")[% Change],
 
     // Decreased causes ─────────────────
-    [Enteric infections],                              [199.3], [19.7],
-    text(fill: green-dark, weight: "bold")[−90.1%],
+    [Enteric infections], [199.3], [19.7], text(fill: green-dark, weight: "bold")[−90.1%],
 
-    [Other infectious diseases],                       [39.6],  [6.8],
-    text(fill: green-dark, weight: "bold")[−82.8%],
+    [Other infectious diseases], [39.6], [6.8], text(fill: green-dark, weight: "bold")[−82.8%],
 
-    [Nutritional deficiencies],                        [58.5],  [15.8],
-    text(fill: green-dark, weight: "bold")[−73.0%],
+    [Nutritional deficiencies], [58.5], [15.8], text(fill: green-dark, weight: "bold")[−73.0%],
 
-    [Neglected tropical diseases and malaria],          [33.2],  [11.2],
-    text(fill: green-dark, weight: "bold")[−66.1%],
+    [Neglected tropical diseases and malaria], [33.2], [11.2], text(fill: green-dark, weight: "bold")[−66.1%],
 
-    [Maternal and neonatal disorders],                [4316.3], [1710.0],
-    text(fill: green-dark, weight: "bold")[−60.4%],
+    [Maternal and neonatal disorders], [4316.3], [1710.0], text(fill: green-dark, weight: "bold")[−60.4%],
 
-    [Transport injuries],                              [37.7],  [16.9],
-    text(fill: green-dark, weight: "bold")[−55.2%],
+    [Transport injuries], [37.7], [16.9], text(fill: green-dark, weight: "bold")[−55.2%],
 
-    [Cardiovascular diseases],                        [1523.8],  [740.6],
-    text(fill: green-dark, weight: "bold")[−51.4%],
+    [Cardiovascular diseases], [1523.8], [740.6], text(fill: green-dark, weight: "bold")[−51.4%],
 
-    [Chronic respiratory diseases],                    [250.8],  [164.1],
-    text(fill: green-dark, weight: "bold")[−34.6%],
+    [Chronic respiratory diseases], [250.8], [164.1], text(fill: green-dark, weight: "bold")[−34.6%],
 
-    [Respiratory infections and tuberculosis],          [402.2],  [318.2],
-    text(fill: green-dark, weight: "bold")[−20.9%],
+    [Respiratory infections and tuberculosis], [402.2], [318.2], text(fill: green-dark, weight: "bold")[−20.9%],
 
-    [Self-harm and interpersonal violence],             [30.3],   [25.6],
-    text(fill: green-dark, weight: "bold")[−15.5%],
+    [Self-harm and interpersonal violence], [30.3], [25.6], text(fill: green-dark, weight: "bold")[−15.5%],
 
-    [Mental disorders],                                  [0.0],    [0.0],
-    text(fill: green-dark, weight: "bold")[−13.2%],
+    [Mental disorders], [0.0], [0.0], text(fill: green-dark, weight: "bold")[−13.2%],
 
-    [Digestive diseases],                              [121.2],  [110.7],
-    text(fill: green-dark, weight: "bold")[−8.7%],
+    [Digestive diseases], [121.2], [110.7], text(fill: green-dark, weight: "bold")[−8.7%],
 
     // Stable
-    [Neoplasms],                                       [346.9],  [347.2],
-    text(weight: "bold")[+0.1%],
+    [Neoplasms], [346.9], [347.2], text(weight: "bold")[+0.1%],
 
     // Increased causes ─────────────────
-    [HIV/AIDS and sexually transmitted infections],    [14.2],   [14.6],
-    text(fill: red-dark, weight: "bold")[+2.4%],
+    [HIV/AIDS and sexually transmitted infections], [14.2], [14.6], text(fill: red-dark, weight: "bold")[+2.4%],
 
-    [Neurological disorders],                          [359.2],  [374.9],
-    text(fill: red-dark, weight: "bold")[+4.4%],
+    [Neurological disorders], [359.2], [374.9], text(fill: red-dark, weight: "bold")[+4.4%],
 
-    [Musculoskeletal disorders],                         [4.1],    [4.5],
-    text(fill: red-dark, weight: "bold")[+10.0%],
+    [Musculoskeletal disorders], [4.1], [4.5], text(fill: red-dark, weight: "bold")[+10.0%],
 
-    [Diabetes and kidney diseases],                    [178.6],  [207.7],
-    text(fill: red-dark, weight: "bold")[+16.3%],
+    [Diabetes and kidney diseases], [178.6], [207.7], text(fill: red-dark, weight: "bold")[+16.3%],
 
-    [Other non-communicable diseases],                 [340.1],  [414.0],
-    text(fill: red-dark, weight: "bold")[+21.7%],
+    [Other non-communicable diseases], [340.1], [414.0], text(fill: red-dark, weight: "bold")[+21.7%],
 
-    [Unintentional injuries],                           [76.2],   [96.2],
-    text(fill: red-dark, weight: "bold")[+26.2%],
+    [Unintentional injuries], [76.2], [96.2], text(fill: red-dark, weight: "bold")[+26.2%],
 
-    [Substance use disorders],                           [3.8],    [5.0],
-    text(fill: red-dark, weight: "bold")[+32.6%],
+    [Substance use disorders], [3.8], [5.0], text(fill: red-dark, weight: "bold")[+32.6%],
 
-    [Skin and subcutaneous diseases],                    [9.3],   [31.0],
-    text(fill: red-dark, weight: "bold")[+232.7%],
+    [Skin and subcutaneous diseases], [9.3], [31.0], text(fill: red-dark, weight: "bold")[+232.7%],
   )
 ]
 
 == Causes with the Greatest Mortality Reductions
 
-Figure 1 illustrates the six cause categories with the largest
-proportional declines.
+Figure 1 illustrates the eight cause categories with genuine age-standardised
+declines, including two (unintentional injuries and diabetes & kidney diseases)
+that showed apparent crude increases but are reclassified as improvements under
+age standardisation.
 
 *Enteric infections* (−90.1%) showed the most dramatic improvement, with
-very high death rates in infancy in 1990 — exceeding 1,000 per 100,000 in
-the 12–23-month group — collapsing to near-zero levels by 2023 across all
+very high death rates in early infancy in 1990 — reaching 1,492.8 per 100,000
+in the 1–5-month group — collapsing to near-zero levels by 2023 across all
 paediatric age groups. Mean rates fell from 199.3 to 19.7 per 100,000 across
 age groups.
 
 *Maternal and neonatal disorders* (−60.4%) exhibited extreme concentration of
 risk in the earliest age groups (neonatal period), declining from a mean rate
-of 2,589.8 in 1990 to 1,026.0 per 100,000 per age group in 2023.
+of 4,316.3 in 1990 to 1,710.0 per 100,000 per age group in 2023.
 
 *Nutritional deficiencies* (−73.0%) and *neglected tropical diseases and
 malaria* (−66.1%) similarly showed large absolute reductions concentrated in
@@ -373,7 +355,7 @@ with genuine reductions.
     Diabetes & kidney diseases (★ reclassified) showed crude rate increases
     but genuine age-specific reductions under standardisation.
     Source: GBD Compare 2023 (IHME).
-  ]
+  ],
 )
 
 == Causes with Rising Mortality Burden
@@ -423,7 +405,7 @@ The shape of the 2023 curve in the oldest age groups substantially exceeds
     and Diabetes & kidney diseases have been reclassified as decreasing under
     age standardisation and are shown in Figure 1 instead.
     Source: GBD Compare 2023 (IHME).
-  ]
+  ],
 )
 
 // ── 4. Discussion ────────────────────────────────────────────────────────────
@@ -563,44 +545,44 @@ visualisation, and manuscript preparation.
 #set text(size: 10pt)
 
 #block[*\[1\]* Victora CG, Barreto ML, do Carmo Leal M, et al. Health conditions and
-health-policy innovations in Brazil: the way forward. _Lancet._
-2011;377(9782):2042–2053.]
+  health-policy innovations in Brazil: the way forward. _Lancet._
+  2011;377(9782):2042–2053.]
 
 #block[*\[2\]* Schmidt MI, Duncan BB, Azevedo e Silva G, et al. Chronic non-communicable
-diseases in Brazil: burden and current challenges. _Lancet._
-2011;377(9781):1949–1961.]
+  diseases in Brazil: burden and current challenges. _Lancet._
+  2011;377(9781):1949–1961.]
 
 #block[*\[3\]* Omran AR. The epidemiologic transition: a theory of the epidemiology of
-population change. _Milbank Q._ 1971;49(4):509–538.]
+  population change. _Milbank Q._ 1971;49(4):509–538.]
 
 #block[*\[4\]* Frenk J, Bobadilla JL, Stern C, et al. Elements for a theory of the health
-transition. _Health Transit Rev._ 1991;1(1):21–38.]
+  transition. _Health Transit Rev._ 1991;1(1):21–38.]
 
 #block[*\[5\]* GBD 2023 Diseases and Injuries Collaborators. Global burden of 371 diseases
-and injuries: a systematic analysis for the Global Burden of Disease Study 2023.
-_Lancet._ 2024 (forthcoming). IHME, University of Washington, Seattle, WA.]
+  and injuries: a systematic analysis for the Global Burden of Disease Study 2023.
+  _Lancet._ 2024 (forthcoming). IHME, University of Washington, Seattle, WA.]
 
 #block[*\[6\]* Malta DC, França EB, Abreu DMX, et al. Mortality due to noncommunicable
-diseases in Brazil, 1990 to 2015, according to the Global Burden of Disease
-study. _Sao Paulo Med J._ 2017;135(2):141–148.]
+  diseases in Brazil, 1990 to 2015, according to the Global Burden of Disease
+  study. _Sao Paulo Med J._ 2017;135(2):141–148.]
 
 #block[*\[7\]* Rasella D, Aquino R, Santos CA, et al. Effect of a conditional cash transfer
-programme on childhood mortality: a nationwide analysis of Brazilian
-municipalities. _Lancet._ 2013;382(9886):57–64.]
+  programme on childhood mortality: a nationwide analysis of Brazilian
+  municipalities. _Lancet._ 2013;382(9886):57–64.]
 
 #block[*\[8\]* Chor D, Pinho Ribeiro AL, Sá Carvalho M, et al. Prevalence, awareness,
-treatment and influence of socioeconomic variables on control of high blood
-pressure: results from the ELSA-Brasil study. _PLoS One._
-2015;10(6):e0127382.]
+  treatment and influence of socioeconomic variables on control of high blood
+  pressure: results from the ELSA-Brasil study. _PLoS One._
+  2015;10(6):e0127382.]
 
 #block[*\[9\]* Bray F, Laversanne M, Sung H, et al. Global cancer statistics 2022:
-GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185
-countries. _CA Cancer J Clin._ 2024;74(3):229–263.]
+  GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185
+  countries. _CA Cancer J Clin._ 2024;74(3):229–263.]
 
 #block[*\[10\]* Carlini EA, Noto AR, Sanchez ZM, et al. VI Levantamento Nacional Sobre o
-Consumo de Drogas Psicotrópicas Entre Estudantes do Ensino Fundamental e
-Médio das Redes Pública e Privada de Ensino nas 27 Capitais Brasileiras.
-CEBRID/UNIFESP, 2012.]
+  Consumo de Drogas Psicotrópicas Entre Estudantes do Ensino Fundamental e
+  Médio das Redes Pública e Privada de Ensino nas 27 Capitais Brasileiras.
+  CEBRID/UNIFESP, 2012.]
 
 #block[*\[11\]* Associação Brasileira para o Estudo da Obesidade e da Síndrome Metabólica.
-_Diretrizes Brasileiras de Obesidade._ 5th ed. São Paulo: ABESO; 2020.]
+  _Diretrizes Brasileiras de Obesidade._ 5th ed. São Paulo: ABESO; 2020.]
