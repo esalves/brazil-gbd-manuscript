@@ -175,12 +175,47 @@ Causes were classified as *improved* ($Delta% < 0$) or
 using the `csv` standard library only, ensuring full reproducibility without
 external dependencies. Code is provided in `scripts/analysis.py`.
 
+== Age-Standardised Sensitivity Analysis
+
+Because the arithmetic mean of 25 age-specific rates weights every age band
+equally, summary % changes are sensitive to the different age structures of
+Brazil's 1990 and 2023 populations. To assess whether apparent trends reflect
+genuine changes in age-specific risk versus shifts in population composition,
+we performed direct age-standardisation against the mean of Brazil's 1990 and
+2023 populations (United Nations World Population Prospects 2024) as an
+internal standard.
+
+The age-standardised rate for each cause and year was:
+
+$ "ASR"_"cause, year" = sum_(i=1)^{25} r_{i, "cause, year"} times w_i^"std" $
+
+where $w_i^"std" = P_i^"std" \/ sum_j P_j^"std"$ is the normalised weight of
+age group $i$ in the standard population and $P_i^"std"$ is the mean of
+Brazil's 1990 and 2023 population counts in that group. The five GBD
+sub-groups spanning age 0–4 years were assigned weights proportional to their
+person-year duration within the five-year band. The age-standardised percent
+change was then:
+
+$ Delta%_"std" = frac("ASR"_"2023" - "ASR"_"1990", "ASR"_"1990") times 100 $
+
+Uncertainty was propagated simultaneously through all 25 GBD 95% confidence
+intervals via Monte Carlo simulation ($n = 10{,}000$ draws per cause),
+assuming a log-normal distribution for each age-specific rate. The 95%
+confidence interval for $Delta%_"std"$ is the 2.5th–97.5th percentile of the
+resulting distribution. All code is provided in
+`scripts/analysis_standardised.py`; figure generation (including
+cause-selection based on standardised direction of change) is in
+`scripts/figures.py`.
+
 == Visualisation
 
 Age-specific rate curves for 1990 and 2023 were plotted for selected cause
-categories. Figures 1 and 2 show causes with the greatest reductions and
-greatest increases, respectively, with the shaded area between curves
-representing the direction and magnitude of change.
+categories. Figure 1 shows causes with the greatest standardised reductions
+and Figure 2 shows causes with the largest standardised increases; two causes
+(unintentional injuries and diabetes & kidney diseases) are classified using
+their standardised direction and therefore appear in Figure 1 despite showing
+crude rate increases. All percentage annotations in the figures reflect
+age-standardised values with Monte Carlo 95% CIs.
 
 == Ethics
 
