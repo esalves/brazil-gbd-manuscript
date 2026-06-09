@@ -18,7 +18,7 @@
   number-align: center,
 )
 
-#set text(font: "Linux Libertine", size: 11pt, lang: "en")
+#set text(font: "Linux Libertine", size: 11pt, lang: "en", hyphenate: true)
 #set heading(numbering: "1.")
 #set par(justify: true, leading: 0.65em)
 #show par: set block(spacing: 1.2em)
