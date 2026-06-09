@@ -136,9 +136,10 @@ Quantifying the magnitude and age-pattern of these shifts across all major
 cause categories simultaneously, within a globally harmonised framework,
 provides an evidence base for prioritising health investment. The Global Burden
 of Disease (GBD) Study, produced by the Institute for Health Metrics and
-Evaluation (IHME), offers the most comprehensive such assessment, covering 204
-countries and territories and a hierarchy of diseases and injuries within a
-common comparative framework [5].
+Evaluation (IHME), offers the most comprehensive such assessment; its 2023
+round estimated the burden of 375 diseases and injuries across 204 countries
+and territories (and 660 subnational locations) within a common comparative
+framework [5].
 
 Monitoring these shifts has direct policy salience. Non-communicable diseases
 account for roughly 70% of deaths worldwide, and the World Health Organization's
@@ -208,7 +209,10 @@ of death — to their most probable true causes, and it models cause-specific
 mortality with the Cause of Death Ensemble model (CODEm), constraining
 cause-specific estimates so that they sum to all-cause mortality [15]. Causes
 are organised in a four-level hierarchy; this analysis uses the 22 Level-2
-categories (of which 21 carry mortality estimates for Brazil). These corrections
+categories (of which 21 carry mortality estimates for Brazil). GBD reports each
+estimate with a 95% uncertainty interval derived from the percentiles of its
+posterior draw distribution; our uncertainty propagation (below) resamples
+these published intervals. These corrections
 substantially improve cross-national and temporal comparability relative to
 unadjusted vital statistics, but they also mean the estimates carry modelling
 uncertainty that is larger for causes that are under-recorded or frequently
@@ -529,6 +533,16 @@ age-standardisation conventions: Malta reported cardiovascular declines of
 neoplasm rate (their −6.5%) against our standardised −10.4%. This concordance
 provides external validation of the present estimates.
 
+The same principle is central to GBD 2023 itself. Its headline global finding
+contrasts a 6.1% rise in the absolute number of disability-adjusted life-years
+between 2010 and 2023 with a 12.6% fall in the corresponding age-standardised
+rate — a measure that, in the authors' words, accounts for population growth
+and ageing — and frames this divergence as a manifestation of the global
+epidemiological transition [5]. Our cause- and group-level mortality results
+for Brazil are a national instance of that same pattern, in which count- or
+composition-based measures and age-standardised rates can move in opposite
+directions.
+
 == Progress against policy targets
 
 Read against the WHO Global Action Plan target of a 25% relative reduction in
@@ -610,9 +624,9 @@ data.
 *Author contributions.* E.S.A.S. conceived the study, extracted and analysed
 the data, produced the figures, and wrote the manuscript.
 
-*Use of the GBD 2023 citation.* The data were extracted from the IHME GBD 2023
-release; the corresponding GBD 2023 collaborator capstone reference should be
-inserted as [5] once its final bibliographic details are confirmed.
+*Data provenance.* The estimates analysed here are from the GBD 2023 release,
+published in October 2025 [5], and were extracted via the IHME GBD Compare /
+GBD Results tool on 4 June 2026.
 
 // ── References ───────────────────────────────────────────────────────────────
 = References
@@ -634,10 +648,12 @@ inserted as [5] once its final bibliographic details are confirmed.
 #block[*\[4\]* Frenk J, Bobadilla JL, Stern C, et al. Elements for a theory of the health
   transition. _Health Transit Rev._ 1991;1(1):21–38.]
 
-#block[*\[5\]* GBD 2023 Diseases and Injuries Collaborators. Global burden of diseases and
-  injuries, 1990–2023: a systematic analysis for the Global Burden of Disease
-  Study 2023. _Lancet._ (citation to be confirmed). IHME, University of
-  Washington, Seattle, WA.]
+#block[*\[5\]* GBD 2023 Disease and Injury and Risk Factor Collaborators. Burden of 375
+  diseases and injuries, risk-attributable burden of 88 risk factors, and
+  healthy life expectancy in 204 countries and territories, including 660
+  subnational locations, 1990–2023: a systematic analysis for the Global Burden
+  of Disease Study 2023. _Lancet._ 2025;406:1873–1922.
+  doi:10.1016/S0140-6736(25)01637-X.]
 
 #block[*\[6\]* United Nations, Department of Economic and Social Affairs, Population
   Division. _World Population Prospects 2024._ New York: United Nations; 2024.
