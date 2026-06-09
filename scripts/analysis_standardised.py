@@ -1,45 +1,69 @@
 """
 analysis_standardised.py
 ------------------------
-Reproduces the age-standardised mortality-rate analysis for:
-"Shifting Mortality Burden in Brazil, 1990–2023"
+Age-standardised mortality-rate analysis for:
+"Shifting Mortality Burden in Brazil, 1990-2023"
 
 Method
 ------
-Direct age-standardisation against the mean of Brazil's 1990 and 2023
-populations (UN World Population Prospects 2024 approximation).
-The age-standardised rate for each cause and year is:
+Direct age standardisation of GBD 2023 age-specific death rates for Brazil
+to the WHO World Standard Population (Ahmad OB, Boschi-Pinto C, Lopez AD,
+et al. Age standardization of rates: a new WHO standard. GPE Discussion
+Paper No. 31. Geneva: WHO; 2001). The WHO World Standard is an external,
+published, fixed standard, so standardised rates for 1990 and 2023 are
+directly comparable and are not influenced by Brazil's changing age
+structure.
 
-    ASR = Σ_i (r_i × w_i)
+The age-standardised death rate (ASR) for each cause and year is
 
-where r_i is the age-specific death rate in GBD age group i and
-w_i = P_i_std / Σ P_j_std is the normalised standard-population weight.
+    ASR = sum_i ( r_i * w_i )
 
-Uncertainty is propagated through all 25 GBD 95% confidence intervals
-simultaneously via Monte Carlo simulation (n=10,000 draws per cause),
-assuming log-normal distributions for each age-specific rate.
-The 95% CI for the standardised % change is the 2.5th–97.5th percentile
-of the 10,000 simulated % changes.
+where r_i is the GBD age-specific death rate (per 100,000) in age group i
+and w_i is the normalised WHO World Standard weight for that group.
+
+This script also reproduces, for comparison, the *unweighted mean of the 25
+age-specific rates* -- the summary metric displayed by the GBD Compare tool.
+That metric weights every age band equally regardless of its share of the
+population and is reported here only to show how it can diverge from a
+properly standardised rate.
+
+Point estimates are computed deterministically from the reported GBD point
+rates. 95% uncertainty intervals for the standardised percent change are
+obtained by Monte Carlo simulation (n = 10,000) that propagates each age
+group's GBD 95% interval, assuming an independent log-normal distribution
+per age-specific rate (a normal distribution truncated at zero is used as a
+fallback for groups whose lower bound is zero or negative). Independence
+across age groups is a simplifying assumption; the GBD posterior correlation
+structure is not published in the extract and this is noted as a limitation.
 
 Usage
 -----
     python scripts/analysis_standardised.py
+    python scripts/analysis_standardised.py --json results.json   # machine-readable
 
 Output
 ------
-Prints a table of crude and age-standardised % changes for all causes,
-sorted by standardised % change.
+Prints a table of unweighted-mean and age-standardised percent changes for
+all causes, sorted by standardised percent change, and flags direction
+reversals. With --json, also writes a results file consumed by figures.py.
 """
 
+from __future__ import annotations
+
+import argparse
 import csv
+import hashlib
+import json
 import os
+import sys
+
 import numpy as np
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
+# -- Paths --------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR  = os.path.join(BASE_DIR, "data")
+DATA_DIR = os.path.join(BASE_DIR, "data")
 
-# ── GBD age groups ────────────────────────────────────────────────────────────
+# -- GBD age groups (25, in order) --------------------------------------------
 AGE_ORDER = [
     "0-6 days", "7-27 days", "1-5 months", "6-11 months", "12-23 months",
     "2-4 years", "5-9 years", "10-14 years", "15-19 years", "20-24 years",
@@ -48,35 +72,37 @@ AGE_ORDER = [
     "75-79 years", "80-84 years", "85-89 years", "90-94 years", "95+ years",
 ]
 
-# ── Standard population ───────────────────────────────────────────────────────
-# Mean of Brazil 1990 + 2023 populations (UN WPP 2024, thousands).
-# The 0–4 year UN WPP group is split proportionally by person-years into
-# the six GBD sub-groups it contains.
-_BRAZIL_5YR = {
-    # (age_min, excl_max): (pop_1990_k, pop_2023_k)
-    ( 0,   5): (17_000, 14_500),
-    ( 5,  10): (16_000, 15_500),
-    (10,  15): (15_000, 16_500),
-    (15,  20): (14_000, 16_500),
-    (20,  25): (13_000, 16_500),
-    (25,  30): (11_500, 16_500),
-    (30,  35): (10_000, 16_500),
-    (35,  40): ( 8_500, 16_000),
-    (40,  45): ( 7_000, 15_000),
-    (45,  50): ( 5_700, 14_000),
-    (50,  55): ( 4_500, 13_000),
-    (55,  60): ( 3_600, 11_500),
-    (60,  65): ( 2_900,  9_800),
-    (65,  70): ( 2_200,  7_800),
-    (70,  75): ( 1_600,  6_000),
-    (75,  80): ( 1_000,  4_500),
-    (80,  85): (   550,  3_000),
-    (85,  90): (   260,  1_600),
-    (90,  95): (    90,    600),
-    (95, 120): (    25,    200),
+# -- WHO World Standard Population --------------------------------------------
+# Ahmad OB, Boschi-Pinto C, Lopez AD, Murray CJL, Lozano R, Inoue M.
+# Age standardization of rates: a new WHO standard. GPE Discussion Paper
+# No. 31. Geneva: World Health Organization; 2001, Table 1.
+# Values are the relative weight (%) of each conventional 5-year age band.
+WHO_WORLD_STD = {
+    (0, 5): 8.86,
+    (5, 10): 8.69,
+    (10, 15): 8.60,
+    (15, 20): 8.47,
+    (20, 25): 8.22,
+    (25, 30): 7.93,
+    (30, 35): 7.61,
+    (35, 40): 7.15,
+    (40, 45): 6.59,
+    (45, 50): 6.04,
+    (50, 55): 5.37,
+    (55, 60): 4.55,
+    (60, 65): 3.72,
+    (65, 70): 2.96,
+    (70, 75): 2.21,
+    (75, 80): 1.52,
+    (80, 85): 0.91,
+    (85, 90): 0.44,
+    (90, 95): 0.15,
+    (95, 100): 0.04,
+    (100, 120): 0.005,
 }
 
-# Duration (years) of each GBD sub-group within the 0–4 band
+# The GBD extract splits the 0-4 band into six sub-groups. The WHO 0-4 weight
+# is apportioned among them in proportion to the person-years each spans.
 _SUBGROUP_DUR = {
     "0-6 days":      6 / 365.25,
     "7-27 days":    21 / 365.25,
@@ -87,61 +113,86 @@ _SUBGROUP_DUR = {
 }
 
 
-def build_std_pop():
-    """Return normalised population weights for the 25 GBD age groups."""
-    mean_pop = {k: (v[0] + v[1]) / 2.0 for k, v in _BRAZIL_5YR.items()}
-    total_dur_0_4 = sum(_SUBGROUP_DUR.values())
-    pop_0_4 = mean_pop[(0, 5)]
+def build_std_weights() -> dict:
+    """Map the WHO World Standard onto the 25 GBD age groups (normalised)."""
+    # Merge the two open-ended WHO bands (95-99, 100+) into GBD's "95+".
+    band_95plus = WHO_WORLD_STD[(95, 100)] + WHO_WORLD_STD[(100, 120)]
+    weight_0_4 = WHO_WORLD_STD[(0, 5)]
+    total_dur_0_4 = sum(_SUBGROUP_DUR.values())  # ~= 5 years
 
     raw = {}
     for ag in AGE_ORDER:
         if ag in _SUBGROUP_DUR:
-            raw[ag] = pop_0_4 * _SUBGROUP_DUR[ag] / total_dur_0_4
+            raw[ag] = weight_0_4 * _SUBGROUP_DUR[ag] / total_dur_0_4
+        elif ag == "95+ years":
+            raw[ag] = band_95plus
         else:
-            age_str = ag.replace(" years", "")
-            if "+" in age_str:
-                lo, hi = int(age_str.replace("+", "")), 120
-            else:
-                lo_s, hi_s = age_str.split("-")
-                lo, hi = int(lo_s), int(hi_s) + 1
-            raw[ag] = mean_pop[(lo, hi)]
+            lo_s, hi_s = ag.replace(" years", "").split("-")
+            lo, hi = int(lo_s), int(hi_s) + 1
+            raw[ag] = WHO_WORLD_STD[(lo, hi)]
 
     total = sum(raw.values())
     return {ag: raw[ag] / total for ag in AGE_ORDER}
 
 
-STD_WEIGHTS = build_std_pop()
+STD_WEIGHTS = build_std_weights()
 
-# ── Data loading ──────────────────────────────────────────────────────────────
-def load_data(filepath):
+
+# -- Data loading -------------------------------------------------------------
+def load_data(filepath: str) -> dict:
     """Return {cause: {age_group: (value, lower, upper)}}."""
     data = {}
     with open(filepath, newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             cause = (row.get("Cause of death or injury") or "").strip()
-            age   = (row.get("Age") or "").strip()
+            age = (row.get("Age") or "").strip()
             if not cause or not age:
                 continue
             try:
                 val = float(row["Value"])
-                lo  = float(row["Lower bound"])
-                hi  = float(row["Upper bound"])
-            except (ValueError, KeyError):
+                lo = float(row["Lower bound"])
+                hi = float(row["Upper bound"])
+            except (ValueError, KeyError, TypeError):
                 continue
             data.setdefault(cause, {})[age] = (val, lo, hi)
     return data
 
-# ── Monte Carlo age-standardisation ──────────────────────────────────────────
+
+# -- Core calculations --------------------------------------------------------
 N_MC = 10_000
-RNG  = np.random.default_rng(42)
+SEED = 42
 
 
-def mc_draws(cause_data, n=N_MC):
+def _rng_for(label: str) -> np.random.Generator:
+    """Deterministic, call-order-independent RNG keyed on a label.
+
+    Seeding per (cause, year) guarantees the Monte Carlo intervals are
+    identical no matter which script or in what order standardised_change is
+    invoked, so every published number is exactly reproducible.
     """
-    Draw n Monte Carlo samples of age-specific rates.
-    Returns array of shape (n, 25).
-    Log-normal distribution for positive rates; normal fallback for near-zero.
-    """
+    digest = hashlib.md5(f"{SEED}:{label}".encode()).digest()
+    return np.random.default_rng(int.from_bytes(digest[:8], "little"))
+
+
+def _weights_vector() -> np.ndarray:
+    return np.array([STD_WEIGHTS[ag] for ag in AGE_ORDER])
+
+
+def asr_point(cause_data: dict) -> float:
+    """Deterministic age-standardised rate from the reported point rates."""
+    w = _weights_vector()
+    r = np.array([cause_data.get(ag, (0.0, 0.0, 0.0))[0] for ag in AGE_ORDER])
+    return float((r * w).sum())
+
+
+def mean_age_specific(cause_data: dict) -> float:
+    """Unweighted mean of the 25 age-specific rates (GBD Compare metric)."""
+    r = [cause_data.get(ag, (0.0,))[0] for ag in AGE_ORDER]
+    return sum(r) / len(r)
+
+
+def _mc_draws(cause_data: dict, n: int, rng: np.random.Generator) -> np.ndarray:
+    """Draw n Monte Carlo samples of the 25 age-specific rates -> (n, 25)."""
     draws = np.zeros((n, len(AGE_ORDER)))
     for j, ag in enumerate(AGE_ORDER):
         if ag not in cause_data:
@@ -149,88 +200,99 @@ def mc_draws(cause_data, n=N_MC):
         val, lo, hi = cause_data[ag]
         if val <= 0 or lo <= 0:
             se = (hi - lo) / (2 * 1.96) if (hi - lo) > 0 else max(val * 0.1, 1e-9)
-            draws[:, j] = np.maximum(0.0, RNG.normal(val, se, n))
+            draws[:, j] = np.maximum(0.0, rng.normal(val, se, n))
         else:
-            mu    = np.log(val)
+            mu = np.log(val)
             sigma = max((np.log(hi) - np.log(lo)) / (2 * 1.96), 1e-9)
-            draws[:, j] = RNG.lognormal(mu, sigma, n)
+            draws[:, j] = rng.lognormal(mu, sigma, n)
     return draws
 
 
-def standardised_pct_change(cause, data_1990, data_2023):
-    """
-    Compute age-standardised % change with 95% CI via Monte Carlo.
+def standardised_change(cause: str, data_1990: dict, data_2023: dict) -> dict:
+    """Age-standardised rates and percent change with Monte Carlo 95% CI."""
+    w = _weights_vector()
+    d90 = data_1990.get(cause, {})
+    d23 = data_2023.get(cause, {})
 
-    Returns
-    -------
-    point : float   median % change across MC draws
-    lo    : float   2.5th percentile
-    hi    : float   97.5th percentile
-    """
-    weights = np.array([STD_WEIGHTS[ag] for ag in AGE_ORDER])
+    asr90 = asr_point(d90)
+    asr23 = asr_point(d23)
+    pct_point = (asr23 - asr90) / asr90 * 100.0 if asr90 else float("nan")
 
-    d90 = mc_draws(data_1990.get(cause, {}))
-    d23 = mc_draws(data_2023.get(cause, {}))
+    sim90 = (_mc_draws(d90, N_MC, _rng_for(f"{cause}|1990")) * w).sum(axis=1)
+    sim23 = (_mc_draws(d23, N_MC, _rng_for(f"{cause}|2023")) * w).sum(axis=1)
+    valid = sim90 > 0
+    pct = np.where(valid, (sim23 - sim90) / sim90 * 100.0, np.nan)
 
-    asr90 = (d90 * weights).sum(axis=1)
-    asr23 = (d23 * weights).sum(axis=1)
-
-    valid = asr90 > 0
-    pct   = np.where(valid, (asr23 - asr90) / asr90 * 100.0, np.nan)
-
-    return (float(np.nanmedian(pct)),
-            float(np.nanpercentile(pct, 2.5)),
-            float(np.nanpercentile(pct, 97.5)))
-
-
-def crude_pct_change(cause, data_1990, data_2023):
-    """Arithmetic-mean (unweighted) % change, matching analysis.py."""
-    def mean_rate(d):
-        vals = [d.get(ag, (0,))[0] for ag in AGE_ORDER]
-        return sum(vals) / len(vals)
-
-    r90 = mean_rate(data_1990.get(cause, {}))
-    r23 = mean_rate(data_2023.get(cause, {}))
-    return (r23 - r90) / r90 * 100.0 if r90 else float("nan")
+    m90 = mean_age_specific(d90)
+    m23 = mean_age_specific(d23)
+    return {
+        "cause": cause,
+        "asr_1990": asr90,
+        "asr_2023": asr23,
+        "std_pct": pct_point,
+        "std_lo": float(np.nanpercentile(pct, 2.5)),
+        "std_hi": float(np.nanpercentile(pct, 97.5)),
+        "mean_1990": m90,
+        "mean_2023": m23,
+        "mean_pct": (m23 - m90) / m90 * 100.0 if m90 else float("nan"),
+    }
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
-def main():
+def compute_all(data_1990: dict, data_2023: dict) -> list:
+    causes = sorted(
+        c for c in (set(data_1990) | set(data_2023))
+        if data_1990.get(c) or data_2023.get(c)
+    )
+    results = [standardised_change(c, data_1990, data_2023) for c in causes]
+    results.sort(key=lambda d: d["std_pct"])
+    return results
+
+
+# -- CLI ----------------------------------------------------------------------
+def _fmt(v: float) -> str:
+    return f"{'+' if v >= 0 else ''}{v:.1f}%"
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--json", metavar="PATH",
+                        help="write machine-readable results to PATH")
+    args = parser.parse_args()
+
     data_1990 = load_data(os.path.join(DATA_DIR, "GBD_Compare_Data1990.csv"))
     data_2023 = load_data(os.path.join(DATA_DIR, "GBD_Compare_Data2023.csv"))
-    causes    = sorted(set(data_1990) | set(data_2023))
+    results = compute_all(data_1990, data_2023)
 
-    print("Computing age-standardised rates via Monte Carlo "
-          f"(n={N_MC:,}) …\n")
+    print("Age standardisation to the WHO World Standard Population.")
+    print(f"Monte Carlo n = {N_MC:,} draws per cause; seed = 42.\n")
 
-    results = []
-    for cause in causes:
-        crude = crude_pct_change(cause, data_1990, data_2023)
-        std, lo, hi = standardised_pct_change(cause, data_1990, data_2023)
-        results.append((cause, crude, std, lo, hi))
-
-    results.sort(key=lambda x: x[2])   # sort by standardised % change
-
-    hdr = (f"{'Cause':<52} {'Crude %':>8}  "
-           f"{'Std %':>8}  {'95% CI':^22}  {'Direction change?'}")
+    hdr = (f"{'Cause':<46} {'ASR 1990':>9} {'ASR 2023':>9} "
+           f"{'Std %':>8} {'95% CI':^20} {'Mean %':>8}")
     print(hdr)
-    print("─" * len(hdr))
+    print("-" * len(hdr))
+    for r in results:
+        flip = (r["mean_pct"] > 0) != (r["std_pct"] > 0)
+        flag = "  <- REVERSED" if flip else ""
+        ci = f"[{_fmt(r['std_lo'])}, {_fmt(r['std_hi'])}]"
+        print(f"{r['cause']:<46} {r['asr_1990']:>9.1f} {r['asr_2023']:>9.1f} "
+              f"{_fmt(r['std_pct']):>8} {ci:^20} {_fmt(r['mean_pct']):>8}{flag}")
 
-    for cause, crude, std, lo, hi in results:
-        flip = ((crude > 0) != (std > 0))
-        flag = "  ← REVERSED" if flip else ""
-        crude_s = f"{'+' if crude >= 0 else ''}{crude:.1f}%"
-        std_s   = f"{'+' if std   >= 0 else ''}{std:.1f}%"
-        ci_s    = (f"[{'+' if lo >= 0 else ''}{lo:.1f}%, "
-                   f"{'+' if hi >= 0 else ''}{hi:.1f}%]")
-        print(f"{cause:<52} {crude_s:>8}  {std_s:>8}  {ci_s:<22}{flag}")
+    dec = sum(1 for r in results if r["std_pct"] < 0)
+    inc = sum(1 for r in results if r["std_pct"] > 0)
+    rev = [r for r in results if (r["mean_pct"] > 0) != (r["std_pct"] > 0)]
+    print(f"\nCauses analysed: {len(results)}")
+    print(f"Age-standardised decrease: {dec}   increase: {inc}")
+    print(f"Direction differs between unweighted mean and standardised rate: "
+          f"{len(rev)}")
+    for r in rev:
+        print(f"  - {r['cause']}: mean {_fmt(r['mean_pct'])} "
+              f"-> std {_fmt(r['std_pct'])} "
+              f"(95% CI {_fmt(r['std_lo'])} to {_fmt(r['std_hi'])})")
 
-    print(f"\nTotal causes: {len(results)}")
-    reversed_causes = [r for r in results if ((r[1] > 0) != (r[2] > 0))]
-    print(f"Direction reversed under standardisation: {len(reversed_causes)}")
-    for r in reversed_causes:
-        print(f"  • {r[0]}: crude {r[1]:+.1f}% → std {r[2]:+.1f}% "
-              f"(95% CI {r[3]:+.1f}% to {r[4]:+.1f}%)")
+    if args.json:
+        with open(args.json, "w", encoding="utf-8") as fh:
+            json.dump(results, fh, indent=2)
+        print(f"\nWrote {args.json}", file=sys.stderr)
 
 
 if __name__ == "__main__":
