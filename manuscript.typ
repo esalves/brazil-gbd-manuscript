@@ -140,16 +140,34 @@ Evaluation (IHME), offers the most comprehensive such assessment, covering 204
 countries and territories and a hierarchy of diseases and injuries within a
 common comparative framework [5].
 
+Monitoring these shifts has direct policy salience. Non-communicable diseases
+account for roughly 70% of deaths worldwide, and the World Health Organization's
+Global Action Plan for the Prevention and Control of NCDs set a target of a 25%
+relative reduction in premature NCD mortality by 2025, reinforced by Sustainable
+Development Goal target 3.4 (a one-third reduction by 2030) and Brazil's
+National Plan to Combat NCDs 2011–2022 [14, 11]. Tracking whether
+age-standardised mortality is in fact falling — and for which causes — is
+therefore essential to assessing progress against these commitments.
+
 A central methodological issue motivates this analysis. Brazil's population
 aged dramatically between 1990 and 2023: the median age roughly doubled and the
 share of the population aged 60 years and over more than doubled [6]. Because
 mortality rates for most chronic diseases and many injuries rise steeply with
 age, any summary measure that does not hold age structure constant can register
-an apparent increase in mortality even when age-specific risk is falling. We
-therefore make age-standardised death rates the primary outcome and contrast
-them with the unweighted mean of age-specific rates that is displayed by the
-widely used GBD Compare tool, to characterise both the true direction of change
-and the cases in which the two measures disagree.
+an apparent increase in mortality even when age-specific risk is falling. This
+distinction is not merely technical: a previous GBD-based analysis found that
+NCD deaths in Brazil rose by about 90% in absolute number between 1990 and 2015
+even as the age-standardised NCD death rate fell by a quarter, the divergence
+being attributed to population growth and ageing [11].
+
+The objectives of this study were therefore to (i) quantify the
+age-standardised change in mortality for each major cause category in Brazil
+between 1990 and 2023; (ii) characterise the underlying age-pattern of these
+changes; and (iii) identify the causes for which the direction of change
+depends on whether age structure is taken into account. To do so we make
+age-standardised death rates the primary outcome and contrast them with the
+unweighted mean of age-specific rates displayed by the widely used GBD Compare
+tool.
 
 // ── 2. Methods ───────────────────────────────────────────────────────────────
 = Methods
@@ -176,6 +194,25 @@ underlying data are cited as:
   https://vizhub.healthdata.org/gbd-compare/ and
   https://vizhub.healthdata.org/gbd-results/. Accessed 4 June 2026.
 ]
+
+== GBD estimation framework
+
+The estimates analysed here are modelled outputs of the GBD study rather than
+raw death counts, and the GBD methodology has been described in detail elsewhere
+[5]. In brief, for Brazil the principal input is the national Mortality
+Information System (Sistema de Informação sobre Mortalidade), supplemented by
+other vital-registration and survey sources. GBD applies standardised
+procedures to correct for under-registration of deaths and to redistribute
+"garbage codes" — deaths assigned to causes that cannot be an underlying cause
+of death — to their most probable true causes, and it models cause-specific
+mortality with the Cause of Death Ensemble model (CODEm), constraining
+cause-specific estimates so that they sum to all-cause mortality [15]. Causes
+are organised in a four-level hierarchy; this analysis uses the 22 Level-2
+categories (of which 21 carry mortality estimates for Brazil). These corrections
+substantially improve cross-national and temporal comparability relative to
+unadjusted vital statistics, but they also mean the estimates carry modelling
+uncertainty that is larger for causes that are under-recorded or frequently
+miscertified (addressed in the Discussion).
 
 == Primary analysis: age-standardised death rates
 
@@ -251,6 +288,23 @@ diseases — increased on the unweighted-mean metric but declined once
 age-standardised; no category moved in the opposite direction. Reductions were
 concentrated in communicable, perinatal, and nutritional causes, and increases
 in non-communicable categories, consistent with an epidemiological transition.
+
+== Burden by GBD Level-1 group
+
+Aggregating the 21 categories into the three GBD Level-1 super-groups, the
+age-standardised death rate fell in all three between 1990 and 2023:
+communicable, maternal, neonatal, and nutritional causes by
+#pct-down[−53.2%] (from 146.3 to 68.4 per 100,000; 95% CI −54.5% to −51.7%),
+non-communicable diseases by #pct-down[−32.1%] (588.0 to 399.4; 95% CI −34.3%
+to −29.3%), and injuries by #pct-down[−20.5%] (89.2 to 70.9; 95% CI −22.1% to
+−18.9%). The communicable group declined fastest, so its share of the total
+contracted while the NCD share expanded — the proportional shift that defines
+the epidemiological transition. Critically, the NCD super-group's
+age-standardised rate fell substantially even though several of its constituent
+categories rose (Table 1): the decline of the dominant cardiovascular category
+outweighs the increases in smaller NCD categories. This illustrates, at the
+aggregate level, the same principle seen for individual causes — proportional
+or count-based increases can coexist with falling age-specific risk.
 
 #figure(
   caption: [Age-standardised death rates (deaths per 100,000, WHO World
@@ -424,7 +478,7 @@ in nutritional-deficiency mortality (#pct-down[−82.1%]) reflects food-security
 and conditional cash-transfer programmes [12]. The cardiovascular reduction of
 more than half (#pct-down[−54.8%]) aligns with documented improvements in
 hypertension control, expanding cardiac-care capacity, and reduced smoking
-prevalence [13].
+prevalence [13, 16].
 
 == Challenges: non-communicable diseases
 
@@ -460,6 +514,40 @@ rates displayed by default in some visualisation tools can invert the apparent
 direction of a trend. Mortality changes over periods of demographic change
 should be interpreted using age-standardised or otherwise age-adjusted measures.
 
+The same phenomenon has been documented for Brazil at the aggregate level.
+Analysing GBD 2015 estimates, Malta and colleagues reported that the absolute
+number of NCD deaths rose by about 90% between 1990 and 2015 while the
+age-standardised NCD death rate fell by 25.3%, explicitly attributing the
+divergence to population growth and ageing [11]. Our Level-1 results extend
+that pattern to 2023 — an age-standardised NCD decline of #pct-down[−32.1%]
+over the longer window — and our cause-level analysis shows where the same
+demographic confounding can flip the apparent direction of individual causes.
+The two analyses also agree closely on direction and approximate magnitude for
+the largest categories despite using different GBD cycles, endpoint years, and
+age-standardisation conventions: Malta reported cardiovascular declines of
+−40.4% (1990–2015) against our −54.8% (1990–2023), and a broadly stable
+neoplasm rate (their −6.5%) against our standardised −10.4%. This concordance
+provides external validation of the present estimates.
+
+== Progress against policy targets
+
+Read against the WHO Global Action Plan target of a 25% relative reduction in
+premature NCD mortality and SDG target 3.4 [14, 11], the trajectory is broadly
+encouraging: the age-standardised rate fell for all three Level-1 groups,
+including a #pct-down[−32.1%] reduction for NCDs as a whole and a more than
+halving of cardiovascular mortality, the single largest contributor. Progress
+is uneven, however. The rising age-standardised burden of substance use
+disorders, skin and subcutaneous diseases, and the heterogeneous "other NCD"
+category identifies where prevention and treatment are not keeping pace, and
+the persistence of interpersonal violence and self-harm (standardised rate
+essentially unchanged) marks injuries as a continuing priority that sits
+outside the classic NCD-target framing and that earlier work has flagged as a
+major and socially concentrated source of premature mortality in Brazil [17]. Reductions in mortality have also been
+shown to be socially patterned in Brazil, declining faster in wealthier regions
+and thereby widening relative inequalities [11]; the national estimates analysed
+here cannot capture that gradient and should be complemented by subnational and
+socioeconomic analyses.
+
 == Strengths and limitations
 
 The analysis is fully reproducible: every reported number, including all
@@ -472,10 +560,15 @@ Several limitations apply. First, the design is ecological and
 cross-sectional: population-level associations cannot establish that specific
 policies caused the observed changes, and the policy interpretations above are
 contextual rather than causal. Second, the estimates are GBD modelled outputs
-rather than directly observed deaths, and they carry uncertainty that is larger
-for causes under-recorded in vital registration (for example skin and
-subcutaneous diseases and the heterogeneous neurological and "other NCD"
-categories); the wide interval for neurological disorders reflects this.
+rather than directly observed deaths. The garbage-code redistribution and
+under-registration corrections that GBD applies improve comparability but rest
+on modelling assumptions that can bias estimates, particularly for ill-defined,
+small, or frequently miscertified causes [11]; this is most relevant to the
+categories where our estimates are least certain — skin and subcutaneous
+diseases, the residual "other NCD" group, and neurological disorders, whose
+standardised interval spans zero — and the large relative increases in these
+categories should be read with corresponding caution and as a prompt to
+disaggregate rather than as settled findings.
 Third, the Monte Carlo procedure treats the 25 age-specific rates as
 independent because the GBD posterior correlation structure is not available in
 the public extract; the true correlation between age groups would alter the
@@ -579,3 +672,20 @@ inserted as [5] once its final bibliographic details are confirmed.
   treatment and influence of socioeconomic variables on control of high blood
   pressure: results from the ELSA-Brasil study. _PLoS One._
   2015;10(6):e0127382.]
+
+#block[*\[14\]* World Health Organization. _Global action plan for the prevention and
+  control of noncommunicable diseases 2013–2020._ Geneva: World Health
+  Organization; 2013.]
+
+#block[*\[15\]* GBD 2021 Causes of Death Collaborators. Global burden of 288 causes of
+  death and life expectancy decomposition in 204 countries and territories and
+  811 subnational locations, 1990–2021: a systematic analysis for the Global
+  Burden of Disease Study 2021. _Lancet._ 2024;403(10440):2100–2132.]
+
+#block[*\[16\]* Ribeiro AL, Duncan BB, Brant LCC, Lotufo PA, Mill JG, Barreto SM.
+  Cardiovascular health in Brazil: trends and perspectives. _Circulation._
+  2016;133(4):422–433.]
+
+#block[*\[17\]* Reichenheim ME, de Souza ER, Moraes CL, et al. Violence and injuries in
+  Brazil: the effect, progress made, and challenges ahead. _Lancet._
+  2011;377(9781):1962–1975.]

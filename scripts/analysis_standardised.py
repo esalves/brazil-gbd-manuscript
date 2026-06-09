@@ -238,6 +238,91 @@ def standardised_change(cause: str, data_1990: dict, data_2023: dict) -> dict:
     }
 
 
+# -- GBD Level-1 super-groups -------------------------------------------------
+# Mapping of the 21 analysed Level-2 categories to the three GBD Level-1
+# groups. (Sense organ diseases carry no mortality estimate and are excluded.)
+LEVEL1_GROUPS = {
+    "Communicable, maternal, neonatal & nutritional": [
+        "HIV/AIDS and sexually transmitted infections",
+        "Respiratory infections and tuberculosis",
+        "Enteric infections",
+        "Neglected tropical diseases and malaria",
+        "Other infectious diseases",
+        "Maternal and neonatal disorders",
+        "Nutritional deficiencies",
+    ],
+    "Non-communicable diseases": [
+        "Neoplasms",
+        "Cardiovascular diseases",
+        "Chronic respiratory diseases",
+        "Digestive diseases",
+        "Neurological disorders",
+        "Mental disorders",
+        "Substance use disorders",
+        "Diabetes and kidney diseases",
+        "Skin and subcutaneous diseases",
+        "Musculoskeletal disorders",
+        "Other non-communicable diseases",
+    ],
+    "Injuries": [
+        "Transport injuries",
+        "Unintentional injuries",
+        "Self-harm and interpersonal violence",
+    ],
+}
+
+
+def _sum_age_specific(causes, year_data):
+    """Sum age-specific point rates across a set of causes (rates are additive)."""
+    out = {}
+    for ag in AGE_ORDER:
+        out[ag] = (sum(year_data.get(c, {}).get(ag, (0.0,))[0] for c in causes),
+                   0.0, 0.0)
+    return out
+
+
+def group_change(group_causes, data_1990, data_2023) -> dict:
+    """
+    Age-standardised rate and % change for a Level-1 group.
+
+    Point estimates sum the constituent age-specific rates (which are additive
+    across mutually exclusive causes) and standardise to the WHO standard.
+    Monte Carlo CIs sum independent draws across both causes and age groups,
+    consistent with the independence assumption used elsewhere.
+    """
+    w = _weights_vector()
+    agg90 = _sum_age_specific(group_causes, data_1990)
+    agg23 = _sum_age_specific(group_causes, data_2023)
+    asr90 = asr_point(agg90)
+    asr23 = asr_point(agg23)
+    pct_point = (asr23 - asr90) / asr90 * 100.0 if asr90 else float("nan")
+
+    sim90 = np.zeros(N_MC)
+    sim23 = np.zeros(N_MC)
+    for c in group_causes:
+        sim90 += (_mc_draws(data_1990.get(c, {}), N_MC, _rng_for(f"{c}|1990")) * w).sum(axis=1)
+        sim23 += (_mc_draws(data_2023.get(c, {}), N_MC, _rng_for(f"{c}|2023")) * w).sum(axis=1)
+    pct = (sim23 - sim90) / sim90 * 100.0
+
+    return {
+        "group": "",
+        "asr_1990": asr90,
+        "asr_2023": asr23,
+        "std_pct": pct_point,
+        "std_lo": float(np.nanpercentile(pct, 2.5)),
+        "std_hi": float(np.nanpercentile(pct, 97.5)),
+    }
+
+
+def compute_groups(data_1990: dict, data_2023: dict) -> list:
+    out = []
+    for name, causes in LEVEL1_GROUPS.items():
+        r = group_change(causes, data_1990, data_2023)
+        r["group"] = name
+        out.append(r)
+    return out
+
+
 def compute_all(data_1990: dict, data_2023: dict) -> list:
     causes = sorted(
         c for c in (set(data_1990) | set(data_2023))
@@ -265,6 +350,12 @@ def main() -> None:
 
     print("Age standardisation to the WHO World Standard Population.")
     print(f"Monte Carlo n = {N_MC:,} draws per cause; seed = 42.\n")
+
+    print("GBD Level-1 super-groups (age-standardised):")
+    for g in compute_groups(data_1990, data_2023):
+        print(f"  {g['group']:<48} {g['asr_1990']:>8.1f} -> {g['asr_2023']:>7.1f}  "
+              f"{_fmt(g['std_pct'])} ({_fmt(g['std_lo'])}, {_fmt(g['std_hi'])})")
+    print()
 
     hdr = (f"{'Cause':<46} {'ASR 1990':>9} {'ASR 2023':>9} "
            f"{'Std %':>8} {'95% CI':^20} {'Mean %':>8}")
