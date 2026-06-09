@@ -1,0 +1,259 @@
+population_group_id,population_group_name,measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,1,Number,1990,13605.523807319323,15395.102306591365,12040.902793172483
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,2,Percent,1990,0.01576099735624695,0.01784876847235518,0.013935943163479856
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,3,Rate,1990,9.110976081891305,10.30937219911857,8.063223357409836
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,1,Number,1990,22399.014301726587,47399.084563105345,10097.612448595186
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,2,Percent,1990,0.02594447018931976,0.05483255918320622,0.01173148765758158
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,3,Rate,1990,14.999560946796155,31.740926102799094,6.761893684230385
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,1,Number,1990,2.6126742784843815,3.700533105984879,0.6528768030701944
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,2,Percent,1990,3.026425085443247e-06,4.277059723788838e-06,7.568126336678116e-07
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,3,Rate,1990,0.0017495844480635188,0.0024780720754563955,0.00043720072975023496
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,1,Number,2023,289443.2993944416,301088.83556424006,271132.00251269306
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,2,Percent,2023,0.19687810547758183,0.20422779004393943,0.1842544873626754
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,3,Rate,2023,136.481233352851,141.9724544066276,127.84690535859494
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,1,Number,1990,14805.57273410159,17676.1454371993,12648.327095838858
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,2,Percent,1990,0.017151122207966593,0.02050810101557915,0.014633224850965606
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,3,Rate,1990,9.914592114897745,11.836878945573348,8.469986696442444
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,1,Number,1990,35818.11452979251,38653.888013690696,32830.39684689319
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,2,Percent,1990,0.0414930873101359,0.04473116044843835,0.0380417122945707
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,3,Rate,1990,23.98569797098323,25.884681409721452,21.984964685455825
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,1,Number,2023,8865.454479956203,10918.613464519643,7300.696170026275
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,2,Percent,2023,0.006030111163371729,0.007427363871879885,0.004962866472825559
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,3,Rate,2023,4.180328804257736,5.148455104189235,3.44249813246413
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,1,Number,2023,73935.05539749011,78800.00556409436,66126.37225083145
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,2,Percent,2023,0.05029037303870892,0.05366256531599893,0.04504076467396189
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,3,Rate,2023,34.86260545596375,37.15657598603801,31.180576164053114
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,1,Number,2023,3484.6152120544116,3703.0240019237544,3232.4519220550355
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,2,Percent,2023,0.0023702287350375125,0.002513800959571902,0.002198769552230691
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,3,Rate,2023,1.6431010249547517,1.746087347591469,1.5241984388612764
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,1,Number,2023,63398.9401643325,67290.05579221252,57629.670603321865
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,2,Percent,2023,0.043123381452138676,0.045702770202055806,0.0392742611551188
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,3,Rate,2023,29.89450978825409,31.729288002580308,27.174125426691262
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,1,Number,2023,80191.44673578191,84168.66211135052,74465.95040769195
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,2,Percent,2023,0.05454623876306521,0.057135535005519884,0.05064952108474832
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,3,Rate,2023,37.81268240704402,39.6880592456275,35.112938443201024
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,1,Number,1990,38636.66922892876,41450.14011418436,36037.02239825687
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,2,Percent,1990,0.04475806460774403,0.047954359406675265,0.041699747607583555
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,526,Digestive diseases,3,Rate,1990,25.873150803597998,27.75719924639824,24.132290221451655
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,1,Number,2023,5074.027010615204,5791.044721637194,4232.0852396232
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,2,Percent,2023,0.003451301202507898,0.003917723479792835,0.0028831918577344757
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,3,Rate,2023,2.3925565591716076,2.7306520056402444,1.9955556558628087
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,1,Number,2023,14403.297322662695,14827.267434467425,13961.747077204684
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,2,Percent,2023,0.00979706259361671,0.010074974260018382,0.009500114064857307
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,3,Rate,2023,6.791588497842318,6.99150317503442,6.583384258139957
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,1,Number,2023,117724.91465115029,129498.08915634078,104453.8883269636
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,2,Percent,2023,0.08007570226060926,0.08791944236533601,0.07111744089123505
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,3,Rate,2023,55.510842992610826,61.06224936583989,49.25315437320752
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,1,Number,2023,6835.091678796791,7417.1398087914,5985.606760700636
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,2,Percent,2023,0.004649162432473307,0.00504387033287343,0.004079667331928092
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,3,Rate,2023,3.222951591395208,3.4974048152859725,2.82239386703617
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,1,Number,2023,4430.35517608068,4670.695881057024,4169.190910700429
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,2,Percent,2023,0.0030135240005689824,0.0031925860022571214,0.0028358296108368123
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,3,Rate,2023,2.0890459025574883,2.202373783730387,1.9658990854732419
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,1,Number,2023,21663.24264551278,22948.584979665116,20475.1967756036
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,2,Percent,2023,0.01473519748475726,0.015554805085506747,0.013948634122529691
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,3,Rate,2023,10.21487137849577,10.820949002032945,9.654671968303168
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,1,Number,1990,48751.58710151389,51438.827784741065,46210.22222829274
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,2,Percent,1990,0.05647537524591007,0.05939281384130195,0.05344666714904969
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,3,Rate,1990,32.64663311214696,34.446151156281054,30.94480120157978
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,1,Number,2023,11020.630069903416,11729.727398817246,10324.360764492872
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,2,Percent,2023,0.007496307599004851,0.007974897330504552,0.007055224443504175
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,3,Rate,2023,5.196559006246657,5.5309197539988,4.8682470579411525
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2023,115189.95794088433,123186.95518857875,103267.9003963842
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,2,Percent,2023,0.07835291373902573,0.08352032281313039,0.06994779850653143
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,3,Rate,2023,54.315534553835434,58.086359616181454,48.693925343391605
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,1,Number,2023,74436.92851631077,76896.31748044374,71966.9793017862
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,2,Percent,2023,0.05063193206846416,0.05222506556915908,0.04911154887455379
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,3,Rate,2023,35.09925374730991,36.258929717772894,33.93459830072508
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,1,Number,2023,97622.90779573085,202711.27385617504,43288.56485778051
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,2,Percent,2023,0.0664075807811178,0.13783421600217977,0.02960444327800521
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,542,Neurological disorders,3,Rate,2023,46.03214131171162,95.58447104597094,20.411862130598085
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,1,Number,2023,3.4872847265381317,7.626898353869481,1.9246763862692626
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,2,Percent,2023,2.371462363210663e-06,5.1697716467536856e-06,1.3077284913720695e-06
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,558,Mental disorders,3,Rate,2023,0.0016443597814364325,0.0035963122869685105,0.0009075428850925464
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,1,Number,2023,379656.93854870665,400401.06222180335,342235.2299662053
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,2,Percent,2023,0.2582398321344492,0.27256172335182016,0.23355427104497817
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,3,Rate,2023,179.01968134174095,188.80116044197075,161.37421864767919
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,1,Number,2023,13452.533028999906,14259.34028638878,12090.079968151618
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,2,Percent,2023,0.009150300989292046,0.009699877903597293,0.008228363109046467
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,3,Rate,2023,6.343274497489126,6.7237084194242325,5.700836843831312
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,1,Number,2023,40472.25120156692,41693.56211433369,39275.404952599965
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,2,Percent,2023,0.02752917571207134,0.028266850167361697,0.026813034889094093
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,3,Rate,2023,19.08388541767132,19.65977029747485,18.519536363696016
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,1,Number,2023,48852.690063264294,51886.78926340753,44790.54234139232
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,2,Percent,2023,0.0332291969097742,0.03518808430683531,0.030514462720026996
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,3,Rate,2023,23.03551474982571,24.466183906157198,21.12008975189878
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,1,Number,1990,110275.83488052509,114193.79938305123,106290.01234448767
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,2,Percent,1990,0.12774717074684355,0.1319513737021404,0.12285042605741481
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,410,Neoplasms,3,Rate,1990,73.84651324240468,76.47018884488405,71.17739632292502
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,1,Number,1990,1356.4123048616316,1467.2339292826143,1245.987277321932
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,2,Percent,1990,0.0015713074559993117,0.0016949118942412478,0.0014466425411968152
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,3,Rate,1990,0.9083251951041443,0.9825371977991615,0.8343787745910899
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,1,Number,1990,21932.91098662189,23264.044468812055,20606.088266511
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,2,Percent,1990,0.025408038255878354,0.026905037594138585,0.023767817013419786
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,3,Rate,1990,14.687433592072441,15.578830754709786,13.79892314300491
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,1,Number,1990,7208.402319011766,7547.992772555928,6920.603565359177
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,2,Percent,1990,0.008350364312331575,0.008728414269621591,0.00803895787238736
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,3,Rate,1990,4.82712625013634,5.054533922468297,4.6344010307283074
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,1,Number,1990,62036.254395895834,67189.54693032286,57121.67386625689
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,2,Percent,1990,0.07186610368252383,0.07767366915659395,0.06599343609496325
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,3,Rate,1990,41.54274675606877,44.99366314040494,38.2516845160409
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,1,Number,1990,44092.479863453584,47250.133485119935,40507.58376877984
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,2,Percent,1990,0.05107761776285062,0.05487510708962184,0.04686193172556359
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,957,Enteric infections,3,Rate,1990,29.526649257787884,31.64118060765197,27.126013821975583
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,1,Number,1990,11504.506750002385,12146.24479958793,10846.868412751217
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,2,Percent,1990,0.01332724965044536,0.014111585097907255,0.012548429323106305
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,961,Other infectious diseases,3,Rate,1990,7.7040242858448895,8.13376591897981,7.26363498175894
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,1,Number,1990,60033.19229529481,61863.739190863635,58012.64568808493
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,2,Percent,1990,0.06954528875502958,0.0718624250848462,0.06726421161889717
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,3,Rate,1990,40.201390763637185,41.427221479051134,38.84832622372345
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,1,Number,1990,4265.991873536926,4486.313623617319,4018.5601790530927
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,2,Percent,1990,0.004941834638717456,0.005215043619938402,0.004656063781373421
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,973,Substance use disorders,3,Rate,1990,2.8567330795767143,3.0042721397210217,2.6910397713094296
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,1990,40385.74116330767,42768.55879793765,37736.997983489266
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,2,Percent,1990,0.0467842405820478,0.049622486041296675,0.04368817821515762
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,3,Rate,1990,27.044421589296128,28.640081909624534,25.270683503195006
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,1,Number,1990,254332.8378647427,264499.1440200061,241512.3251092415
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,2,Percent,1990,0.2946295344288792,0.3060061565259809,0.28021685750457437
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,3,Rate,1990,170.31467773248266,177.12257234451963,161.72938643997725
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,1,Number,1990,1409.2730152662136,1534.5938902065384,1279.9763580791264
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,2,Percent,1990,0.0016325566254059328,0.0017793247013712095,0.0014785328831398341
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,3,Rate,1990,0.9437235138303093,1.0276449791346252,0.8571396551135785
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,1,Number,1990,40559.51840907979,44675.75097767584,36803.99315700562
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,2,Percent,1990,0.04698642011301059,0.05184191753229817,0.042806788783986395
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,688,Transport injuries,3,Rate,1990,27.160791995333366,29.91723834838045,24.64589427943806
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,1,Number,1990,29821.451089928185,31184.707808375395,28533.665154324735
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,2,Percent,1990,0.034546129647628154,0.03616515400082126,0.0330285481345241
+1,All Population,1,Deaths,135,Brazil,3,Both,22,All ages,696,Unintentional injuries,3,Rate,1990,19.970015962300565,20.88292453760792,19.107646602322884
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,1,Number,1990,1872283.7341604135,2747696.301896829,1393404.307020733
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,2,Percent,1990,0.03482246084889657,0.04766411438005278,0.026455092120462993
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,3,Rate,1990,1253.7799030767828,1840.0023138701683,933.0969901240109
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,1,Number,1990,1771303.9105715351,1971443.5760112533,1620836.176070241
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,2,Percent,1990,0.033052383676509714,0.035768218675719554,0.030340216197679674
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,3,Rate,1990,1186.158489120127,1320.182561304546,1085.3973608054519
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,1,Number,1990,3459349.3942809734,3569417.515447773,3355093.932654303
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,2,Percent,1990,0.06463540575482286,0.06965960151205315,0.05917644872847821
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,3,Rate,1990,2316.5627458785148,2390.270163066666,2246.747791986321
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,1,Number,1990,2803575.987588369,3300519.852436793,2422918.1887319945
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,2,Percent,1990,0.0522356224791233,0.05768121299460181,0.047864458380836784
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,3,Rate,1990,1877.4222976215726,2210.202110497347,1622.5137656251732
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,1,Number,1990,1787798.124263824,2368080.9243960883,1332348.4810074845
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,2,Percent,1990,0.03328583373331799,0.04158936972714167,0.025479764393014602
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,3,Rate,1990,1197.2038842528893,1585.7918421743454,892.2107899052758
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,1,Number,1990,3144552.400436288,4028707.030532952,2281402.272439675
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,2,Percent,1990,0.058450454027117654,0.07108846038455857,0.0454499692698696
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,3,Rate,1990,2105.7580813769346,2697.834638045083,1527.7472467607815
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,1,Number,1990,1050922.3513643404,1357019.3369774676,807490.5436980595
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,2,Percent,1990,0.01958682970323771,0.024840064242068235,0.015615440659227542
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,3,Rate,1990,703.753015525539,908.7316958141965,540.7382423621641
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,1,Number,1990,985273.6783302074,1328586.0416029235,691571.1059954902
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,2,Percent,1990,0.018296437904769123,0.023472243005663425,0.013741120120696143
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,3,Rate,1990,659.7912027873838,889.6912621083321,463.1124751156117
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,1,Number,1990,458653.5356539973,485027.9642443639,436973.3704364518
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,2,Percent,1990,0.008565237500741842,0.009193400893129047,0.007882715589799165
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,3,Rate,1990,307.13858961978417,324.80029757483607,292.6204079205066
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,1,Number,1990,3727885.8000110122,4051477.121326372,3447048.0257468326
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,2,Percent,1990,0.06962521453669711,0.0768968744671582,0.06338543215723438
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,3,Rate,1990,2496.388881525512,2713.082691375433,2308.3251009281007
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,1,Number,1990,3598533.8841082305,3881923.3466072264,3279311.1081354194
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,2,Percent,1990,0.06722517715245575,0.07451683242785032,0.05986417785870492
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,3,Rate,1990,2409.7680186592775,2599.54054423447,2195.9996170988334
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,1,Number,1990,951086.2349928942,1038349.1003184989,874084.959234457
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,2,Percent,1990,0.017754970471707893,0.01933503642189594,0.016274815579116288
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,3,Rate,1990,636.8974882227359,695.3333037105,585.3333741433634
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,1,Number,1990,795656.98942891,1152022.3635020978,520400.6273452649
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,2,Percent,1990,0.014770953818632615,0.019914256521533596,0.010316250557951987
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,3,Rate,1990,532.8138705087273,771.45491407137,348.4876977829583
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,1,Number,1990,5579085.399968102,5778690.938640663,5389994.330195594
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,2,Percent,1990,0.10422956748606357,0.11207551448332631,0.09577403042548746
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,3,Rate,1990,3736.0497366954037,3869.7161294351217,3609.424386698239
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,1,Number,1990,2478360.497580259,2694389.434476463,2281510.582405074
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,2,Percent,1990,0.04628255198916104,0.05106150750586253,0.0420420225116584
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,3,Rate,1990,1659.6408587819717,1804.3052248829565,1527.8197768241703
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,1,Number,1990,2882900.4730775296,3302161.376165717,2554699.175399553
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,2,Percent,1990,0.05373045668397872,0.05796971890371931,0.050198532854585295
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,3,Rate,1990,1930.5421554260363,2211.301361334277,1710.7612623463394
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,1,Number,1990,752031.6043246222,943832.0433972608,592778.1328170188
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,2,Percent,1990,0.013994259107129741,0.01650806532354465,0.011640107682191137
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,3,Rate,1990,503.6000125288801,632.0396990587706,396.9554914937272
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,1990,1659586.0729431207,1845682.1744113131,1496610.9563522735
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,2,Percent,1990,0.030946068342425834,0.03280351551299939,0.02911482091147464
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,3,Rate,1990,1111.3463348092773,1235.9660961225309,1002.2096040055839
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,1,Number,2023,690429.836194476,1028754.9011762211,465144.6807955327
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,2,Percent,2023,0.00985250138632309,0.013789650389873145,0.007191553792814759
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,386,Nutritional deficiencies,3,Rate,2023,325.55846269225657,485.0889207802379,219.32972660037197
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,1,Number,1990,6798677.676971905,7059899.590640653,6514340.09879933
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,2,Percent,1990,0.12698889559185386,0.13652177200110988,0.11709436179988233
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,3,Rate,1990,4552.753027417899,4727.680993529835,4362.345593599031
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,1,Number,1990,1392360.7225603764,1621947.0390397978,1224472.3638343231
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,2,Percent,1990,0.025956122287158667,0.029054568222010663,0.023823012863489354
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,3,Rate,1990,932.3981509471885,1086.141253219241,819.9712541629451
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,1,Number,2023,2842750.0212445064,3199139.85961919,2576778.1797954757
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,2,Percent,2023,0.04079905158663725,0.04426109777189967,0.037430402171998486
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,526,Digestive diseases,3,Rate,2023,1340.4422552707535,1508.4907981030235,1215.0285212715985
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,1,Number,2023,4452612.204375421,5310159.889106524,3760459.1856860416
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,2,Percent,2023,0.06374063260271752,0.07087248111058964,0.05752653227192174
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,640,Other non-communicable diseases,3,Rate,2023,2099.540761753714,2503.9003234220813,1773.1697666148998
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,1,Number,2023,774687.3831983245,1035543.5499982274,568003.579407453
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,2,Percent,2023,0.01107432963021977,0.014117252999786575,0.008863935858483033
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,344,Neglected tropical diseases and malaria,3,Rate,2023,365.2884338418041,488.28997316585276,267.8307952837408
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,1,Number,2023,1216013.1727846407,1640237.7982595789,900145.4484336006
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,2,Percent,2023,0.017371386525632766,0.021461012325560688,0.01370173689557095
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,653,Skin and subcutaneous diseases,3,Rate,2023,573.3868358403204,773.4215238935708,424.44569024814035
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,1,Number,1990,2720472.109847312,3582220.1128206938,2003799.1445748562
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,2,Percent,1990,0.05053496150736386,0.06180338608741623,0.03984745147456292
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,3,Rate,1990,1821.7715594997585,2398.8434572744213,1341.8495559365638
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,1,Number,1990,2945900.2697027144,3085159.05719392,2798307.348456044
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,2,Percent,1990,0.0550301353968346,0.059391662157623884,0.050393939869211445
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,3,Rate,1990,1972.7301408608403,2065.9851672746718,1873.8941390737248
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,1,Number,2023,7541785.240933192,7761105.731642043,7206408.048580598
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,2,Percent,2023,0.10844923221520342,0.12047540008093119,0.096939696547539
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,410,Neoplasms,3,Rate,2023,3556.178890713186,3659.595107755078,3398.038443356273
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,1,Number,2023,9100324.436837155,9551567.225011803,8541456.033361921
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,2,Percent,2023,0.13078052739018975,0.1425755999829548,0.11870763396805077
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,491,Cardiovascular diseases,3,Rate,2023,4291.07706293123,4503.8516284523575,4027.553778240174
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,1,Number,2023,2456355.074685894,2829844.023826267,2148621.233273901
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,2,Percent,2023,0.03521490181190049,0.03848342667274106,0.032222749097371654
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,508,Chronic respiratory diseases,3,Rate,2023,1158.2454002115446,1334.3566887747425,1013.1396254080191
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,1,Number,2023,3885139.3163694176,5452250.978157857,2815462.1248833816
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,2,Percent,2023,0.05565841783911468,0.07772540563264436,0.04254890424820638
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,542,Neurological disorders,3,Rate,2023,1831.9602034495504,2570.900551524609,1327.5751902574589
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,1,Number,2023,6531758.106290182,8792471.301509053,4829736.621233245
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,2,Percent,2023,0.093278837769028,0.11627543380074483,0.07553959771973315
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,558,Mental disorders,3,Rate,2023,3079.9206759114422,4145.915037453263,2277.3662828416577
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,1,Number,2023,2347998.1541823307,3171648.74283941,1656946.4128980224
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,2,Percent,2023,0.03349149827812527,0.04226899505122825,0.02573713914503658
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,669,Sense organ diseases,3,Rate,2023,1107.151848612378,1495.5279085415743,781.3001389392231
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,1,Number,2023,5600601.609524617,7466997.089978693,4147986.358061865
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,2,Percent,2023,0.07987556466169243,0.09822580643738522,0.06485242445459005
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,626,Musculoskeletal disorders,3,Rate,2023,2640.852342358839,3520.9140250078694,1955.9005002482206
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,1,Number,2023,4297114.654701489,4456691.617190545,4150059.6219372163
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,2,Percent,2023,0.0617769379557459,0.06862594014040924,0.055237487928631195
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,717,Self-harm and interpersonal violence,3,Rate,2023,2026.21898368096,2101.464327763113,1956.878106609694
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,1,Number,2023,759258.5170447337,804376.4463016109,717402.0174875825
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,2,Percent,2023,0.01090700106107322,0.011936457812015164,0.010015760546625509
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,955,HIV/AIDS and sexually transmitted infections,3,Rate,2023,358.0132587512642,379.28772129431917,338.2766585420187
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,1,Number,2023,3462081.2535297233,3996174.0214928435,3046110.0166668375
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,2,Percent,2023,0.04970429952400197,0.05634962642449258,0.043706910613950656
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,956,Respiratory infections and tuberculosis,3,Rate,2023,1632.4755848142993,1884.3164111486753,1436.3326180738911
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,1,Number,2023,231677.36476401723,256397.73503655827,207790.78618269588
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,2,Percent,2023,0.0033249514196545104,0.0036092013422664207,0.0030338820336795955
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,957,Enteric infections,3,Rate,2023,109.24285533327019,120.89925446496265,97.97961409680329
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,1,Number,2023,267864.35443841486,301358.43814099027,241432.50086980787
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,2,Percent,2023,0.0038430987426302243,0.0041588763860112956,0.003537643767973586
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,961,Other infectious diseases,3,Rate,2023,126.30611087389404,142.0995801416747,113.84269582026269
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,1,Number,2023,2459223.800333079,2645078.3384096734,2295738.8023660965
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,2,Percent,2023,0.03531819305057597,0.03861300627751636,0.03274417521211757
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,962,Maternal and neonatal disorders,3,Rate,2023,1159.5980907568025,1247.234103177842,1082.5099902414213
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,1,Number,2023,2261756.5209555742,2384236.981373405,2155092.9090371034
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,2,Percent,2023,0.03248993578136092,0.03501771394481494,0.029895536304192574
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,688,Transport injuries,3,Rate,2023,1066.4863210504097,1124.2395471033994,1016.1912154495559
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,1,Number,2023,3171068.369156483,3742770.530194463,2726566.4208718743
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,2,Percent,2023,0.04541599715429557,0.04960009620492271,0.041898743911976254
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,696,Unintentional injuries,3,Rate,2023,1495.2542448699087,1764.8290327893283,1285.6581883830206
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,1,Number,2023,1291088.5057100644,1584575.370828151,1054812.408080144
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,2,Percent,2023,0.018474748429748677,0.021328122706498795,0.016151014185225025
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,973,Substance use disorders,3,Rate,2023,608.7871164945083,747.1750128734552,497.375820106594
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2023,4127569.265354943,4683993.782508437,3640551.128029186
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,2,Percent,2023,0.05915795518412848,0.06293580450748246,0.055113002381543263
+1,All Population,2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,22,All ages,974,Diabetes and kidney diseases,3,Rate,2023,1946.2732260983255,2208.644144781724,1716.6295059414247

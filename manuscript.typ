@@ -1,6 +1,13 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Shifting Mortality Burden in Brazil, 1990–2023
 // Typst manuscript source
+//
+// All numerical values (tables and in-text figures) are read at compile time
+// from build/results.json, which is produced by `python scripts/build_results.py`.
+// No statistic is typed by hand. Build order:
+//     python scripts/build_results.py     # writes build/results.json
+//     python scripts/figures.py           # writes figures/*.jpg
+//     typst compile manuscript.typ manuscript.pdf
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Page & typography ────────────────────────────────────────────────────────
@@ -15,13 +22,22 @@
 #set heading(numbering: "1.")
 #set par(justify: true, leading: 0.65em, spacing: 1.2em)
 
+#set document(
+  title: "Shifting Mortality Burden in Brazil, 1990–2023: Age-Standardised Trends Across Cause Categories from the Global Burden of Disease Study 2023",
+  author: "Eduardo S. A. Santos",
+)
+
+// Hyperlinks and cross-references rendered as coloured, clickable links.
+#let link-blue = rgb("#1a4f8a")
+#show link: it => text(fill: link-blue, it)
+#show ref: it => text(fill: link-blue, it)
+
 // ── Colour helpers ───────────────────────────────────────────────────────────
 #let green-dark = rgb("#1a7a4a")
 #let red-dark = rgb("#c0392b")
 #let grey-light = rgb("#f5f5f5")
 #let grey-border = rgb("#cccccc")
 
-// ── Reusable components ──────────────────────────────────────────────────────
 #let note(body) = block(
   fill: grey-light,
   stroke: 1pt + grey-border,
@@ -30,9 +46,28 @@
   body,
 )
 
-// Bold percentage-change tags used inline
+// ── Results data (single source of truth) ────────────────────────────────────
+#let R = json("build/results.json")
+#let C = R.by_slug         // cause records, keyed by short slug
+#let G = R.group_by_slug   // Level-1 groups + "all", keyed by slug
+#let S = R.summary
+
+// Colour a preformatted change string by its sign (− green, + red).
+#let vcol(s) = if s.starts-with("−") { green-dark } else if s.starts-with("+") { red-dark } else { rgb("#333333") }
+#let cv(s) = text(fill: vcol(s), weight: "bold", s)
+
+// Retained for any literal use.
 #let pct-up(v) = text(fill: red-dark, weight: "bold", v)
 #let pct-down(v) = text(fill: green-dark, weight: "bold", v)
+
+// Table-cell builders driven by the JSON records.
+#let hcell(b) = text(fill: white, weight: "bold", b)
+#let name-cell(c) = {
+  [#c.name_short]
+  if c.sup != "" { [#super[#c.sup]] }
+  if c.discordant { [ †] }
+}
+#let t2-name(r) = if r.bold { text(weight: "bold", r.name) } else { [#r.name] }
 
 // ── Title block ──────────────────────────────────────────────────────────────
 #align(center)[
@@ -75,8 +110,8 @@ age structure can mislead.
 
 *Methods.* Using age-specific death rates (deaths per 100,000) from the Global
 Burden of Disease (GBD) Study 2023 for Brazil (1990 and 2023, both sexes, 25
-age groups), we computed age-standardised death rates (ASRs) for 21 Level-2
-cause categories by direct standardisation to the WHO World Standard
+age groups), we computed age-standardised death rates (ASRs) for #S.n_causes
+Level-2 cause categories by direct standardisation to the WHO World Standard
 Population. The relative percent change in ASR between 1990 and 2023 was the
 primary outcome; 95% uncertainty intervals were obtained by Monte Carlo
 propagation of each age group's GBD interval (10,000 draws per cause). For
@@ -84,26 +119,34 @@ comparison we also computed the unweighted mean of the 25 age-specific rates —
 the summary statistic displayed by the GBD Compare tool — which weights every
 age band equally.
 
-*Results.* Of 21 cause categories, 15 showed decreased and six showed increased
-age-standardised mortality between 1990 and 2023. The largest standardised
-reductions were in enteric infections (#pct-down[−90.9%], 95% CI −91.4% to
-−90.4%), nutritional deficiencies (#pct-down[−82.1%]), neglected tropical
-diseases and malaria (#pct-down[−75.1%]), maternal and neonatal disorders
-(#pct-down[−60.8%]), and cardiovascular diseases (#pct-down[−54.8%]). The
-largest standardised increases were in skin and subcutaneous diseases
-(#pct-up[+206.8%], 95% CI +191.9% to +221.8%), other non-communicable diseases
-(#pct-up[+65.0%]), and substance use disorders (#pct-up[+16.1%]). Three
-categories — unintentional injuries, neoplasms, and diabetes and kidney
-diseases — rose on the unweighted-mean metric but declined once
-age-standardised (e.g. unintentional injuries: unweighted #pct-up[+26.2%] vs
-standardised #pct-down[−19.0%], 95% CI −21.5% to −16.4%), indicating that their
-apparent rise reflects population ageing rather than higher age-specific risk.
+*Results.* Of #S.n_causes cause categories, #S.n_decreased showed decreased and
+#S.n_increased showed increased age-standardised mortality between 1990 and
+2023. The largest standardised reductions were in enteric infections
+(#cv(C.enteric.asr_pct), 95% CI #C.enteric.asr_ci), nutritional deficiencies
+(#cv(C.nutritional.asr_pct)), neglected tropical diseases and malaria
+(#cv(C.ntd.asr_pct)), maternal and neonatal disorders (#cv(C.maternal.asr_pct)),
+and cardiovascular diseases (#cv(C.cvd.asr_pct)). The largest standardised
+increases were in skin and subcutaneous diseases (#cv(C.skin.asr_pct), 95% CI
+#C.skin.asr_ci), other non-communicable diseases (#cv(C.other_ncd.asr_pct)), and
+substance use disorders (#cv(C.substance.asr_pct)). #S.n_reversed categories —
+unintentional injuries, neoplasms, and diabetes and kidney diseases — rose on
+the unweighted-mean metric but declined once age-standardised (e.g.
+unintentional injuries: unweighted #cv(C.unintentional.mean_pct) vs standardised
+#cv(C.unintentional.asr_pct), 95% CI #C.unintentional.asr_ci), indicating that
+their apparent rise reflects population ageing rather than higher age-specific
+risk.
+
+The contrast with absolute burden was stark: the total number of deaths rose
+#cv(G.all.deaths_pct) and the crude rate #cv(G.all.crude_pct) over the period,
+even as the all-cause age-standardised rate fell #cv(G.all.asr_pct); for
+non-communicable diseases, deaths more than doubled (#cv(G.ncd.deaths_pct))
+while the standardised rate fell #cv(G.ncd.asr_pct).
 
 *Interpretation.* Brazil's mortality profile has shifted from communicable,
 perinatal, and nutritional causes toward non-communicable diseases — a classic
-epidemiological transition. Age standardisation reverses the apparent direction
-of several trends, underscoring that age structure must be accounted for before
-mortality changes are interpreted or acted upon.
+epidemiological transition. Rising death counts and crude rates coexist with
+falling age-standardised rates, underscoring that age structure must be
+accounted for before mortality changes are interpreted or acted upon.
 
 *Keywords:* epidemiological transition; Brazil; mortality; Global Burden of
 Disease; non-communicable diseases; age standardisation.
@@ -184,16 +227,19 @@ IHME GBD Compare / GBD Results tool for Brazil, both sexes combined, for the
 calendar years 1990 and 2023, across all 25 GBD age groups (0–6 days through
 95+ years) and the 22 Level-2 cause categories of the GBD cause hierarchy. One
 category (sense organ diseases) carried no mortality estimate and was excluded,
-leaving 21 categories. For every age group the tool provides a point estimate
-and a 95% uncertainty interval. Data were extracted on 4 June 2026. The
-underlying data are cited as:
+leaving #S.n_causes categories. For every age group the tool provides a point
+estimate and a 95% uncertainty interval. A second extract, for Brazil, both
+sexes, all ages combined, provided the absolute number of deaths and the crude
+(all-ages) death rate per 100,000 for the same 22 categories in 1990 and 2023;
+these are used in the absolute-burden analysis (@tab:burden). Data were
+extracted on 4 June 2026. The underlying data are cited as:
 
 #note[
   Institute for Health Metrics and Evaluation (IHME). _GBD Compare / GBD
   Results tool. Global Burden of Disease (GBD) Study 2023._ Seattle, WA: IHME,
   University of Washington, 2025. Available from
-  https://vizhub.healthdata.org/gbd-compare/ and
-  https://vizhub.healthdata.org/gbd-results/. Accessed 4 June 2026.
+  #link("https://vizhub.healthdata.org/gbd-compare/") and
+  #link("https://vizhub.healthdata.org/gbd-results/"). Accessed 4 June 2026.
 ]
 
 == GBD estimation framework
@@ -209,14 +255,14 @@ of death — to their most probable true causes, and it models cause-specific
 mortality with the Cause of Death Ensemble model (CODEm), constraining
 cause-specific estimates so that they sum to all-cause mortality [15]. Causes
 are organised in a four-level hierarchy; this analysis uses the 22 Level-2
-categories (of which 21 carry mortality estimates for Brazil). GBD reports each
-estimate with a 95% uncertainty interval derived from the percentiles of its
-posterior draw distribution; our uncertainty propagation (below) resamples
-these published intervals. These corrections
-substantially improve cross-national and temporal comparability relative to
-unadjusted vital statistics, but they also mean the estimates carry modelling
-uncertainty that is larger for causes that are under-recorded or frequently
-miscertified (addressed in the Discussion).
+categories (of which #S.n_causes carry mortality estimates for Brazil). GBD
+reports each estimate with a 95% uncertainty interval derived from the
+percentiles of its posterior draw distribution; our uncertainty propagation
+(below) resamples these published intervals. These corrections substantially
+improve cross-national and temporal comparability relative to unadjusted vital
+statistics, but they also mean the estimates carry modelling uncertainty that is
+larger for causes that are under-recorded or frequently miscertified (addressed
+in the Discussion).
 
 == Primary analysis: age-standardised death rates
 
@@ -264,15 +310,27 @@ of its share of the population and is reported only to identify causes whose
 direction of change differs from the age-standardised result. It is not an
 age-standardised rate and is not used for inference.
 
+== Absolute burden
+
+To place the rate analysis in context, we report the absolute number of deaths
+and the crude (all-ages) death rate for each cause and Level-1 group in 1990
+and 2023, with their relative changes. The crude rate uses Brazil's actual
+population age structure in each year, so — unlike the age-standardised rate —
+it is affected by population growth and ageing; juxtaposing the two isolates
+the demographic contribution to the change in burden. Counts and crude rates
+are reported as GBD point estimates.
+
 == Software and reproducibility
 
 All analyses were performed in Python 3. The unweighted-mean metric is
 reproduced by `scripts/analysis.py` (standard library only); the
 age-standardised analysis and uncertainty propagation by
-`scripts/analysis_standardised.py` (using NumPy); and the figures by
-`scripts/figures.py`, which imports the analysis module so that every plotted
-value is produced by the same code path. Data, code, and this manuscript source
-are openly available (see Data and Code Availability).
+`scripts/analysis_standardised.py` (using NumPy); the absolute-burden analysis
+by `scripts/analysis_counts.py`; and the figures by `scripts/figures.py`. A
+single build step, `scripts/build_results.py`, writes every reported quantity to
+`build/results.json`, which this manuscript reads at compile time; consequently
+no statistic in the text or tables is entered by hand. Data, code, and the
+manuscript source are openly available (see Data and Code Availability).
 
 == Ethics
 
@@ -285,30 +343,14 @@ approval was not required.
 
 == Overview
 
-Of the 21 cause categories analysed, 15 showed a decreased and six an increased
-age-standardised mortality rate between 1990 and 2023 (Table 1). Three
-categories — unintentional injuries, neoplasms, and diabetes and kidney
-diseases — increased on the unweighted-mean metric but declined once
-age-standardised; no category moved in the opposite direction. Reductions were
-concentrated in communicable, perinatal, and nutritional causes, and increases
-in non-communicable categories, consistent with an epidemiological transition.
-
-== Burden by GBD Level-1 group
-
-Aggregating the 21 categories into the three GBD Level-1 super-groups, the
-age-standardised death rate fell in all three between 1990 and 2023:
-communicable, maternal, neonatal, and nutritional causes by
-#pct-down[−53.2%] (from 146.3 to 68.4 per 100,000; 95% CI −54.5% to −51.7%),
-non-communicable diseases by #pct-down[−32.1%] (588.0 to 399.4; 95% CI −34.3%
-to −29.3%), and injuries by #pct-down[−20.5%] (89.2 to 70.9; 95% CI −22.1% to
-−18.9%). The communicable group declined fastest, so its share of the total
-contracted while the NCD share expanded — the proportional shift that defines
-the epidemiological transition. Critically, the NCD super-group's
-age-standardised rate fell substantially even though several of its constituent
-categories rose (Table 1): the decline of the dominant cardiovascular category
-outweighs the increases in smaller NCD categories. This illustrates, at the
-aggregate level, the same principle seen for individual causes — proportional
-or count-based increases can coexist with falling age-specific risk.
+Of the #S.n_causes cause categories analysed, #S.n_decreased showed a decreased
+and #S.n_increased an increased age-standardised mortality rate between 1990 and
+2023 (@tab:asr). #S.n_reversed categories — unintentional injuries, neoplasms,
+and diabetes and kidney diseases — increased on the unweighted-mean metric but
+declined once age-standardised; no category moved in the opposite direction.
+Reductions were concentrated in communicable, perinatal, and nutritional causes,
+and increases in non-communicable categories, consistent with an epidemiological
+transition.
 
 #figure(
   caption: [Age-standardised death rates (deaths per 100,000, WHO World
@@ -328,33 +370,16 @@ or count-based increases can coexist with falling age-specific risk.
     fill: (col, row) => if row == 0 { rgb("#2c3e50") } else if calc.odd(row) { rgb("#f9f9f9") } else { white },
     inset: (x: 7pt, y: 4.5pt),
 
-    text(fill: white, weight: "bold")[Cause of death or injury],
-    text(fill: white, weight: "bold")[ASR 1990],
-    text(fill: white, weight: "bold")[ASR 2023],
-    text(fill: white, weight: "bold")[Δ% ASR (95% CI)],
-    text(fill: white, weight: "bold")[Δ% mean],
+    hcell[Cause of death or injury], hcell[ASR 1990], hcell[ASR 2023],
+    hcell[Δ% ASR (95% CI)], hcell[Δ% mean],
 
-    [Enteric infections], [27.3], [2.5], pct-down[−90.9 (−91.4, −90.4)], [−90.1],
-    [Nutritional deficiencies], [10.0], [1.8], pct-down[−82.1 (−83.3, −80.8)], [−73.0],
-    [Neglected tropical diseases & malaria], [13.6], [3.4], pct-down[−75.1 (−76.8, −71.4)], [−66.1],
-    [Other infectious diseases], [7.4], [1.9], pct-down[−74.2 (−75.0, −73.3)], [−82.8],
-    [Maternal & neonatal disorders], [29.9], [11.7], pct-down[−60.8 (−63.1, −58.4)], [−60.4],
-    [Cardiovascular diseases], [293.7], [132.6], pct-down[−54.8 (−56.4, −53.1)], [−51.4],
-    [Transport injuries], [31.1], [17.8], pct-down[−42.8 (−44.8, −40.8)], [−55.2],
-    [Chronic respiratory diseases], [42.3], [25.3], pct-down[−40.2 (−43.2, −37.1)], [−34.6],
-    [Digestive diseases], [39.3], [29.3], pct-down[−25.3 (−27.7, −22.7)], [−8.7],
-    [Respiratory infections & tuberculosis], [52.9], [41.1], pct-down[−22.2 (−26.0, −18.3)], [−20.9],
-    [Unintentional injuries †], [23.1], [18.7], pct-down[−19.0 (−21.5, −16.4)], pct-up[+26.2],
-    [Mental disorders #super[a]], [\<0.01], [\<0.01], pct-down[−12.7 (−46.0, +34.1)], [−13.2],
-    [Neoplasms †], [117.9], [105.6], pct-down[−10.4 (−12.7, −8.0)], pct-up[+0.1],
-    [Diabetes & kidney diseases †], [44.9], [40.4], pct-down[−10.0 (−13.5, −6.2)], pct-up[+16.3],
-    [Self-harm & interpersonal violence], [34.9], [34.4], pct-down[−1.6 (−4.9, +1.6)], [−15.5],
-    [Neurological disorders], [28.6], [31.3], pct-up[+9.5 (−33.6, +72.5)], [+4.4],
-    [Musculoskeletal disorders], [1.2], [1.4], pct-up[+11.3 (+7.4, +15.2)], [+10.0],
-    [HIV/AIDS & sexually transmitted infections], [5.2], [6.1], pct-up[+15.6 (+10.5, +20.6)], [+2.4],
-    [Substance use disorders], [3.8], [4.4], pct-up[+16.1 (+11.9, +20.5)], [+32.6],
-    [Other non-communicable diseases], [14.8], [24.4], pct-up[+65.0 (+58.2, +72.4)], [+21.7],
-    [Skin & subcutaneous diseases], [1.5], [4.7], pct-up[+206.8 (+191.9, +221.8)], [+232.7],
+    ..R.causes.map(c => (
+      name-cell(c),
+      [#c.asr90],
+      [#c.asr23],
+      cv(c.asr_pct_ci_tbl),
+      cv(c.mean_pct_tbl),
+    )).flatten()
   )
   #v(0.3em)
   #text(size: 8pt, fill: rgb("#555555"))[
@@ -363,46 +388,118 @@ or count-based increases can coexist with falling age-specific risk.
     mortality is near zero and its percent change is statistically unstable
     (wide interval).
   ]
-]
+] <tab:asr>
+
+== Burden by GBD Level-1 group
+
+Aggregating the #S.n_causes categories into the three GBD Level-1 super-groups,
+the age-standardised death rate fell in all three between 1990 and 2023:
+communicable, maternal, neonatal, and nutritional causes by
+#cv(G.cmnn.asr_pct) (from #G.cmnn.asr90 to #G.cmnn.asr23 per 100,000; 95% CI
+#G.cmnn.asr_ci), non-communicable diseases by #cv(G.ncd.asr_pct)
+(#G.ncd.asr90 to #G.ncd.asr23; 95% CI #G.ncd.asr_ci), and injuries by
+#cv(G.injuries.asr_pct) (#G.injuries.asr90 to #G.injuries.asr23; 95% CI
+#G.injuries.asr_ci). The communicable group declined fastest, so its share of
+the total contracted while the NCD share expanded — the proportional shift that
+defines the epidemiological transition. Critically, the NCD super-group's
+age-standardised rate fell substantially even though several of its constituent
+categories rose (@tab:asr): the decline of the dominant cardiovascular category
+outweighs the increases in smaller NCD categories. This illustrates, at the
+aggregate level, the same principle seen for individual causes — proportional
+or count-based increases can coexist with falling age-specific risk.
+
+== Absolute burden: deaths and crude rates versus standardised rates
+
+The number of deaths and the crude death rate tell a markedly different story
+from the age-standardised rate (@tab:burden). The total number of deaths in
+Brazil rose #cv(G.all.deaths_pct), from #G.all.deaths90 in 1990 to
+#G.all.deaths23 in 2023, and the crude all-ages death rate rose
+#cv(G.all.crude_pct), even though the all-cause age-standardised rate fell
+#cv(G.all.asr_pct) (95% CI #G.all.asr_ci). The contrast is starkest for
+non-communicable diseases, where the number of deaths more than doubled
+(#cv(G.ncd.deaths_pct), from #G.ncd.deaths90 to #G.ncd.deaths23) and the crude
+rate rose #cv(G.ncd.crude_pct), yet the age-standardised rate fell
+#cv(G.ncd.asr_pct). Among individual causes, cardiovascular deaths rose
+#cv(C.cvd.deaths_pct) (#C.cvd.deaths90 to #C.cvd.deaths23) and neoplasm deaths
+#cv(C.neoplasms.deaths_pct) even as their age-standardised rates fell by
+#cv(C.cvd.asr_pct) and #cv(C.neoplasms.asr_pct) respectively; diabetes and
+kidney disease deaths nearly tripled (#cv(C.diabetes.deaths_pct)) while the
+age-standardised rate fell #cv(C.diabetes.asr_pct). In every such case the
+growth in deaths is a product of a larger, older population rather than of
+rising age-specific risk.
+
+#figure(
+  caption: [Absolute deaths, crude (all-ages) death rate, and age-standardised
+    rate: percent change in Brazil, 1990–2023, both sexes. Death counts and
+    crude rates are GBD point estimates for all ages; age-standardised changes
+    (WHO World Standard) are reproduced from @tab:asr (causes) and the main text
+    (groups), where 95% uncertainty intervals are given. Δ = percent change
+    1990–2023.],
+  kind: table,
+)[
+  #set text(size: 9pt)
+  #table(
+    columns: (1.9fr, auto, auto, auto, auto, auto),
+    align: (left, right, right, right, right, right),
+    stroke: none,
+    fill: (col, row) => if row == 0 { rgb("#2c3e50") } else if calc.odd(row) { rgb("#f9f9f9") } else { white },
+    inset: (x: 6pt, y: 4.5pt),
+
+    hcell[Cause / group], hcell[Deaths 1990], hcell[Deaths 2023],
+    hcell[Δ deaths], hcell[Δ crude], hcell[Δ ASR],
+
+    ..R.table2.map(r => (
+      t2-name(r),
+      [#r.deaths90],
+      [#r.deaths23],
+      cv(r.dn),
+      cv(r.dc),
+      cv(r.da),
+    )).flatten()
+  )
+] <tab:burden>
 
 == Causes with the greatest mortality reductions
 
-Figure 1 shows the cause categories with the largest age-standardised declines,
-together with the three categories (unintentional injuries, neoplasms, and
-diabetes and kidney diseases) that fall only after standardisation.
+@fig:decreased shows the cause categories with the largest age-standardised
+declines, together with the three categories (unintentional injuries,
+neoplasms, and diabetes and kidney diseases) that fall only after
+standardisation.
 
-*Enteric infections* (#pct-down[−90.9%]) showed the most pronounced
+*Enteric infections* (#cv(C.enteric.asr_pct)) showed the most pronounced
 improvement. Death rates that were very high in early infancy in 1990 (peaking
 near 1,500 per 100,000 in the 1–5-month group) collapsed to near-zero across
-all paediatric groups by 2023, so the standardised rate fell from 27.3 to 2.5
-per 100,000.
+all paediatric groups by 2023, so the standardised rate fell from
+#C.enteric.asr90 to #C.enteric.asr23 per 100,000.
 
-*Maternal and neonatal disorders* (#pct-down[−60.8%]) showed extreme
+*Maternal and neonatal disorders* (#cv(C.maternal.asr_pct)) showed extreme
 concentration of risk in the neonatal period, with the standardised rate
-falling from 29.9 to 11.7 per 100,000. *Nutritional deficiencies*
-(#pct-down[−82.1%]) and *neglected tropical diseases and malaria*
-(#pct-down[−75.1%]) showed similarly large reductions concentrated in early
-childhood.
+falling from #C.maternal.asr90 to #C.maternal.asr23 per 100,000.
+*Nutritional deficiencies* (#cv(C.nutritional.asr_pct)) and *neglected tropical
+diseases and malaria* (#cv(C.ntd.asr_pct)) showed similarly large reductions
+concentrated in early childhood.
 
-*Cardiovascular diseases* (#pct-down[−54.8%]), the largest single contributor
-to standardised mortality in both years (ASR 293.7 per 100,000 in 1990),
+*Cardiovascular diseases* (#cv(C.cvd.asr_pct)), the largest single contributor
+to standardised mortality in both years (ASR #C.cvd.asr90 per 100,000 in 1990),
 declined by more than half, with the steepest absolute reductions in the older
 age bands.
 
 *Respiratory infections and tuberculosis* declined more modestly
-(#pct-down[−22.2%], 95% CI −26.0% to −18.3%), with reductions in younger and
-middle-aged groups partly offset by persistently high rates at the oldest ages.
+(#cv(C.resp_tb.asr_pct), 95% CI #C.resp_tb.asr_ci), with reductions in younger
+and middle-aged groups partly offset by persistently high rates at the oldest
+ages.
 
 Three categories rose on the unweighted-mean metric but declined once
-age-standardised, and therefore appear in Figure 1: *unintentional injuries*
-(unweighted #pct-up[+26.2%]; standardised #pct-down[−19.0%], 95% CI −21.5% to
-−16.4%), *diabetes and kidney diseases* (unweighted #pct-up[+16.3%];
-standardised #pct-down[−10.0%], 95% CI −13.5% to −6.2%), and *neoplasms*
-(unweighted #pct-up[+0.1%]; standardised #pct-down[−10.4%], 95% CI −12.7% to
-−8.0%). In each case, 2023 age-specific rates exceeded 1990 rates only in the
-oldest age bands, which the unweighted mean over-weights relative to their
-population share; once standardised, the broad-based reductions at younger and
-middle ages dominate.
+age-standardised, and therefore appear in @fig:decreased: *unintentional
+injuries* (unweighted #cv(C.unintentional.mean_pct); standardised
+#cv(C.unintentional.asr_pct), 95% CI #C.unintentional.asr_ci), *diabetes and
+kidney diseases* (unweighted #cv(C.diabetes.mean_pct); standardised
+#cv(C.diabetes.asr_pct), 95% CI #C.diabetes.asr_ci), and *neoplasms* (unweighted
+#cv(C.neoplasms.mean_pct); standardised #cv(C.neoplasms.asr_pct), 95% CI
+#C.neoplasms.asr_ci). In each case, 2023 age-specific rates exceeded 1990 rates
+only in the oldest age bands, which the unweighted mean over-weights relative to
+their population share; once standardised, the broad-based reductions at younger
+and middle ages dominate.
 
 #figure(
   image("figures/fig1_decreased.jpg", width: 100%),
@@ -416,35 +513,36 @@ middle ages dominate.
     unweighted-mean metric but declined after standardisation. Source: GBD 2023
     (IHME).
   ],
-)
+) <fig:decreased>
 
 == Causes with rising mortality burden
 
-Figure 2 shows the six categories with rising age-standardised mortality.
+@fig:increased shows the six categories with rising age-standardised mortality.
 
 *Skin and subcutaneous diseases* showed by far the largest relative increase
-(#pct-up[+206.8%], 95% CI +191.9% to +221.8%), with the standardised rate rising
-from 1.5 to 4.7 per 100,000. The increase was concentrated among the elderly;
-plausible contributors include changes in diagnostic coding over time, an ageing
-and more immunocompromised population, and rising melanoma incidence in a
-high-ultraviolet setting [9]. Because this category is small and partly
-dependent on cause-of-death coding, the estimate should be interpreted with
-caution.
+(#cv(C.skin.asr_pct), 95% CI #C.skin.asr_ci), with the standardised rate rising
+from #C.skin.asr90 to #C.skin.asr23 per 100,000. The increase was concentrated
+among the elderly; plausible contributors include changes in diagnostic coding
+over time, an ageing and more immunocompromised population, and rising melanoma
+incidence in a high-ultraviolet setting [9]. Because this category is small and
+partly dependent on cause-of-death coding, the estimate should be interpreted
+with caution.
 
-*Other non-communicable diseases* increased by #pct-up[+65.0%] (95% CI +58.2%
-to +72.4%). This residual category is heterogeneous, and the rise should be
-read as a signal to disaggregate rather than as a single coherent trend.
+*Other non-communicable diseases* increased by #cv(C.other_ncd.asr_pct) (95% CI
+#C.other_ncd.asr_ci). This residual category is heterogeneous, and the rise
+should be read as a signal to disaggregate rather than as a single coherent
+trend.
 
-*Substance use disorders* increased by #pct-up[+16.1%] (95% CI +11.9% to
-+20.5%), with the largest rises in middle age, consistent with documented
-increases in alcohol- and drug-attributable mortality in Brazilian urban
-centres [10].
+*Substance use disorders* increased by #cv(C.substance.asr_pct) (95% CI
+#C.substance.asr_ci), with the largest rises in middle age, consistent with
+documented increases in alcohol- and drug-attributable mortality in Brazilian
+urban centres [10].
 
-*HIV/AIDS and sexually transmitted infections* (#pct-up[+15.6%]) and
-*musculoskeletal disorders* (#pct-up[+11.3%]) showed smaller but precisely
-estimated increases. *Neurological disorders* rose modestly in the point
-estimate (#pct-up[+9.5%]) but with an interval spanning zero (95% CI −33.6% to
-+72.5%), so the direction of change for this heterogeneous category is
+*HIV/AIDS and sexually transmitted infections* (#cv(C.hiv.asr_pct)) and
+*musculoskeletal disorders* (#cv(C.musculo.asr_pct)) showed smaller but
+precisely estimated increases. *Neurological disorders* rose modestly in the
+point estimate (#cv(C.neuro.asr_pct)) but with an interval spanning zero (95% CI
+#C.neuro.asr_ci), so the direction of change for this heterogeneous category is
 uncertain.
 
 #figure(
@@ -457,7 +555,7 @@ uncertain.
     the percent change in the WHO-standardised rate with its Monte Carlo 95% CI
     (n = 10,000). Source: GBD 2023 (IHME).
   ],
-)
+) <fig:increased>
 
 // ── 4. Discussion ────────────────────────────────────────────────────────────
 = Discussion
@@ -469,48 +567,53 @@ markedly: communicable diseases, nutritional deficiencies, and perinatal
 conditions declined steeply, while several non-communicable categories rose.
 This pattern is consistent with the epidemiological-transition and
 double-burden literature [4] and with previous national GBD-based assessments
-[11]. The analysis also shows that the direction of change for three categories
-depends entirely on whether age structure is accounted for.
+[11]. The analysis also shows that the direction of change for #S.n_reversed
+categories depends entirely on whether age structure is accounted for.
 
 == Successes: communicable, perinatal, and nutritional causes
 
 The near-elimination of enteric-infection mortality in childhood
-(#pct-down[−90.9%]) is among Brazil's most notable public-health achievements,
-attributable to oral rehydration therapy, sanitation expansion, rotavirus
-vaccination (introduced in 2006), and improved paediatric care [1]. The decline
-in nutritional-deficiency mortality (#pct-down[−82.1%]) reflects food-security
-and conditional cash-transfer programmes [12]. The cardiovascular reduction of
-more than half (#pct-down[−54.8%]) aligns with documented improvements in
-hypertension control, expanding cardiac-care capacity, and reduced smoking
-prevalence [13, 16].
+(#cv(C.enteric.asr_pct)) is among Brazil's most notable public-health
+achievements, attributable to oral rehydration therapy, sanitation expansion,
+rotavirus vaccination (introduced in 2006), and improved paediatric care [1].
+The decline in nutritional-deficiency mortality (#cv(C.nutritional.asr_pct))
+reflects food-security and conditional cash-transfer programmes [12]. The
+cardiovascular reduction of more than half (#cv(C.cvd.asr_pct)) aligns with
+documented improvements in hypertension control, expanding cardiac-care
+capacity, and reduced smoking prevalence [13, 16]; notably, this halving of
+age-specific risk occurred even as the absolute number of cardiovascular deaths
+rose by #cv(C.cvd.deaths_pct) (#C.cvd.deaths90 to #C.cvd.deaths23), a divergence
+driven entirely by demographic change.
 
 == Challenges: non-communicable diseases
 
-The large rise in skin and subcutaneous disease mortality (#pct-up[+206.8%]) is
-not explained by a single mechanism; improved diagnostic ascertainment, an
-ageing and more immunocompromised population, and rising melanoma incidence are
-plausible contributors [9], and the category warrants disaggregation in future
-work. The increase in substance use disorder mortality (#pct-up[+16.1%]) is
-consistent with rising alcohol- and drug-attributable deaths in urban Brazil
-[10]; prevention and treatment services remain comparatively underfunded.
+The large rise in skin and subcutaneous disease mortality
+(#cv(C.skin.asr_pct)) is not explained by a single mechanism; improved
+diagnostic ascertainment, an ageing and more immunocompromised population, and
+rising melanoma incidence are plausible contributors [9], and the category
+warrants disaggregation in future work. The increase in substance use disorder
+mortality (#cv(C.substance.asr_pct)) is consistent with rising alcohol- and
+drug-attributable deaths in urban Brazil [10]; prevention and treatment services
+remain comparatively underfunded.
 
 == Why age standardisation changes the conclusions
 
-Three categories illustrate why a population-weighted summary is essential.
-Unintentional injuries rose by #pct-up[+26.2%] on the unweighted-mean metric
-but fell by #pct-down[−19.0%] once standardised; diabetes and kidney diseases
-moved from #pct-up[+16.3%] to #pct-down[−10.0%]; and neoplasms from a flat
-#pct-up[+0.1%] to #pct-down[−10.4%]. In each case the 2023 age-specific rate
-exceeded the 1990 rate only at the oldest ages. The unweighted mean gives each
-of the 25 age bands equal weight, so it over-represents these small but
-high-rate elderly bands; the WHO standard assigns them weights that reflect a
-population age distribution, allowing the substantial reductions at younger and
-middle ages to dominate. Because Brazil's elderly population grew rapidly over
-the period [6], crude or count-based measures will register an apparent
-increase for these causes even though within-age-group risk has fallen — a
-classic confounding-by-age effect. For unintentional injuries, the standardised
-decline is consistent with reduced road-traffic mortality among working-age
-adults following road-safety legislation such as the 2008 "Dry Law," even as
+#S.n_reversed categories illustrate why a population-weighted summary is
+essential. Unintentional injuries rose by #cv(C.unintentional.mean_pct) on the
+unweighted-mean metric but fell by #cv(C.unintentional.asr_pct) once
+standardised; diabetes and kidney diseases moved from #cv(C.diabetes.mean_pct)
+to #cv(C.diabetes.asr_pct); and neoplasms from a flat #cv(C.neoplasms.mean_pct)
+to #cv(C.neoplasms.asr_pct). In each case the 2023 age-specific rate exceeded
+the 1990 rate only at the oldest ages. The unweighted mean gives each of the 25
+age bands equal weight, so it over-represents these small but high-rate elderly
+bands; the WHO standard assigns them weights that reflect a population age
+distribution, allowing the substantial reductions at younger and middle ages to
+dominate. Because Brazil's elderly population grew rapidly over the period [6],
+crude or count-based measures will register an apparent increase for these
+causes even though within-age-group risk has fallen — a classic
+confounding-by-age effect. For unintentional injuries, the standardised decline
+is consistent with reduced road-traffic mortality among working-age adults
+following road-safety legislation such as the 2008 "Dry Law," even as
 fall-related deaths rise among the elderly.
 
 This finding has a practical implication: the unweighted mean of age-specific
@@ -522,16 +625,20 @@ The same phenomenon has been documented for Brazil at the aggregate level.
 Analysing GBD 2015 estimates, Malta and colleagues reported that the absolute
 number of NCD deaths rose by about 90% between 1990 and 2015 while the
 age-standardised NCD death rate fell by 25.3%, explicitly attributing the
-divergence to population growth and ageing [11]. Our Level-1 results extend
-that pattern to 2023 — an age-standardised NCD decline of #pct-down[−32.1%]
-over the longer window — and our cause-level analysis shows where the same
+divergence to population growth and ageing [11]. Our data reproduce and extend
+that pattern to 2023: NCD deaths more than doubled (#cv(G.ncd.deaths_pct), from
+#G.ncd.deaths90 to #G.ncd.deaths23) and the crude rate rose #cv(G.ncd.crude_pct),
+yet the age-standardised NCD rate fell #cv(G.ncd.asr_pct); across all causes,
+deaths rose #cv(G.all.deaths_pct) against a #cv(G.all.asr_pct) standardised
+decline (@tab:burden). Our cause-level analysis then shows where the same
 demographic confounding can flip the apparent direction of individual causes.
 The two analyses also agree closely on direction and approximate magnitude for
 the largest categories despite using different GBD cycles, endpoint years, and
 age-standardisation conventions: Malta reported cardiovascular declines of
-−40.4% (1990–2015) against our −54.8% (1990–2023), and a broadly stable
-neoplasm rate (their −6.5%) against our standardised −10.4%. This concordance
-provides external validation of the present estimates.
+−40.4% (1990–2015) against our #cv(C.cvd.asr_pct) (1990–2023), and a broadly
+stable neoplasm rate (their −6.5%) against our standardised
+#cv(C.neoplasms.asr_pct). This concordance provides external validation of the
+present estimates.
 
 The same principle is central to GBD 2023 itself. Its headline global finding
 contrasts a 6.1% rise in the absolute number of disability-adjusted life-years
@@ -548,7 +655,7 @@ directions.
 Read against the WHO Global Action Plan target of a 25% relative reduction in
 premature NCD mortality and SDG target 3.4 [14, 11], the trajectory is broadly
 encouraging: the age-standardised rate fell for all three Level-1 groups,
-including a #pct-down[−32.1%] reduction for NCDs as a whole and a more than
+including a #cv(G.ncd.asr_pct) reduction for NCDs as a whole and a more than
 halving of cardiovascular mortality, the single largest contributor. Progress
 is uneven, however. The rising age-standardised burden of substance use
 disorders, skin and subcutaneous diseases, and the heterogeneous "other NCD"
@@ -556,19 +663,20 @@ category identifies where prevention and treatment are not keeping pace, and
 the persistence of interpersonal violence and self-harm (standardised rate
 essentially unchanged) marks injuries as a continuing priority that sits
 outside the classic NCD-target framing and that earlier work has flagged as a
-major and socially concentrated source of premature mortality in Brazil [17]. Reductions in mortality have also been
-shown to be socially patterned in Brazil, declining faster in wealthier regions
-and thereby widening relative inequalities [11]; the national estimates analysed
-here cannot capture that gradient and should be complemented by subnational and
-socioeconomic analyses.
+major and socially concentrated source of premature mortality in Brazil [17].
+Reductions in mortality have also been shown to be socially patterned in Brazil,
+declining faster in wealthier regions and thereby widening relative inequalities
+[11]; the national estimates analysed here cannot capture that gradient and
+should be complemented by subnational and socioeconomic analyses.
 
 == Strengths and limitations
 
 The analysis is fully reproducible: every reported number, including all
-figures, is generated by the accompanying open code from the open data, with
-no manual adjustments. Standardisation to the external WHO World Standard makes
-the 1990 and 2023 rates directly comparable and the results comparable with
-other studies that use the same standard.
+figures and table cells, is generated by the accompanying open code from the
+open data and read into this document at compile time, with no manual
+adjustments. Standardisation to the external WHO World Standard makes the 1990
+and 2023 rates directly comparable and the results comparable with other studies
+that use the same standard.
 
 Several limitations apply. First, the design is ecological and
 cross-sectional: population-level associations cannot establish that specific
@@ -609,7 +717,7 @@ be accounted for before mortality changes are interpreted.
 = Declarations
 
 *Data and code availability.* All data analysed are publicly available from the
-IHME GBD Compare / GBD Results tool (https://vizhub.healthdata.org/gbd-compare/).
+IHME GBD Compare / GBD Results tool (#link("https://vizhub.healthdata.org/gbd-compare/")).
 The extracted CSV files, all analysis and figure-generation code, the STROBE
 checklist, and this manuscript source are provided in the accompanying
 repository and may be re-run to reproduce every value and figure reported here.
@@ -657,7 +765,7 @@ GBD Results tool on 4 June 2026.
 
 #block[*\[6\]* United Nations, Department of Economic and Social Affairs, Population
   Division. _World Population Prospects 2024._ New York: United Nations; 2024.
-  Available from https://population.un.org/wpp/.]
+  Available from #link("https://population.un.org/wpp/").]
 
 #block[*\[7\]* von Elm E, Altman DG, Egger M, et al. The Strengthening the Reporting of
   Observational Studies in Epidemiology (STROBE) statement: guidelines for

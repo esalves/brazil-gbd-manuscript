@@ -20,9 +20,10 @@ comparison the analysis also reports the *unweighted mean of the 25
 age-specific rates* — the summary statistic shown by the GBD Compare tool —
 which is **not** age-standardised.
 
-Every number in the manuscript, including all figure annotations, is produced
-directly by the code in `scripts/` from the data in `data/`. There are no
-manual overrides.
+Every number in the manuscript — every table cell and in-text figure — is
+produced by the code in `scripts/` from the data in `data/` and read into the
+Typst source at compile time from `build/results.json`. Nothing is typed by
+hand, and there are no manual overrides.
 
 ## Repository structure
 
@@ -33,14 +34,19 @@ brazil-gbd-manuscript/
 ├── manuscript.pdf                 # Compiled manuscript
 ├── STROBE_checklist.md            # STROBE reporting checklist
 ├── data/
-│   ├── GBD_Compare_Data1990.csv   # Age-specific death rates + 95% UIs, Brazil, 1990
-│   └── GBD_Compare_Data2023.csv   # Age-specific death rates + 95% UIs, Brazil, 2023
+│   ├── GBD_Compare_Data1990.csv         # Age-specific death rates + 95% UIs, Brazil, 1990
+│   ├── GBD_Compare_Data2023.csv         # Age-specific death rates + 95% UIs, Brazil, 2023
+│   └── IHME-GBD_2023_DATA-94d42f74-1.csv# All-ages death counts, crude rates & DALYs, 1990 & 2023
 ├── figures/
 │   ├── fig1_decreased.jpg         # Figure 1: greatest age-standardised reductions
 │   └── fig2_increased.jpg         # Figure 2: rising age-standardised burden
+├── build/
+│   └── results.json              # Generated: all values the manuscript reads at compile time
 └── scripts/
     ├── analysis.py                # Unweighted-mean metric (GBD Compare display metric)
     ├── analysis_standardised.py   # PRIMARY: WHO age-standardised rates + Monte Carlo CIs
+    ├── analysis_counts.py         # Absolute deaths & crude rates vs ASR (Table 2)
+    ├── build_results.py           # Writes build/results.json (single source for the manuscript)
     └── figures.py                 # Figure generation (imports analysis_standardised)
 ```
 
@@ -63,6 +69,11 @@ Of 21 cause categories, 15 declined and six rose in age-standardised mortality.
 but fell once age-standardised): unintentional injuries (+26.2% → −19.0%),
 diabetes & kidney diseases (+16.3% → −10.0%), and neoplasms (+0.1% → −10.4%).
 
+**Absolute burden vs risk.** Total deaths rose +70% (863,234 → 1,470,158) and
+the crude rate +19.9%, while the all-cause age-standardised rate fell −34.6%.
+NCD deaths more than doubled (+112%) even as the NCD age-standardised rate fell
+−32.1% — the demographic (growth + ageing) effect that motivates the analysis.
+
 ## Data source
 
 > Institute for Health Metrics and Evaluation (IHME). GBD Compare / GBD Results tool. Global Burden of Disease (GBD) Study 2023. Seattle, WA: IHME, University of Washington, 2025. Available from https://vizhub.healthdata.org/gbd-compare/ and https://vizhub.healthdata.org/gbd-results/. (Accessed 4 June 2026.)
@@ -84,20 +95,27 @@ python scripts/analysis.py
 python scripts/analysis_standardised.py
 #   add --json results.json for machine-readable output
 
+# Absolute deaths and crude rates vs age-standardised rates (Table 2)
+python scripts/analysis_counts.py
+
 # Regenerate both figures from the same code path
 python scripts/figures.py
 ```
 
-The Monte Carlo procedure is seeded deterministically per cause, so reported
-intervals are reproduced exactly on every run, independent of execution order.
+### Building the manuscript (reproducible pipeline)
 
-### Compiling the manuscript
-
-Requires [Typst](https://typst.app/) ≥ 0.11:
+The Typst source reads all values from `build/results.json`, so regenerate it
+(and the figures) before compiling:
 
 ```bash
+python scripts/build_results.py     # writes build/results.json
+python scripts/figures.py           # writes figures/*.jpg
 typst compile manuscript.typ manuscript.pdf
 ```
+
+The Monte Carlo procedure is seeded deterministically per cause, so reported
+intervals are reproduced exactly on every run, independent of execution order.
+Compiling the manuscript requires [Typst](https://typst.app/) ≥ 0.11.
 
 ## License
 
