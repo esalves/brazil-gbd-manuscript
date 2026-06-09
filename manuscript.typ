@@ -20,7 +20,8 @@
 
 #set text(font: "Linux Libertine", size: 11pt, lang: "en")
 #set heading(numbering: "1.")
-#set par(justify: true, leading: 0.65em, spacing: 1.2em)
+#set par(justify: true, leading: 0.65em)
+#show par: set block(spacing: 1.2em)
 
 #set document(
   title: "Shifting Mortality Burden in Brazil, 1990–2023: Age-Standardised Trends Across Cause Categories from the Global Burden of Disease Study 2023",
