@@ -86,7 +86,7 @@ Age-standardisation standard:
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install numpy matplotlib
+pip install -r requirements.txt
 
 # Unweighted-mean comparison metric (standard library only)
 python scripts/analysis.py
