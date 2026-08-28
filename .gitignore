@@ -6,6 +6,7 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
 .env
 
 # Typst compilation output
@@ -16,8 +17,11 @@ manuscript.pdf
 .DS_Store
 Thumbs.db
 
-# Editor
+# Editor & AI Agents
 .vscode/
 .idea/
+.claude/
+.gemini/
+.agents/
 *.swp
 *.swo
