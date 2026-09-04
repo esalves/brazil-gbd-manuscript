@@ -3,10 +3,338 @@
     "n_causes": 21,
     "n_decreased": 15,
     "n_increased": 6,
-    "n_reversed": 3
+    "n_reversed": 3,
+    "n_decreased_sig": 13,
+    "n_increased_sig": 5,
+    "n_indeterminate": 3,
+    "indeterminate_list": "mental disorders, self-harm & interpersonal violence, and neurological disorders",
+    "w_causes": "twenty-one",
+    "w_decreased": "fifteen",
+    "w_increased": "six",
+    "w_reversed": "three",
+    "w_decreased_sig": "thirteen",
+    "w_increased_sig": "five",
+    "w_indeterminate": "three",
+    "W_reversed": "Three",
+    "W_indeterminate": "Three"
   },
+  "premature": {
+    "p90": "23.3%",
+    "p23": "15.3%",
+    "p90_ci": "23.1% to 23.6%",
+    "p23_ci": "15.1% to 15.5%",
+    "pct": "−34.4%",
+    "ci": "−35.5% to −33.3%"
+  },
+  "validation": {
+    "exhaustive": true,
+    "max_abs_diff_deaths": "0.000"
+  },
+  "allcause": {
+    "d2018": "1,325,398",
+    "d2019": "1,354,114",
+    "d2020": "1,565,872",
+    "d2021": "1,833,020",
+    "d2022": "1,544,801",
+    "d2023": "1,470,158",
+    "crude2019": "647.0",
+    "crude2021": "869.4",
+    "crude2023": "693.2",
+    "excess2020": "211,758",
+    "excess2021": "478,905",
+    "excess2022": "190,686",
+    "excess2023": "116,044",
+    "excess2023_pct": "+9%"
+  },
+  "covid": {
+    "deaths2020": "228,336",
+    "deaths2021": "461,776",
+    "deaths2022": "93,753",
+    "deaths2023": "10,828",
+    "deaths_total": "794,693",
+    "resp2019": "94,842",
+    "resp2021": "549,371",
+    "resp2023": "117,725",
+    "resp2023_excl": "106,897",
+    "resp2023_excl_vs2019_pct": "+13%",
+    "share_resp2023": "9%",
+    "resp_jump2021": "454,529",
+    "resp_asr2019": "42.2",
+    "resp_asr2023": "47.4",
+    "covid_asr2023": "4.3"
+  },
+  "gbd": {
+    "max_abs_diff": "3.1",
+    "max_abs_diff_cause": "unintentional injuries",
+    "n_agree": 21,
+    "n_total": 21,
+    "all_agree": true,
+    "all_pct": "−34.5%",
+    "all_asr1990": "900.9",
+    "all_asr2019": "597.3",
+    "all_asr2021": "762.4",
+    "all_asr2023": "590.0",
+    "pandemic_peak_year": "2021",
+    "all_2023_vs_2019_pct": "−1.2%",
+    "all_1990_2019_pct": "−33.7%",
+    "skin_asr": {
+      "1990": "1.7",
+      "2000": "2.4",
+      "2010": "2.9",
+      "2019": "4.4",
+      "2023": "5.3"
+    },
+    "unint_asr2010": "19.2",
+    "unint_asr2019": "19.2",
+    "unint_asr2023": "20.4"
+  },
+  "table3": [
+    {
+      "name": "All causes",
+      "bold": true,
+      "a1990": "900.9",
+      "a2000": "769.0",
+      "a2010": "669.5",
+      "a2019": "597.3",
+      "a2023": "590.0",
+      "gbd_pct": "−34.5",
+      "who_pct": "−34.6"
+    },
+    {
+      "name": "Enteric infections",
+      "bold": false,
+      "a1990": "31.6",
+      "a2000": "10.0",
+      "a2010": "4.1",
+      "a2019": "2.8",
+      "a2023": "2.9",
+      "gbd_pct": "−90.8",
+      "who_pct": "−90.9"
+    },
+    {
+      "name": "Nutritional deficiencies",
+      "bold": false,
+      "a1990": "11.5",
+      "a2000": "8.4",
+      "a2010": "4.5",
+      "a2019": "2.5",
+      "a2023": "2.1",
+      "gbd_pct": "−81.7",
+      "who_pct": "−82.1"
+    },
+    {
+      "name": "Neglected tropical diseases & malaria",
+      "bold": false,
+      "a1990": "14.0",
+      "a2000": "8.7",
+      "a2010": "5.5",
+      "a2019": "3.9",
+      "a2023": "3.6",
+      "gbd_pct": "−74.3",
+      "who_pct": "−75.1"
+    },
+    {
+      "name": "Other infectious diseases",
+      "bold": false,
+      "a1990": "8.0",
+      "a2000": "4.8",
+      "a2010": "3.0",
+      "a2019": "1.9",
+      "a2023": "2.0",
+      "gbd_pct": "−75.1",
+      "who_pct": "−74.2"
+    },
+    {
+      "name": "Maternal & neonatal disorders",
+      "bold": false,
+      "a1990": "37.6",
+      "a2000": "31.1",
+      "a2010": "20.9",
+      "a2019": "15.7",
+      "a2023": "14.7",
+      "gbd_pct": "−60.8",
+      "who_pct": "−60.8"
+    },
+    {
+      "name": "Cardiovascular diseases",
+      "bold": false,
+      "a1990": "325.2",
+      "a2000": "248.4",
+      "a2010": "196.7",
+      "a2019": "156.2",
+      "a2023": "147.0",
+      "gbd_pct": "−54.8",
+      "who_pct": "−54.8"
+    },
+    {
+      "name": "Transport injuries",
+      "bold": false,
+      "a1990": "30.6",
+      "a2000": "23.6",
+      "a2010": "23.7",
+      "a2019": "16.9",
+      "a2023": "17.2",
+      "gbd_pct": "−43.7",
+      "who_pct": "−42.8"
+    },
+    {
+      "name": "Chronic respiratory diseases",
+      "bold": false,
+      "a1990": "48.0",
+      "a2000": "50.6",
+      "a2010": "37.0",
+      "a2019": "31.1",
+      "a2023": "28.9",
+      "gbd_pct": "−39.7",
+      "who_pct": "−40.2"
+    },
+    {
+      "name": "Digestive diseases",
+      "bold": false,
+      "a1990": "40.7",
+      "a2000": "38.4",
+      "a2010": "35.3",
+      "a2019": "31.0",
+      "a2023": "31.0",
+      "gbd_pct": "−23.9",
+      "who_pct": "−25.3"
+    },
+    {
+      "name": "Respiratory infections & tuberculosis",
+      "bold": false,
+      "a1990": "59.9",
+      "a2000": "43.0",
+      "a2010": "42.1",
+      "a2019": "42.2",
+      "a2023": "47.4",
+      "gbd_pct": "−21.0",
+      "who_pct": "−22.2"
+    },
+    {
+      "name": "Unintentional injuries",
+      "bold": false,
+      "a1990": "24.3",
+      "a2000": "21.3",
+      "a2010": "19.2",
+      "a2019": "19.2",
+      "a2023": "20.4",
+      "gbd_pct": "−15.9",
+      "who_pct": "−19.0"
+    },
+    {
+      "name": "Mental disorders",
+      "bold": false,
+      "a1990": "<0.01",
+      "a2000": "<0.01",
+      "a2010": "<0.01",
+      "a2019": "<0.01",
+      "a2023": "<0.01",
+      "gbd_pct": "−12.6",
+      "who_pct": "−12.7"
+    },
+    {
+      "name": "Neoplasms",
+      "bold": false,
+      "a1990": "123.2",
+      "a2000": "121.2",
+      "a2010": "117.3",
+      "a2019": "112.5",
+      "a2023": "111.3",
+      "gbd_pct": "−9.7",
+      "who_pct": "−10.4"
+    },
+    {
+      "name": "Diabetes & kidney diseases",
+      "bold": false,
+      "a1990": "48.3",
+      "a2000": "52.2",
+      "a2010": "49.7",
+      "a2019": "45.8",
+      "a2023": "44.6",
+      "gbd_pct": "−7.8",
+      "who_pct": "−10.0"
+    },
+    {
+      "name": "Self-harm & interpersonal violence",
+      "bold": false,
+      "a1990": "33.6",
+      "a2000": "35.1",
+      "a2010": "34.2",
+      "a2019": "35.5",
+      "a2023": "33.0",
+      "gbd_pct": "−1.8",
+      "who_pct": "−1.6"
+    },
+    {
+      "name": "Neurological disorders",
+      "bold": false,
+      "a1990": "35.8",
+      "a2000": "35.7",
+      "a2010": "36.5",
+      "a2019": "37.6",
+      "a2023": "38.8",
+      "gbd_pct": "+8.3",
+      "who_pct": "+9.5"
+    },
+    {
+      "name": "Musculoskeletal disorders",
+      "bold": false,
+      "a1990": "1.3",
+      "a2000": "1.4",
+      "a2010": "1.6",
+      "a2019": "1.4",
+      "a2023": "1.4",
+      "gbd_pct": "+10.7",
+      "who_pct": "+11.3"
+    },
+    {
+      "name": "HIV/AIDS & sexually transmitted infections",
+      "bold": false,
+      "a1990": "5.1",
+      "a2000": "8.4",
+      "a2010": "7.5",
+      "a2019": "6.3",
+      "a2023": "5.8",
+      "gbd_pct": "+14.8",
+      "who_pct": "+15.6"
+    },
+    {
+      "name": "Substance use disorders",
+      "bold": false,
+      "a1990": "3.6",
+      "a2000": "4.0",
+      "a2010": "4.5",
+      "a2019": "4.0",
+      "a2023": "4.3",
+      "gbd_pct": "+17.1",
+      "who_pct": "+16.1"
+    },
+    {
+      "name": "Other non-communicable diseases",
+      "bold": false,
+      "a1990": "17.0",
+      "a2000": "20.2",
+      "a2010": "23.4",
+      "a2019": "26.4",
+      "a2023": "28.3",
+      "gbd_pct": "+67.0",
+      "who_pct": "+65.0"
+    },
+    {
+      "name": "Skin & subcutaneous diseases",
+      "bold": false,
+      "a1990": "1.7",
+      "a2000": "2.4",
+      "a2010": "2.9",
+      "a2019": "4.4",
+      "a2023": "5.3",
+      "gbd_pct": "+207.8",
+      "who_pct": "+206.8"
+    }
+  ],
   "causes": [
     {
+      "spans_zero": false,
       "slug": "enteric",
       "name": "Enteric infections",
       "name_short": "Enteric infections",
@@ -25,6 +353,7 @@
       "crude_pct": "−89.1%"
     },
     {
+      "spans_zero": false,
       "slug": "nutritional",
       "name": "Nutritional deficiencies",
       "name_short": "Nutritional deficiencies",
@@ -43,6 +372,7 @@
       "crude_pct": "−73.7%"
     },
     {
+      "spans_zero": false,
       "slug": "ntd",
       "name": "Neglected tropical diseases and malaria",
       "name_short": "Neglected tropical diseases & malaria",
@@ -61,6 +391,7 @@
       "crude_pct": "−57.8%"
     },
     {
+      "spans_zero": false,
       "slug": "other_inf",
       "name": "Other infectious diseases",
       "name_short": "Other infectious diseases",
@@ -79,6 +410,7 @@
       "crude_pct": "−72.9%"
     },
     {
+      "spans_zero": false,
       "slug": "maternal",
       "name": "Maternal and neonatal disorders",
       "name_short": "Maternal & neonatal disorders",
@@ -97,6 +429,7 @@
       "crude_pct": "−74.6%"
     },
     {
+      "spans_zero": false,
       "slug": "cvd",
       "name": "Cardiovascular diseases",
       "name_short": "Cardiovascular diseases",
@@ -115,6 +448,7 @@
       "crude_pct": "+5.1%"
     },
     {
+      "spans_zero": false,
       "slug": "transport",
       "name": "Transport injuries",
       "name_short": "Transport injuries",
@@ -129,10 +463,11 @@
       "sup": "",
       "deaths90": "40,560",
       "deaths23": "40,472",
-      "deaths_pct": "−0%",
+      "deaths_pct": "0%",
       "crude_pct": "−29.7%"
     },
     {
+      "spans_zero": false,
       "slug": "chronic_resp",
       "name": "Chronic respiratory diseases",
       "name_short": "Chronic respiratory diseases",
@@ -151,6 +486,7 @@
       "crude_pct": "+45.3%"
     },
     {
+      "spans_zero": false,
       "slug": "digestive",
       "name": "Digestive diseases",
       "name_short": "Digestive diseases",
@@ -169,6 +505,7 @@
       "crude_pct": "+46.1%"
     },
     {
+      "spans_zero": false,
       "slug": "resp_tb",
       "name": "Respiratory infections and tuberculosis",
       "name_short": "Respiratory infections & tuberculosis",
@@ -187,6 +524,7 @@
       "crude_pct": "+33.6%"
     },
     {
+      "spans_zero": false,
       "slug": "unintentional",
       "name": "Unintentional injuries",
       "name_short": "Unintentional injuries",
@@ -205,6 +543,7 @@
       "crude_pct": "+15.4%"
     },
     {
+      "spans_zero": true,
       "slug": "mental",
       "name": "Mental disorders",
       "name_short": "Mental disorders",
@@ -223,6 +562,7 @@
       "crude_pct": "−6.0%"
     },
     {
+      "spans_zero": false,
       "slug": "neoplasms",
       "name": "Neoplasms",
       "name_short": "Neoplasms",
@@ -241,6 +581,7 @@
       "crude_pct": "+84.8%"
     },
     {
+      "spans_zero": false,
       "slug": "diabetes",
       "name": "Diabetes and kidney diseases",
       "name_short": "Diabetes & kidney diseases",
@@ -259,6 +600,7 @@
       "crude_pct": "+100.8%"
     },
     {
+      "spans_zero": true,
       "slug": "self_harm",
       "name": "Self-harm and interpersonal violence",
       "name_short": "Self-harm & interpersonal violence",
@@ -277,6 +619,7 @@
       "crude_pct": "+7.5%"
     },
     {
+      "spans_zero": true,
       "slug": "neuro",
       "name": "Neurological disorders",
       "name_short": "Neurological disorders",
@@ -295,6 +638,7 @@
       "crude_pct": "+206.9%"
     },
     {
+      "spans_zero": false,
       "slug": "musculo",
       "name": "Musculoskeletal disorders",
       "name_short": "Musculoskeletal disorders",
@@ -313,6 +657,7 @@
       "crude_pct": "+80.9%"
     },
     {
+      "spans_zero": false,
       "slug": "hiv",
       "name": "HIV/AIDS and sexually transmitted infections",
       "name_short": "HIV/AIDS & sexually transmitted infections",
@@ -331,6 +676,7 @@
       "crude_pct": "+40.7%"
     },
     {
+      "spans_zero": false,
       "slug": "substance",
       "name": "Substance use disorders",
       "name_short": "Substance use disorders",
@@ -349,6 +695,7 @@
       "crude_pct": "+81.9%"
     },
     {
+      "spans_zero": false,
       "slug": "other_ncd",
       "name": "Other non-communicable diseases",
       "name_short": "Other non-communicable diseases",
@@ -367,6 +714,7 @@
       "crude_pct": "+103.5%"
     },
     {
+      "spans_zero": false,
       "slug": "skin",
       "name": "Skin and subcutaneous diseases",
       "name_short": "Skin & subcutaneous diseases",
@@ -387,6 +735,7 @@
   ],
   "by_slug": {
     "enteric": {
+      "spans_zero": false,
       "slug": "enteric",
       "name": "Enteric infections",
       "name_short": "Enteric infections",
@@ -405,6 +754,7 @@
       "crude_pct": "−89.1%"
     },
     "nutritional": {
+      "spans_zero": false,
       "slug": "nutritional",
       "name": "Nutritional deficiencies",
       "name_short": "Nutritional deficiencies",
@@ -423,6 +773,7 @@
       "crude_pct": "−73.7%"
     },
     "ntd": {
+      "spans_zero": false,
       "slug": "ntd",
       "name": "Neglected tropical diseases and malaria",
       "name_short": "Neglected tropical diseases & malaria",
@@ -441,6 +792,7 @@
       "crude_pct": "−57.8%"
     },
     "other_inf": {
+      "spans_zero": false,
       "slug": "other_inf",
       "name": "Other infectious diseases",
       "name_short": "Other infectious diseases",
@@ -459,6 +811,7 @@
       "crude_pct": "−72.9%"
     },
     "maternal": {
+      "spans_zero": false,
       "slug": "maternal",
       "name": "Maternal and neonatal disorders",
       "name_short": "Maternal & neonatal disorders",
@@ -477,6 +830,7 @@
       "crude_pct": "−74.6%"
     },
     "cvd": {
+      "spans_zero": false,
       "slug": "cvd",
       "name": "Cardiovascular diseases",
       "name_short": "Cardiovascular diseases",
@@ -495,6 +849,7 @@
       "crude_pct": "+5.1%"
     },
     "transport": {
+      "spans_zero": false,
       "slug": "transport",
       "name": "Transport injuries",
       "name_short": "Transport injuries",
@@ -509,10 +864,11 @@
       "sup": "",
       "deaths90": "40,560",
       "deaths23": "40,472",
-      "deaths_pct": "−0%",
+      "deaths_pct": "0%",
       "crude_pct": "−29.7%"
     },
     "chronic_resp": {
+      "spans_zero": false,
       "slug": "chronic_resp",
       "name": "Chronic respiratory diseases",
       "name_short": "Chronic respiratory diseases",
@@ -531,6 +887,7 @@
       "crude_pct": "+45.3%"
     },
     "digestive": {
+      "spans_zero": false,
       "slug": "digestive",
       "name": "Digestive diseases",
       "name_short": "Digestive diseases",
@@ -549,6 +906,7 @@
       "crude_pct": "+46.1%"
     },
     "resp_tb": {
+      "spans_zero": false,
       "slug": "resp_tb",
       "name": "Respiratory infections and tuberculosis",
       "name_short": "Respiratory infections & tuberculosis",
@@ -567,6 +925,7 @@
       "crude_pct": "+33.6%"
     },
     "unintentional": {
+      "spans_zero": false,
       "slug": "unintentional",
       "name": "Unintentional injuries",
       "name_short": "Unintentional injuries",
@@ -585,6 +944,7 @@
       "crude_pct": "+15.4%"
     },
     "mental": {
+      "spans_zero": true,
       "slug": "mental",
       "name": "Mental disorders",
       "name_short": "Mental disorders",
@@ -603,6 +963,7 @@
       "crude_pct": "−6.0%"
     },
     "neoplasms": {
+      "spans_zero": false,
       "slug": "neoplasms",
       "name": "Neoplasms",
       "name_short": "Neoplasms",
@@ -621,6 +982,7 @@
       "crude_pct": "+84.8%"
     },
     "diabetes": {
+      "spans_zero": false,
       "slug": "diabetes",
       "name": "Diabetes and kidney diseases",
       "name_short": "Diabetes & kidney diseases",
@@ -639,6 +1001,7 @@
       "crude_pct": "+100.8%"
     },
     "self_harm": {
+      "spans_zero": true,
       "slug": "self_harm",
       "name": "Self-harm and interpersonal violence",
       "name_short": "Self-harm & interpersonal violence",
@@ -657,6 +1020,7 @@
       "crude_pct": "+7.5%"
     },
     "neuro": {
+      "spans_zero": true,
       "slug": "neuro",
       "name": "Neurological disorders",
       "name_short": "Neurological disorders",
@@ -675,6 +1039,7 @@
       "crude_pct": "+206.9%"
     },
     "musculo": {
+      "spans_zero": false,
       "slug": "musculo",
       "name": "Musculoskeletal disorders",
       "name_short": "Musculoskeletal disorders",
@@ -693,6 +1058,7 @@
       "crude_pct": "+80.9%"
     },
     "hiv": {
+      "spans_zero": false,
       "slug": "hiv",
       "name": "HIV/AIDS and sexually transmitted infections",
       "name_short": "HIV/AIDS & sexually transmitted infections",
@@ -711,6 +1077,7 @@
       "crude_pct": "+40.7%"
     },
     "substance": {
+      "spans_zero": false,
       "slug": "substance",
       "name": "Substance use disorders",
       "name_short": "Substance use disorders",
@@ -729,6 +1096,7 @@
       "crude_pct": "+81.9%"
     },
     "other_ncd": {
+      "spans_zero": false,
       "slug": "other_ncd",
       "name": "Other non-communicable diseases",
       "name_short": "Other non-communicable diseases",
@@ -747,6 +1115,7 @@
       "crude_pct": "+103.5%"
     },
     "skin": {
+      "spans_zero": false,
       "slug": "skin",
       "name": "Skin and subcutaneous diseases",
       "name_short": "Skin & subcutaneous diseases",

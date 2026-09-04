@@ -2,9 +2,9 @@
 figures.py
 ----------
 Generate the age-specific mortality-rate figures for the GBD Brazil
-manuscript. All age-standardised percentages and 95% CIs are computed
+manuscript. All age-standardised percentages and 95% UIs are computed
 directly by analysis_standardised.py (WHO World Standard Population,
-Monte Carlo n = 10,000). There are no manual overrides: every number shown
+Monte Carlo n = 10,000; 95% uncertainty intervals). There are no manual overrides: every number shown
 in a figure is reproduced by re-running the analysis script.
 
 Output
@@ -12,6 +12,9 @@ Output
 figures/fig1_decreased.jpg  -- causes with the greatest standardised reductions
                                (incl. causes that fall only after standardisation)
 figures/fig2_increased.jpg  -- causes with rising standardised burden
+figures/fig3_trajectory.jpg -- GBD age-standardised rates by year, 1990-2023
+                               (GBD world standard; all causes, Level-1 groups,
+                               and respiratory infections & TB with/without COVID-19)
 
 Usage
 -----
@@ -29,9 +32,11 @@ from matplotlib.lines import Line2D
 from analysis_standardised import (
     AGE_ORDER,
     DATA_DIR,
+    LEVEL1_GROUPS,
     load_data,
     standardised_change,
 )
+from gbd_series import YEARS, load_series
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIG_DIR = os.path.join(BASE_DIR, "figures")
@@ -53,6 +58,7 @@ RED = "#d6604d"
 GREEN_FILL = "#b8e186"
 PINK_FILL = "#fddbc7"
 GREY_BG = "#f7f7f7"
+LOG_FLOOR = 0.1   # deaths per 100,000; lower bound of the log axis
 
 
 def _fmt_pct(v):
@@ -66,29 +72,39 @@ def _plot_panel(ax, cause, res, reclassified=False):
                     for ag in AGE_ORDER])
     x = np.arange(len(AGE_ORDER))
 
+    # Age-specific mortality spans several orders of magnitude, so a
+    # logarithmic axis keeps both the neonatal spike and the reductions at
+    # young and middle ages legible. Rates below the floor are drawn at the
+    # floor (this affects only a few near-zero paediatric values).
+    r90p = np.maximum(r90, LOG_FLOOR)
+    r23p = np.maximum(r23, LOG_FLOOR)
+
     ax.set_facecolor(GREY_BG)
-    ax.fill_between(x, r90, r23, where=(r23 <= r90),
+    ax.fill_between(x, r90p, r23p, where=(r23 <= r90),
                     color=GREEN_FILL, alpha=0.5, linewidth=0)
-    ax.fill_between(x, r90, r23, where=(r23 > r90),
+    ax.fill_between(x, r90p, r23p, where=(r23 > r90),
                     color=PINK_FILL, alpha=0.5, linewidth=0)
-    ax.plot(x, r90, color=BLUE, linewidth=1.6, zorder=3)
-    ax.plot(x, r23, color=RED, linewidth=1.6, linestyle="--", zorder=3)
+    ax.plot(x, r90p, color=BLUE, linewidth=1.6, zorder=3)
+    ax.plot(x, r23p, color=RED, linewidth=1.6, linestyle="--", zorder=3)
+    ax.set_yscale("log")
+    # Headroom (about one decade) so the annotation box never covers a curve.
+    ax.set_ylim(bottom=LOG_FLOOR, top=max(r90p.max(), r23p.max()) * 12)
 
     ax.set_xticks(x)
     ax.set_xticklabels(AGE_LABELS, rotation=60, ha="right",
-                       fontsize=5.5, color="#333333")
-    ax.tick_params(axis="y", labelsize=6.5)
-    ax.set_ylabel("Deaths / 100,000", fontsize=6.5)
+                       fontsize=7.0, color="#333333")
+    ax.tick_params(axis="y", labelsize=7.5)
+    ax.set_ylabel("Deaths / 100,000 (log scale)", fontsize=7.5)
 
     title = cause + ("\n★ falls only after standardisation"
                      if reclassified else "")
-    ax.set_title(title, fontsize=7.5, fontweight="bold", pad=4, color="#1a1a1a")
+    ax.set_title(title, fontsize=8.5, fontweight="bold", pad=4, color="#1a1a1a")
 
     annot = (f"ASR: {_fmt_pct(res['std_pct'])}\n"
-             f"(95% CI {_fmt_pct(res['std_lo'])} to {_fmt_pct(res['std_hi'])})")
+             f"(95% UI {_fmt_pct(res['std_lo'])} to {_fmt_pct(res['std_hi'])})")
     box_color = "#d4edda" if res["std_pct"] < 0 else "#fde8e8"
     ax.annotate(annot, xy=(0.97, 0.97), xycoords="axes fraction",
-                ha="right", va="top", fontsize=6.0, fontweight="bold",
+                ha="right", va="top", fontsize=7.0, fontweight="bold",
                 bbox=dict(boxstyle="round,pad=0.35", fc=box_color,
                           alpha=0.85, ec="#aaaaaa", lw=0.6))
 
@@ -104,8 +120,8 @@ def make_figure(causes, outpath, suptitle, ncols, reclassified=None):
     n = len(causes)
     nrows = (n + ncols - 1) // ncols
     fig, axes = plt.subplots(nrows, ncols,
-                             figsize=(ncols * 4.4, nrows * 3.9),
-                             constrained_layout=True)
+                             figsize=(ncols * 4.4, nrows * 3.9 + 0.5),
+                             layout="constrained")
     axes_flat = np.array(axes).flatten()
 
     print(f"\n{'-'*64}\nFigure: {os.path.basename(outpath)}\n{'-'*64}")
@@ -122,9 +138,11 @@ def make_figure(causes, outpath, suptitle, ncols, reclassified=None):
         Line2D([0], [0], color=BLUE, lw=2.0, label="1990 rate"),
         Line2D([0], [0], color=RED, lw=2.0, linestyle="--", label="2023 rate"),
     ]
-    fig.legend(handles=handles, loc="lower right", fontsize=9,
+    # Legend in its own strip below the panels so it never overlaps an axis;
+    # the title sits above the panels with explicit clearance.
+    fig.legend(handles=handles, loc="outside lower center", fontsize=9.5,
                framealpha=0.9, ncol=2, edgecolor="#cccccc")
-    fig.suptitle(suptitle, fontsize=10.5, fontweight="bold", y=1.01)
+    fig.suptitle(suptitle, fontsize=11.5, fontweight="bold")
 
     os.makedirs(FIG_DIR, exist_ok=True)
     fig.savefig(outpath, dpi=150, bbox_inches="tight",
@@ -158,6 +176,63 @@ FIG2_CAUSES = [
     "Neurological disorders",
 ]
 
+def make_trajectory_figure(outpath):
+    """Figure 3: GBD's own age-standardised death rates by year, 1990-2023."""
+    series = load_series()
+    yrs = np.array([int(y) for y in YEARS])
+
+    def asr(cause, y):
+        return series.get((cause, y, "Age-standardized", "Rate"), (0.0,))[0]
+
+    def group_asr(causes):
+        return np.array([sum(asr(c, y) for c in causes) for y in YEARS])
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4.4), layout="constrained")
+    for ax in (ax1, ax2):
+        ax.set_facecolor(GREY_BG)
+        ax.axvspan(2019.5, 2022.5, color="#e8e8e8", zorder=0, lw=0)
+        ax.axvline(2019, color="#888888", lw=0.8, ls=":", zorder=1)
+        ax.grid(axis="y", color="#dddddd", linewidth=0.5, zorder=0)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.tick_params(labelsize=8)
+        ax.set_xlim(1989, 2024)
+        ax.set_xlabel("Year", fontsize=8.5)
+
+    # Panel A: all causes and the three Level-1 groups (log scale).
+    ax1.plot(yrs, np.array([asr("All causes", y) for y in YEARS]),
+             color="#1a1a1a", lw=2.0, label="All causes")
+    palette = {"Communicable, maternal, neonatal & nutritional": "#1b9e77",
+               "Non-communicable diseases": "#7570b3", "Injuries": "#d95f02"}
+    for name, causes in LEVEL1_GROUPS.items():
+        ax1.plot(yrs, group_asr(causes), color=palette[name], lw=1.7, label=name)
+    ax1.set_yscale("log")
+    ax1.set_ylabel("Age-standardised deaths / 100,000 (log scale)", fontsize=8.5)
+    ax1.set_title("A. All causes and GBD Level-1 groups", fontsize=9.5,
+                  fontweight="bold", loc="left")
+    ax1.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc", loc="lower left")
+
+    # Panel B: respiratory infections & TB with and without COVID-19.
+    resp = "Respiratory infections and tuberculosis"
+    r_tot = np.array([asr(resp, y) for y in YEARS])
+    covid = np.array([asr("COVID-19", y) for y in YEARS])
+    ax2.plot(yrs, r_tot, color=RED, lw=1.8, label="Respiratory infections & TB (total, incl. COVID-19)")
+    ax2.plot(yrs, r_tot - covid, color=BLUE, lw=1.8, ls="--",
+             label="Respiratory infections & TB excluding COVID-19")
+    ax2.plot(yrs, covid, color="#555555", lw=1.4, ls="-.", label="COVID-19 alone")
+    ax2.set_ylabel("Age-standardised deaths / 100,000", fontsize=8.5)
+    ax2.set_title("B. Respiratory infections & TB and COVID-19", fontsize=9.5,
+                  fontweight="bold", loc="left")
+    ax2.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc", loc="upper left")
+
+    fig.suptitle("Brazil — GBD age-standardised death rates by year, 1990–2023 "
+                 "(GBD world standard population)", fontsize=10.5, fontweight="bold")
+    fig.savefig(outpath, dpi=150, bbox_inches="tight", format="jpeg",
+                pil_kwargs={"quality": 92})
+    plt.close(fig)
+    print(f"Saved -> {outpath}")
+
+
 if __name__ == "__main__":
     print("Age-standardised figures (WHO World Standard, Monte Carlo n=10,000)")
     make_figure(
@@ -176,4 +251,5 @@ if __name__ == "__main__":
         "Burden, 1990–2023",
         ncols=3,
     )
+    make_trajectory_figure(os.path.join(FIG_DIR, "fig3_trajectory.jpg"))
     print("\nAll figures generated.")

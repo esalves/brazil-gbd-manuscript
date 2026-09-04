@@ -22,16 +22,17 @@ where r_i is the GBD age-specific death rate (per 100,000) in age group i
 and w_i is the normalised WHO World Standard weight for that group.
 
 This script also reproduces, for comparison, the *unweighted mean of the 25
-age-specific rates* -- the summary metric displayed by the GBD Compare tool.
-That metric weights every age band equally regardless of its share of the
-population and is reported here only to show how it can diverge from a
-properly standardised rate.
+age-specific rates* -- a naive summary an analyst obtains by averaging the rows
+of an age-disaggregated extract (it is NOT a metric published by GBD). It
+weights every age band equally regardless of its share of the population and
+is reported here only to show how it can diverge from a properly standardised
+rate.
 
 Point estimates are computed deterministically from the reported GBD point
 rates. 95% uncertainty intervals for the standardised percent change are
 obtained by Monte Carlo simulation (n = 10,000) that propagates each age
 group's GBD 95% interval, assuming an independent log-normal distribution
-per age-specific rate (a normal distribution truncated at zero is used as a
+per age-specific rate (a normal distribution censored at zero is used as a
 fallback for groups whose lower bound is zero or negative). Independence
 across age groups is a simplifying assumption; the GBD posterior correlation
 structure is not published in the extract and this is noted as a limitation.
@@ -186,7 +187,7 @@ def asr_point(cause_data: dict) -> float:
 
 
 def mean_age_specific(cause_data: dict) -> float:
-    """Unweighted mean of the 25 age-specific rates (GBD Compare metric)."""
+    """Unweighted mean of the 25 age-specific rates (naive comparison metric)."""
     r = [cause_data.get(ag, (0.0,))[0] for ag in AGE_ORDER]
     return sum(r) / len(r)
 
@@ -209,7 +210,7 @@ def _mc_draws(cause_data: dict, n: int, rng: np.random.Generator) -> np.ndarray:
 
 
 def standardised_change(cause: str, data_1990: dict, data_2023: dict) -> dict:
-    """Age-standardised rates and percent change with Monte Carlo 95% CI."""
+    """Age-standardised rates and percent change with Monte Carlo 95% UI."""
     w = _weights_vector()
     d90 = data_1990.get(cause, {})
     d23 = data_2023.get(cause, {})
@@ -333,6 +334,63 @@ def compute_all(data_1990: dict, data_2023: dict) -> list:
     return results
 
 
+# -- Premature NCD mortality (SDG 3.4.1-style indicator) ----------------------
+# Unconditional probability of dying between exact ages 30 and 70 from the
+# four major NCD groups, computed from the age-specific death rates of the
+# eight 5-year GBD age groups spanning 30-69 using the standard life-table
+# approximation q_i = 1 - exp(-5 m_i), P = 1 - prod(1 - q_i)
+# (WHO Global Action Plan 2013-2020; UN SDG indicator 3.4.1 metadata).
+# Note: the GBD Level-2 extract combines diabetes with chronic kidney disease,
+# so the indicator here is an approximation that includes kidney deaths.
+PREMATURE_NCD_CAUSES = [
+    "Cardiovascular diseases",
+    "Neoplasms",
+    "Chronic respiratory diseases",
+    "Diabetes and kidney diseases",
+]
+PREMATURE_AGE_GROUPS = [
+    "30-34 years", "35-39 years", "40-44 years", "45-49 years",
+    "50-54 years", "55-59 years", "60-64 years", "65-69 years",
+]
+
+
+def _prob_30_70(rates_by_age: np.ndarray) -> np.ndarray:
+    """rates_by_age: (..., 8) array of deaths per 100,000 -> probability (%)."""
+    m = rates_by_age / 100_000.0
+    q = 1.0 - np.exp(-5.0 * m)
+    return (1.0 - np.prod(1.0 - q, axis=-1)) * 100.0
+
+
+def premature_ncd_probability(data_1990: dict, data_2023: dict,
+                              causes=PREMATURE_NCD_CAUSES) -> dict:
+    """Probability (%) of dying at 30-69 from the four major NCD groups."""
+    idx = [AGE_ORDER.index(ag) for ag in PREMATURE_AGE_GROUPS]
+
+    def point(year_data):
+        r = np.array([sum(year_data.get(c, {}).get(ag, (0.0,))[0] for c in causes)
+                      for ag in PREMATURE_AGE_GROUPS])
+        return float(_prob_30_70(r))
+
+    def sims(year_data, year):
+        tot = np.zeros((N_MC, len(idx)))
+        for c in causes:
+            tot += _mc_draws(year_data.get(c, {}), N_MC,
+                             _rng_for(f"{c}|{year}"))[:, idx]
+        return _prob_30_70(tot)
+
+    p90, p23 = point(data_1990), point(data_2023)
+    s90, s23 = sims(data_1990, "1990"), sims(data_2023, "2023")
+    pct = (s23 - s90) / s90 * 100.0
+    return {
+        "p_1990": p90, "p_2023": p23,
+        "pct": (p23 - p90) / p90 * 100.0,
+        "pct_lo": float(np.percentile(pct, 2.5)),
+        "pct_hi": float(np.percentile(pct, 97.5)),
+        "p90_lo": float(np.percentile(s90, 2.5)), "p90_hi": float(np.percentile(s90, 97.5)),
+        "p23_lo": float(np.percentile(s23, 2.5)), "p23_hi": float(np.percentile(s23, 97.5)),
+    }
+
+
 # -- CLI ----------------------------------------------------------------------
 def _fmt(v: float) -> str:
     return f"{'+' if v >= 0 else ''}{v:.1f}%"
@@ -358,7 +416,7 @@ def main() -> None:
     print()
 
     hdr = (f"{'Cause':<46} {'ASR 1990':>9} {'ASR 2023':>9} "
-           f"{'Std %':>8} {'95% CI':^20} {'Mean %':>8}")
+           f"{'Std %':>8} {'95% UI':^20} {'Mean %':>8}")
     print(hdr)
     print("-" * len(hdr))
     for r in results:
@@ -367,6 +425,11 @@ def main() -> None:
         ci = f"[{_fmt(r['std_lo'])}, {_fmt(r['std_hi'])}]"
         print(f"{r['cause']:<46} {r['asr_1990']:>9.1f} {r['asr_2023']:>9.1f} "
               f"{_fmt(r['std_pct']):>8} {ci:^20} {_fmt(r['mean_pct']):>8}{flag}")
+
+    pn = premature_ncd_probability(data_1990, data_2023)
+    print(f"\nPremature NCD mortality (probability of death at 30-69, four NCD groups):")
+    print(f"  1990: {pn['p_1990']:.1f}%   2023: {pn['p_2023']:.1f}%   "
+          f"change {_fmt(pn['pct'])} ({_fmt(pn['pct_lo'])}, {_fmt(pn['pct_hi'])})")
 
     dec = sum(1 for r in results if r["std_pct"] < 0)
     inc = sum(1 for r in results if r["std_pct"] > 0)
@@ -378,7 +441,7 @@ def main() -> None:
     for r in rev:
         print(f"  - {r['cause']}: mean {_fmt(r['mean_pct'])} "
               f"-> std {_fmt(r['std_pct'])} "
-              f"(95% CI {_fmt(r['std_lo'])} to {_fmt(r['std_hi'])})")
+              f"(95% UI {_fmt(r["std_lo"])} to {_fmt(r["std_hi"])})")
 
     if args.json:
         with open(args.json, "w", encoding="utf-8") as fh:

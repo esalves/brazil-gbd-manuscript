@@ -20,6 +20,10 @@ by_slug          : dict keyed by short slug -> cause record (for in-text lookups
 groups           : GBD Level-1 super-group records
 group_by_slug    : dict keyed by cmnn / ncd / injuries / all
 table2           : ordered rows for Table 2 (all causes, groups, key causes)
+premature        : probability of death at 30-69 from the four major NCD groups
+validation       : Level-2 sum == GBD all-cause check (exhaustiveness)
+allcause, covid  : GBD annual all-cause series and COVID-19 placement/counts
+gbd, table3      : comparison of WHO-standard changes with GBD's own ASRs
 """
 
 from __future__ import annotations
@@ -33,8 +37,10 @@ from analysis_standardised import (
     compute_all,
     group_change,
     load_data,
+    premature_ncd_probability,
 )
 from analysis_counts import load_counts
+from gbd_series import load_series, level2_causes, asr as gbd_asr, deaths as gbd_deaths
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD_DIR = os.path.join(BASE_DIR, "build")
@@ -89,7 +95,20 @@ def s1(x: float) -> str:
 
 
 def s0(x: float) -> str:
+    if round(x) == 0:          # avoid a signed zero such as "−0"
+        return "0"
     return f"{'+' if x >= 0 else MINUS}{abs(x):.0f}"
+
+
+NUM_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+             "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
+             "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+             "twenty-one", "twenty-two", "twenty-three"]
+
+
+def word(n: int) -> str:
+    """Spell out small counts so sentences never start with a numeral."""
+    return NUM_WORDS[n] if 0 <= n < len(NUM_WORDS) else str(n)
 
 
 def p1(x: float) -> str:
@@ -132,7 +151,9 @@ def main() -> None:
     for r in asr:
         c = r["cause"]
         discordant = (r["mean_pct"] > 0) != (r["std_pct"] > 0)
+        spans_zero = r["std_lo"] < 0 < r["std_hi"]
         rec = {
+            "spans_zero": spans_zero,
             "slug": SHORT_SLUG[c],
             "name": c,
             "name_short": TABLE_NAME.get(c, c),
@@ -167,6 +188,8 @@ def main() -> None:
         r90 = sum(counts[(c, "1990", "Rate")] for c in cs)
         r23 = sum(counts[(c, "2023", "Rate")] for c in cs)
         slug = "all" if name == "All causes" else GROUP_SLUG[name]
+        # The "all causes" aggregate is the sum of the extracted Level-2
+        # categories; the build validates that it equals GBD's all-cause total.
         rec = {
             "slug": slug, "name": name,
             "asr90": f1(g["asr_1990"]), "asr23": f1(g["asr_2023"]),
@@ -203,10 +226,146 @@ def main() -> None:
     n_dec = sum(1 for r in asr if r["std_pct"] < 0)
     n_inc = sum(1 for r in asr if r["std_pct"] > 0)
     n_rev = sum(1 for r in asr if (r["mean_pct"] > 0) != (r["std_pct"] > 0))
+    # Uncertainty-aware classification: a change counts as a decrease or an
+    # increase only when its 95% interval excludes zero.
+    n_dec_sig = sum(1 for r in asr if r["std_hi"] < 0)
+    n_inc_sig = sum(1 for r in asr if r["std_lo"] > 0)
+    indeterminate = [TABLE_NAME.get(r["cause"], r["cause"]).lower()
+                     for r in asr if r["std_lo"] < 0 < r["std_hi"]]
+    n_ind = len(indeterminate)
+
+    # Premature NCD mortality (probability of death at ages 30-69).
+    pn = premature_ncd_probability(d90, d23)
+    premature = {
+        "p90": f"{pn['p_1990']:.1f}%", "p23": f"{pn['p_2023']:.1f}%",
+        "p90_ci": f"{pn['p90_lo']:.1f}% to {pn['p90_hi']:.1f}%",
+        "p23_ci": f"{pn['p23_lo']:.1f}% to {pn['p23_hi']:.1f}%",
+        "pct": p1(pn["pct"]),
+        "ci": f"{p1(pn['pct_lo'])} to {p1(pn['pct_hi'])}",
+    }
+
+    # ── GBD annual series: exhaustiveness check, COVID-19 placement, external
+    #    validation against GBD's own age-standardised rates, trajectory ──────
+    series = load_series()
+    l2 = level2_causes(series)
+    allcause = {(y, m): series[("All causes", y, "All ages", m)][0]
+                for y in (str(yy) for yy in range(1990, 2024)) for m in ("Number", "Rate")}
+
+    # Exhaustiveness: sum of Level-2 categories == GBD all causes, every year,
+    # deaths and crude rate (COVID-19 is NOT added: it is nested in Level 2).
+    validation = {"exhaustive": True, "max_abs_diff_deaths": 0.0}
+    for y in (str(yy) for yy in range(1990, 2024)):
+        for m in ("Number", "Rate"):
+            l2_sum = sum(series[(c, y, "All ages", m)][0] for c in l2)
+            diff = l2_sum - allcause[(y, m)]
+            if m == "Number":
+                validation["max_abs_diff_deaths"] = max(validation["max_abs_diff_deaths"], abs(diff))
+            if abs(diff) > (0.5 if m == "Number" else 0.01):
+                validation["exhaustive"] = False
+                print(f"WARNING: Level-2 sum != GBD all-cause for {y} {m}: {diff:+.3f}")
+    validation["max_abs_diff_deaths"] = f"{validation['max_abs_diff_deaths']:.3f}"
+    # Cross-check the 1990/2023 counts extract against the series extract.
+    for y in ("1990", "2023"):
+        for c in l2:
+            assert abs(counts[(c, y, "Number")] - gbd_deaths(series, c, y)) < 0.5, (c, y)
+
+    def d(y):
+        return allcause[(y, "Number")]
+    allcause_rec = {
+        **{f"d{y}": thou(d(y)) for y in ("2018", "2019", "2020", "2021", "2022", "2023")},
+        **{f"crude{y}": f"{allcause[(y, 'Rate')]:.1f}" for y in ("2019", "2021", "2023")},
+        "excess2020": thou(d("2020") - d("2019")),
+        "excess2021": thou(d("2021") - d("2019")),
+        "excess2022": thou(d("2022") - d("2019")),
+        "excess2023": thou(d("2023") - d("2019")),
+        "excess2023_pct": p0((d("2023") - d("2019")) / d("2019") * 100.0),
+    }
+
+    # COVID-19: nested under respiratory infections and tuberculosis. The
+    # 2019->2021 jump in that category should equal COVID-19 deaths in 2021
+    # up to the change in the other members of the category.
+    RESP = "Respiratory infections and tuberculosis"
+    cov = {y: gbd_deaths(series, "COVID-19", y) for y in ("2020", "2021", "2022", "2023")}
+    resp = {y: gbd_deaths(series, RESP, y) for y in ("2019", "2020", "2021", "2022", "2023")}
+    covid_rec = {
+        **{f"deaths{y}": thou(v) for y, v in cov.items()},
+        "deaths_total": thou(sum(cov.values())),
+        "resp2019": thou(resp["2019"]), "resp2021": thou(resp["2021"]),
+        "resp2023": thou(resp["2023"]),
+        "resp2023_excl": thou(resp["2023"] - cov["2023"]),
+        "resp2023_excl_vs2019_pct": p0((resp["2023"] - cov["2023"] - resp["2019"]) / resp["2019"] * 100.0),
+        "share_resp2023": f"{cov['2023'] / resp['2023'] * 100:.0f}%",
+        "resp_jump2021": thou(resp["2021"] - resp["2019"]),
+        "resp_asr2019": f"{gbd_asr(series, RESP, '2019'):.1f}",
+        "resp_asr2023": f"{gbd_asr(series, RESP, '2023'):.1f}",
+        "covid_asr2023": f"{gbd_asr(series, 'COVID-19', '2023'):.1f}",
+    }
+
+    # External validation: GBD's own age-standardised % change vs ours (WHO).
+    def ours_pct(c):
+        return float(by_slug[SHORT_SLUG[c]]["asr_pct"].replace(MINUS, "-").replace("%", ""))
+
+    YRS = ("1990", "2000", "2010", "2019", "2023")
+    gbd_rows, diffs, agree = [], [], 0
+    order = [r["cause"] for r in asr]  # same order as Table 1
+    for c in order:
+        g90, g23 = gbd_asr(series, c, "1990"), gbd_asr(series, c, "2023")
+        gpct = (g23 - g90) / g90 * 100.0
+        opct = ours_pct(c)
+        diffs.append(abs(gpct - opct))
+        agree += (gpct > 0) == (opct > 0)
+        gbd_rows.append({
+            "name": TABLE_NAME.get(c, c), "bold": False,
+            **{f"a{y}": f1(gbd_asr(series, c, y)) for y in YRS},
+            "gbd_pct": s1(gpct), "who_pct": by_slug[SHORT_SLUG[c]]["asr_pct"].replace("%", ""),
+        })
+    ga90, ga23 = gbd_asr(series, "All causes", "1990"), gbd_asr(series, "All causes", "2023")
+    gall = (ga23 - ga90) / ga90 * 100.0
+    all_row = {"name": "All causes", "bold": True,
+               **{f"a{y}": f1(gbd_asr(series, "All causes", y)) for y in YRS},
+               "gbd_pct": s1(gall),
+               "who_pct": group_by_slug["all"]["asr_pct"].replace("%", "")}
+    ga = {y: gbd_asr(series, "All causes", y) for y in (str(yy) for yy in range(1990, 2024))}
+    peak_year = max(ga, key=ga.get) if max(ga.values()) > ga["1990"] else max((y for y in ga if int(y) >= 2019), key=ga.get)
+    gbd_summary = {
+        "max_abs_diff": f"{max(diffs):.1f}",
+        "max_abs_diff_cause": TABLE_NAME.get(order[diffs.index(max(diffs))], order[diffs.index(max(diffs))]).lower(),
+        "n_agree": agree, "n_total": len(order), "all_agree": agree == len(order),
+        "all_pct": p1(gall), "all_asr1990": f1(ga90), "all_asr2019": f1(ga["2019"]),
+        "all_asr2021": f1(ga["2021"]), "all_asr2023": f1(ga23),
+        "pandemic_peak_year": peak_year,
+        "all_2023_vs_2019_pct": p1((ga23 - ga["2019"]) / ga["2019"] * 100.0),
+        "all_1990_2019_pct": p1((ga["2019"] - ga90) / ga90 * 100.0),
+        "skin_asr": {y: f1(gbd_asr(series, "Skin and subcutaneous diseases", y)) for y in YRS},
+        "unint_asr2010": f1(gbd_asr(series, "Unintentional injuries", "2010")),
+        "unint_asr2019": f1(gbd_asr(series, "Unintentional injuries", "2019")),
+        "unint_asr2023": f1(gbd_asr(series, "Unintentional injuries", "2023")),
+    }
+    table3 = [all_row] + gbd_rows
+
+    def join_words(items):
+        return items[0] if len(items) == 1 else ", ".join(items[:-1]) + ", and " + items[-1]
 
     out = {
         "summary": {"n_causes": len(asr), "n_decreased": n_dec,
-                    "n_increased": n_inc, "n_reversed": n_rev},
+                    "n_increased": n_inc, "n_reversed": n_rev,
+                    "n_decreased_sig": n_dec_sig, "n_increased_sig": n_inc_sig,
+                    "n_indeterminate": n_ind,
+                    "indeterminate_list": join_words(indeterminate),
+                    # spelled-out versions for sentence-initial use
+                    "w_causes": word(len(asr)), "w_decreased": word(n_dec),
+                    "w_increased": word(n_inc), "w_reversed": word(n_rev),
+                    "w_decreased_sig": word(n_dec_sig),
+                    "w_increased_sig": word(n_inc_sig),
+                    "w_indeterminate": word(n_ind),
+                    "W_reversed": word(n_rev).capitalize(),
+                    "W_indeterminate": word(n_ind).capitalize()},
+        "premature": premature,
+        "validation": validation,
+        "allcause": allcause_rec,
+        "covid": covid_rec,
+        "gbd": gbd_summary,
+        "table3": table3,
         "causes": causes,
         "by_slug": by_slug,
         "groups": groups,

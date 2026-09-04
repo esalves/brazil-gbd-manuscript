@@ -2,13 +2,13 @@
 analysis.py
 -----------
 Reproduces the descriptive comparison metric for:
-"Shifting Mortality Burden in Brazil: Age-Specific Trends Across Cause
+"Shifting Mortality Burden in Brazil, 1990-2023: Age-Standardised Changes Across Cause
 Categories from the Global Burden of Disease Study 2023"
 
 This script computes the *unweighted mean of the 25 age-specific death rates*
-for each cause -- the summary statistic displayed by the IHME GBD Compare
-tool. It weights every age band equally and is therefore NOT an
-age-standardised rate; it over-weights small age bands that carry very high
+for each cause -- a naive summary obtained by averaging the rows of an
+age-disaggregated GBD Compare extract (not a metric published by GBD). It
+weights every age band equally and is therefore NOT an age-standardised rate; it over-weights small age bands that carry very high
 rates (e.g. the neonatal period) relative to their share of the population.
 It is reported only as a baseline for comparison with the age-standardised
 analysis in analysis_standardised.py, which is the manuscript's primary
