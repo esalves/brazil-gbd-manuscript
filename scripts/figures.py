@@ -209,10 +209,13 @@ def make_trajectory_figure(outpath):
     for name, causes in LEVEL1_GROUPS.items():
         ax1.plot(yrs, group_asr(causes), color=palette[name], lw=1.7, label=name)
     ax1.set_yscale("log")
+    # Extra headroom (about half a decade) so the legend sits above all lines.
+    ax1.set_ylim(40, 9000)
     ax1.set_ylabel("Age-standardised deaths / 100,000 (log scale)", fontsize=8.5)
     ax1.set_title("A. All causes and GBD Level-1 groups", fontsize=9.5,
                   fontweight="bold", loc="left")
-    ax1.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc", loc="lower left")
+    ax1.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc",
+               loc="upper left", ncol=1)
 
     # Panel B: respiratory infections & TB with and without COVID-19.
     resp = "Respiratory infections and tuberculosis"
@@ -222,6 +225,7 @@ def make_trajectory_figure(outpath):
     ax2.plot(yrs, r_tot - covid, color=BLUE, lw=1.8, ls="--",
              label="Respiratory infections & TB excluding COVID-19")
     ax2.plot(yrs, covid, color="#555555", lw=1.4, ls="-.", label="COVID-19 alone")
+    ax2.set_ylim(0, r_tot.max() * 1.45)
     ax2.set_ylabel("Age-standardised deaths / 100,000", fontsize=8.5)
     ax2.set_title("B. Respiratory infections & TB and COVID-19", fontsize=9.5,
                   fontweight="bold", loc="left")
@@ -271,9 +275,11 @@ def make_selfharm_figure(outpath):
     # Conflict and terrorism is omitted from the plot: essentially zero
     # throughout (it is included in the Level-2 total).
     ax.set_yscale("log")
-    ax.set_ylim(0.1, 80)
+    # Extra headroom so the legend sits above the Level-2 total line.
+    ax.set_ylim(0.1, 600)
     ax.set_ylabel("Age-standardised deaths / 100,000 (log scale)", fontsize=8.5)
-    ax.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc", loc="lower left")
+    ax.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc",
+              loc="upper left", ncol=2)
     ax.set_title("Brazil — Self-harm and interpersonal violence and its Level-3 components,\n"
                  "GBD age-standardised death rates by year, 1990–2023 (GBD world standard; shading = 95% UI)",
                  fontsize=9.5, fontweight="bold", loc="left")
