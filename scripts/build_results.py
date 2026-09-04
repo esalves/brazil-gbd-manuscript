@@ -24,6 +24,7 @@ premature        : probability of death at 30-69 from the four major NCD groups
 validation       : Level-2 sum == GBD all-cause check (exhaustiveness)
 allcause, covid  : GBD annual all-cause series and COVID-19 placement/counts
 gbd, table3      : comparison of WHO-standard changes with GBD's own ASRs
+selfharm, table4 : Level-3 disaggregation of self-harm and interpersonal violence
 """
 
 from __future__ import annotations
@@ -40,7 +41,8 @@ from analysis_standardised import (
     premature_ncd_probability,
 )
 from analysis_counts import load_counts
-from gbd_series import load_series, level2_causes, asr as gbd_asr, deaths as gbd_deaths
+from gbd_series import (load_series, level2_causes, asr as gbd_asr, asr_ui as gbd_asr_ui,
+                        deaths as gbd_deaths, SELF_HARM_L2, SELF_HARM_L3, YEARS)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD_DIR = os.path.join(BASE_DIR, "build")
@@ -343,6 +345,49 @@ def main() -> None:
     }
     table3 = [all_row] + gbd_rows
 
+    # ── Level-3 disaggregation of self-harm and interpersonal violence ────────
+    # Components are additive; assert they reproduce the Level-2 category.
+    for y in YEARS:
+        for a_name in ("All ages", "Age-standardized"):
+            m = "Number" if a_name == "All ages" else "Rate"
+            tot = sum(series[(c, y, a_name, m)][0] for c in SELF_HARM_L3)
+            assert abs(tot - series[(SELF_HARM_L2, y, a_name, m)][0]) < 1e-6, (y, a_name)
+
+    def sh_row(c, bold=False):
+        v90, lo90, hi90 = gbd_asr_ui(series, c, "1990")
+        v23, lo23, hi23 = gbd_asr_ui(series, c, "2023")
+        d90, d23 = gbd_deaths(series, c, "1990"), gbd_deaths(series, c, "2023")
+        pct = (v23 - v90) / v90 * 100.0 if v90 > 0 else None
+        return {
+            "name": c, "bold": bold,
+            "asr90": f"{v90:.1f} ({lo90:.1f}–{hi90:.1f})" if v90 >= 0.05 else "<0.1",
+            "asr23": f"{v23:.1f} ({lo23:.1f}–{hi23:.1f})" if v23 >= 0.05 else "<0.1",
+            "asr2019": f1(gbd_asr(series, c, "2019")),
+            "pct": s1(pct) if pct is not None else "n/a",
+            "pct_txt": p1(pct) if pct is not None else "n/a",
+            "deaths90": thou(d90), "deaths23": thou(d23),
+            "dpct": p0((d23 - d90) / d90 * 100.0) if d90 > 0 else "n/a",
+            "share23": f"{d23 / gbd_deaths(series, SELF_HARM_L2, '2023') * 100:.0f}%",
+            "v90": f1(v90), "v23": f1(v23),
+        }
+    table4 = [sh_row(SELF_HARM_L2, bold=True)] + [sh_row(c) for c in SELF_HARM_L3]
+    iv = {y: gbd_asr(series, "Interpersonal violence", y) for y in YEARS}
+    pc = {y: gbd_asr(series, "Police conflict and executions", y) for y in YEARS}
+    sh = {y: gbd_asr(series, "Self-harm", y) for y in YEARS}
+    iv_peak = max(iv, key=iv.get)
+    pc_peak = max(pc, key=pc.get)
+    selfharm = {
+        "rows": {r["name"]: r for r in table4},
+        "iv_peak_year": iv_peak, "iv_peak": f1(iv[iv_peak]),
+        "iv_2023_vs_peak_pct": p1((iv["2023"] - iv[iv_peak]) / iv[iv_peak] * 100.0),
+        "pc_peak_year": pc_peak, "pc_peak": f1(pc[pc_peak]),
+        "pc_1990": f1(pc["1990"]), "pc_2023": f1(pc["2023"]),
+        "pc_peak_vs_1990_x": f"{pc[pc_peak] / pc['1990']:.0f}",
+        "sh_min_year": min(sh, key=sh.get), "sh_min": f1(min(sh.values())),
+        "sh_2023_vs_min_pct": p1((sh["2023"] - min(sh.values())) / min(sh.values()) * 100.0),
+        "ct_deaths_total": thou(sum(gbd_deaths(series, "Conflict and terrorism", y) for y in YEARS)),
+    }
+
     def join_words(items):
         return items[0] if len(items) == 1 else ", ".join(items[:-1]) + ", and " + items[-1]
 
@@ -366,6 +411,8 @@ def main() -> None:
         "covid": covid_rec,
         "gbd": gbd_summary,
         "table3": table3,
+        "selfharm": selfharm,
+        "table4": table4,
         "causes": causes,
         "by_slug": by_slug,
         "groups": groups,

@@ -55,6 +55,7 @@
 #let G = R.group_by_slug   // Level-1 groups + "all", keyed by slug
 #let S = R.summary
 #let P = R.premature       // probability of death at 30–69 from four NCD groups
+#let H = R.selfharm.rows   // Level-3 components of self-harm & interpersonal violence
 
 // Colour a preformatted change string by its sign (− green, + red).
 #let vcol(s) = if s.starts-with("−") { green-dark } else if s.starts-with("+") { red-dark } else { rgb("#333333") }
@@ -148,7 +149,12 @@ between ages 30 and 70 from the four major NCD groups fell from #P.p90 to
 age-standardised changes for all #R.gbd.n_total categories (maximum absolute
 difference #R.gbd.max_abs_diff percentage points). The all-cause
 age-standardised rate peaked in #R.gbd.pandemic_peak_year and by 2023 was
-#cv(R.gbd.all_2023_vs_2019_pct) relative to 2019.
+#cv(R.gbd.all_2023_vs_2019_pct) relative to 2019. Disaggregating the flat
+self-harm and interpersonal violence category with GBD's Level-3 estimates
+revealed opposite trends: self-harm #cv(H.at("Self-harm").pct_txt),
+interpersonal violence #cv(H.at("Interpersonal violence").pct_txt), and police
+conflict and executions #cv(H.at("Police conflict and executions").pct_txt)
+(GBD standard).
 
 *Conclusions.* Brazil's mortality profile has shifted from communicable,
 perinatal, and nutritional causes toward NCDs. Rising death counts and crude
@@ -208,7 +214,12 @@ As variações pelo padrão da OMS concordaram em direção com as variações
 padronizadas do próprio GBD para todas as #R.gbd.n_total categorias (diferença
 absoluta máxima de #pt(R.gbd.max_abs_diff) pontos percentuais). A taxa
 padronizada por todas as causas atingiu o pico em #R.gbd.pandemic_peak_year e,
-em 2023, estava #cv(pt(R.gbd.all_2023_vs_2019_pct)) em relação a 2019.
+em 2023, estava #cv(pt(R.gbd.all_2023_vs_2019_pct)) em relação a 2019. A
+desagregação da categoria estável de autoagressão e violência interpessoal com
+as estimativas de nível 3 do GBD revelou tendências opostas: autoagressão
+#cv(pt(H.at("Self-harm").pct_txt)), violência interpessoal
+#cv(pt(H.at("Interpersonal violence").pct_txt)) e conflitos com a polícia e
+execuções #cv(pt(H.at("Police conflict and executions").pct_txt)) (padrão GBD).
 
 
 *Conclusões.* O perfil de mortalidade brasileiro deslocou-se das causas
@@ -280,9 +291,11 @@ between 1990 and 2023; (ii) characterise the underlying age-pattern of these
 changes; (iii) contrast standardised changes with changes in death counts and
 crude rates; (iv) estimate the change in premature NCD mortality as defined by
 the global targets; (v) identify the causes for which the direction of change
-depends on whether age structure is taken into account; and (vi) validate the
+depends on whether age structure is taken into account; (vi) validate the
 results against GBD's own age-standardised rates and place the 2023 endpoint in
-the context of the annual trajectory, including the COVID-19 pandemic.
+the context of the annual trajectory, including the COVID-19 pandemic; and
+(vii) disaggregate the self-harm and interpersonal violence category, whose
+aggregate change masks divergent components.
 
 // ── 2. Methods ───────────────────────────────────────────────────────────────
 = Methods
@@ -308,7 +321,9 @@ the absolute-burden analysis (@tab:burden). A third extract, from the GBD
 Results tool, provided deaths (number and crude rate) and GBD's own
 age-standardised death rates (GBD 2023 world standard population) for Brazil,
 both sexes, for every year from 1990 to 2023, for the 22 Level-2 categories,
-for COVID-19, and for all causes combined. It serves three purposes. First, it
+for COVID-19, for all causes combined, and for the four Level-3 components of
+self-harm and interpersonal violence (self-harm; interpersonal violence; police
+conflict and executions; conflict and terrorism). It serves four purposes. First, it
 validates that the Level-2 extract is exhaustive: in every year the sum of the
 Level-2 categories reproduces GBD's all-cause totals for deaths and crude rates
 (maximum absolute difference #R.validation.max_abs_diff_deaths deaths), so the
@@ -321,7 +336,10 @@ COVID-19 count for 2021 (#R.covid.deaths2021), COVID-19 is nested within that
 category in the tool's hierarchy, as in GBD 2021 @GBD2021CausesOfDeath2024.
 Second, GBD's age-standardised changes provide an external check on the
 WHO-standard changes computed here. Third, the annual series describes the
-trajectory through the pandemic years. Data were extracted on 4 June 2026
+trajectory through the pandemic years. Fourth, the Level-3 components allow the
+self-harm and interpersonal violence category, whose aggregate rate barely
+changed, to be disaggregated; the components are additive and reproduce the
+Level-2 category exactly in every year. Data were extracted on 4 June 2026
 (age-specific rates), 9 June 2026 (all-ages counts and crude rates), and
 4 September 2026 (annual series).
 
@@ -455,6 +473,18 @@ two endpoints in context (@tab:gbd, @fig:trajectory). These GBD rates are used
 descriptively; the primary WHO-standard analysis was not repeated for
 intermediate years because age-specific extracts were obtained only for 1990
 and 2023.
+
+== Disaggregation of self-harm and interpersonal violence
+
+Because the Level-2 category combines causes with different determinants and
+policy levers, we report its four Level-3 components separately (@tab:selfharm,
+@fig:selfharm): GBD age-standardised rates (GBD standard) with GBD's published
+95% uncertainty intervals for 1990 and 2023, the annual series, death counts,
+and the percent change in the age-standardised rate. This disaggregation uses
+GBD's standard population and published intervals rather than the WHO-standard
+Monte Carlo procedure, because age-specific rates were not extracted at
+Level 3; the two standards agree closely on relative change for the parent
+category (@tab:gbd).
 
 == Software and reproducibility
 
@@ -782,6 +812,77 @@ contrast, fell before 2010 (#R.gbd.unint_asr2010 in 2010), was flat to 2019
   ],
 ) <fig:trajectory>
 
+== Self-harm and interpersonal violence: divergent components
+
+The self-harm and interpersonal violence category was essentially flat over
+1990–2023 on both standards (@tab:asr, @tab:gbd), but this stability is the net
+result of opposite movements (@tab:selfharm, @fig:selfharm). Interpersonal
+violence, which accounted for #H.at("Interpersonal violence").share23 of the
+category's deaths in 2023, rose to a peak GBD age-standardised rate of
+#R.selfharm.iv_peak per 100,000 in #R.selfharm.iv_peak_year and then fell to
+#H.at("Interpersonal violence").v23 in 2023 (#cv(R.selfharm.iv_2023_vs_peak_pct)
+from the peak; #cv(H.at("Interpersonal violence").pct_txt) from 1990). Self-harm
+moved in the opposite direction: after a minimum of #R.selfharm.sh_min per
+100,000 in #R.selfharm.sh_min_year, its rate rose steadily to
+#H.at("Self-harm").v23 in 2023, #cv(H.at("Self-harm").pct_txt) above 1990 and
+#cv(R.selfharm.sh_2023_vs_min_pct) above the minimum, with the number of
+self-harm deaths rising #cv(H.at("Self-harm").dpct) (from
+#H.at("Self-harm").deaths90 to #H.at("Self-harm").deaths23). Deaths from police
+conflict and executions rose from #R.selfharm.pc_1990 per 100,000 in 1990 to a
+peak of #R.selfharm.pc_peak in #R.selfharm.pc_peak_year (about
+#R.selfharm.pc_peak_vs_1990_x times the 1990 rate) before falling to
+#R.selfharm.pc_2023 in 2023, still #cv(H.at("Police conflict and executions").pct_txt)
+above 1990. This series shows an abrupt step between 2008 and 2009
+(@fig:selfharm) that most likely reflects a change in data availability or
+coding rather than a real tripling within a single year; the category is small
+(#H.at("Police conflict and executions").share23 of the total in 2023) and
+carries wide intervals. Conflict and terrorism contributed no deaths in Brazil
+in any year.
+
+#figure(
+  caption: [Level-3 components of self-harm and interpersonal violence in
+    Brazil, 1990 and 2023: GBD age-standardised death rates (deaths per 100,000,
+    GBD 2023 world standard population) with GBD's published 95% uncertainty
+    intervals, GBD rate in 2019, percent change in the age-standardised rate,
+    death counts, and share of the category's deaths in 2023. The components are
+    additive and sum to the Level-2 category. Source: GBD Results tool, extracted
+    4 September 2026.],
+  kind: table,
+)[
+  #set text(size: 8pt)
+  #table(
+    columns: (2.6fr, 1.55fr, 0.75fr, 1.55fr, 0.85fr, 1fr, 1fr, 0.85fr, 0.8fr),
+    align: (left, right, right, right, right, right, right, right, right),
+    stroke: none,
+    fill: (col, row) => if row == 0 { rgb("#2c3e50") } else if calc.odd(row) { rgb("#f9f9f9") } else { white },
+    inset: (x: 4pt, y: 4pt),
+
+    hcell[Cause], hcell[ASR 1990 \ (95% UI)], hcell[ASR \ 2019], hcell[ASR 2023 \ (95% UI)],
+    hcell[Δ% \ ASR], hcell[Deaths \ 1990], hcell[Deaths \ 2023], hcell[Δ \ deaths], hcell[Share \ 2023],
+
+    ..R.table4.map(r => (
+      t2-name(r),
+      [#r.asr90], [#r.asr2019], [#r.asr23],
+      cv(r.pct),
+      [#r.deaths90], [#r.deaths23],
+      cv(r.dpct),
+      [#r.share23],
+    )).flatten()
+  )
+] <tab:selfharm>
+
+#figure(
+  image("figures/fig4_selfharm.jpg", width: 92%),
+  caption: [
+    *Brazil: self-harm and interpersonal violence and its Level-3 components,
+    GBD age-standardised death rates by year, 1990–2023 (GBD world standard
+    population; logarithmic scale).* Shading shows GBD's published 95%
+    uncertainty intervals. Conflict and terrorism (no deaths) is included in
+    the Level-2 total but not drawn. The dotted line marks 2019; the grey band
+    marks 2020–2022. Source: GBD Results tool (IHME).
+  ],
+) <fig:selfharm>
+
 // ── 4. Discussion ────────────────────────────────────────────────────────────
 = Discussion
 
@@ -795,7 +896,9 @@ double-burden literature @Frenk1991 @Schramm2004 and with previous national
 GBD-based assessments @GBD2016Brazil2018 @Souza2018 @Malta2017. Deaths and
 crude rates rose while age-standardised rates and premature NCD mortality fell,
 and for #S.w_reversed categories the direction of change depended entirely on
-whether age structure was accounted for.
+whether age structure was accounted for. Disaggregation showed that the flat
+self-harm and interpersonal violence aggregate conceals a homicide rate that
+has fallen since #R.selfharm.iv_peak_year and a steadily rising suicide rate.
 
 == Successes: communicable, perinatal, and nutritional causes
 
@@ -856,21 +959,29 @@ of lives saved by universal ART.
 
 *Self-harm and interpersonal violence* exhibited an aggregate age-standardised
 change of #cv(C.self_harm.asr_pct) with an uncertainty interval spanning zero
-(95% UI #C.self_harm.asr_ci), appearing stable at Level 2. However, this
-stability conceals two diametrically opposed secular trends. Interpersonal
-violence (homicides) accounts for more than 80% of deaths in this category and
-represents an ongoing humanitarian tragedy in Brazil, concentrated
-disproportionately among young Black and mixed-race men aged 15–29 in urban
-peripheries @Reichenheim2011. National homicide rates experienced dramatic
-fluctuations over the 33-year period: a temporary containment following the
-2003 Disarmament Statute (Estatuto do Desarmamento), a sharp escalation peaking
-around 2016–2017 driven by violent disputes between organized-crime factions in
-the North and Northeast, and a subsequent decline. Conversely, self-harm
-(suicide) has exhibited a sustained secular increase across Brazil over the last
-two decades, with growing rates among adolescents, young adults, and indigenous
-populations. Because homicides and suicides moved in opposite directions, the
-Level-2 summary remains essentially flat, illustrating the necessity of Level-3
-disaggregation for targeted policy intervention.
+(95% UI #C.self_harm.asr_ci), appearing stable at Level 2. The Level-3
+disaggregation (@tab:selfharm, @fig:selfharm) shows that this stability is the
+net result of opposed trends. Interpersonal violence (homicide) accounted for
+#H.at("Interpersonal violence").share23 of the category's deaths in 2023 (down
+from about four-fifths in 1990) and remains a humanitarian tragedy concentrated
+among young Black and mixed-race men in urban peripheries @Reichenheim2011. Its
+age-standardised rate was broadly stable through the 1990s and 2000s, a plateau
+that coincides with the 2003 Disarmament Statute (Estatuto do Desarmamento),
+then rose to a peak in #R.selfharm.iv_peak_year, a period marked by violent
+disputes between organised-crime factions in the North and Northeast, and has
+since fallen by about a quarter. Suicide moved the other way: after a minimum in
+the mid-2000s its rate has risen steadily and in 2023 stood
+#cv(H.at("Self-harm").pct_txt) above 1990, with the number of deaths more than
+doubling. Deaths from police conflict and executions, although a small share of
+the total, rose more than tenfold to a #R.selfharm.pc_peak_year peak before
+receding, and their series carries an abrupt 2009 step that points to a change
+in data capture; these estimates depend on how deaths at the hands of police
+are certified and redistributed and should be read as indicative. The three
+components have different determinants and different policy levers (violence
+prevention, firearms and policing policy for homicide and police killings;
+mental health and suicide-prevention services for self-harm), so the Level-2
+summary should not be read as a single trend, and the rising suicide rate in
+particular deserves attention within the mental health agenda of the SUS.
 
 *Substance use disorders* increased by #cv(C.substance.asr_pct) (95% UI
 #C.substance.asr_ci), with risk concentrated at 45–69 years. This age pattern is
@@ -1013,6 +1124,73 @@ municipalities widening relative inequalities @Malta2017 @GBD2016Brazil2018.
 The national estimates analysed here cannot capture these subnational gradients,
 underscoring the importance of regional and socioeconomic disaggregation.
 
+== Implications for public health policy and the SUS
+
+The empirical findings of this study translate into five concrete priorities for
+Brazil's health system and social policy:
+
+*1. Prioritising mental health and youth suicide prevention.* The unmasking of
+the #cv(H.at("Self-harm").pct_txt) rise in age-standardised suicide mortality,
+with annual deaths more than doubling from #H.at("Self-harm").deaths90 to
+#H.at("Self-harm").deaths23, establishes suicide as an escalating public-health
+crisis that cannot remain overshadowed by homicide surveillance. Addressing this
+requires strategic budget expansion for the Psychosocial Care Network (Rede de
+Atenção Psicossocial, RAPS) and Psychosocial Care Centers (CAPS) within the SUS,
+particularly in small and medium-sized municipalities. Universal school-based
+mental-health literacy and depression screening should be institutionalised
+through the School Health Programme (Programa Saúde na Escola, PSE), primary care
+professionals in the Family Health Strategy (ESF) must be trained in early
+detection of self-harm, and culturally grounded prevention strategies must be
+developed for vulnerable groups, most acutely indigenous youth in the Central-West
+and North regions.
+
+*2. Consolidating violence prevention and firearms regulation.* While
+interpersonal violence declined by #drop(R.selfharm.iv_2023_vs_peak_pct) from its
+#R.selfharm.iv_peak_year peak, homicides remain the leading cause of premature
+loss of life in Brazil, claiming over #H.at("Interpersonal violence").deaths23
+lives in 2023, concentrated among young Black men in urban peripheries
+@Reichenheim2011. Public health policy must reinforce intersectoral youth
+inclusion and violence-prevention initiatives (such as _Fica Vivo!_), defend and
+strictly enforce the firearm restrictions established by the 2003 Disarmament
+Statute, and institutionalise rigorous police accountability protocols,
+including mandatory body-worn cameras and independent lethal-force reviews, to
+continue curbing the elevated burden of police-related mortality.
+
+*3. Adapting the SUS to population ageing and long-term care.* The doubling of
+absolute NCD deaths (#cv(G.ncd.deaths_pct)) and the surge in mortality at
+advanced ages (highlighted by the rise in decubitus ulcers and chronic
+frailty) expose a structural gap: the SUS was designed in 1988 for a young
+demographic and lacks an integrated National Long-Term Care Policy (Política
+Nacional de Cuidados). Urgent priorities include scaling up home-based healthcare
+teams (_Programa Melhor em Casa_), establishing formal training, respite care,
+and social assistance for family caregivers, expanding outpatient geriatric and
+palliative care networks, and enforcing systematic clinical protocols for
+pressure-ulcer prevention, mobility maintenance, and infection control in
+public and philanthropic long-stay institutions for older adults (ILPIs).
+
+*4. Counteracting the nutritional transition with regulatory and primary-care
+action.* The dramatic collapse of nutritional deficiencies
+(#drop(C.nutritional.asr_pct)) reflects historic victories against child
+undernutrition, but has been overtaken by an explosive nutritional transition:
+overweight, obesity, and diabetes-related mortality have escalated rapidly,
+fuelled by the ubiquity of ultra-processed foods @Schmidt2011. Halting this
+trend requires decisive regulatory and fiscal measures aligned with the _Guia
+Alimentar para a População Brasileira_, including excise taxes on ultra-processed
+products and sugar-sweetened beverages, mandatory front-of-package nutritional
+warnings, and bans on predatory food marketing to children. In tandem, primary
+care must be reinforced through the ESF and the Farmácia Popular programme to
+ensure early detection, lifestyle support, and uninterrupted access to essential
+antihypertensive and hypoglycaemic medications.
+
+*5. Safeguarding health financing against fiscal austerity.* The deceleration
+and plateauing of cardiovascular declines after 2014–2015 demonstrate that
+progress against chronic diseases is directly vulnerable to macroeconomic
+recessions and fiscal contraction (such as Constitutional Amendment 95/2016)
+@Massuda2018 @Malta2020. Constitutional guarantees of stable, counter-cyclical
+SUS financing and protected social assistance safety nets are indispensable if
+Brazil is to accelerate gains and achieve the SDG 3.4 target of a one-third
+reduction in premature NCD mortality by 2030.
+
 == Strengths and limitations
 
 The analysis is fully reproducible: every reported number, including all
@@ -1051,9 +1229,15 @@ across age groups would widen them, and neither affects the point estimates.
 Sixth, the WHO World Standard is one of several possible standards, and
 absolute standardised rates differ under another standard, as the comparison
 with the GBD standard shows (@tab:gbd); the direction and approximate magnitude
-of change, however, were robust to the choice of standard. Finally, the analysis
-was restricted to both sexes combined; sex-disaggregated and subnational
-analyses would add resolution.
+of change, however, were robust to the choice of standard. Seventh, the
+Level-3 disaggregation of self-harm and interpersonal violence relies on GBD's
+own standard population and published intervals rather than on the
+WHO-standard Monte Carlo procedure, and, like all GBD injury estimates for
+Brazil, depends on the redistribution of deaths of undetermined intent; the
+direction of the three component trends is nonetheless clear, and the 1990 and
+2023 intervals do not overlap for any of them. Finally, the analysis was
+restricted to both sexes combined; sex-disaggregated and subnational analyses
+would add resolution.
 
 == Conclusions
 
@@ -1062,9 +1246,11 @@ epidemiological transition. Reductions in communicable, nutritional, and
 perinatal mortality represent major gains consistent with multi-sector social
 investment, and premature NCD mortality has fallen by about a third since 1990.
 At the same time, the rising age-standardised burden of several
-non-communicable categories and the persistence of injury-related mortality
-underscore the need for sustained NCD prevention, mental health and addiction
-services, and care for a growing older population within the SUS.
+non-communicable categories, the persistence of injury-related mortality, and
+the steady rise in suicide mortality concealed within a flat injury aggregate
+underscore the need for sustained NCD prevention, mental health, addiction and
+suicide-prevention services, violence prevention, and care for a growing older
+population within the SUS.
 Methodologically, the reversal of several trends under age standardisation is
 a reminder that age structure must be accounted for before mortality changes
 are interpreted.
@@ -1111,7 +1297,8 @@ original draft, Writing – review & editing.
 published in October 2025 @GBD2023Collaborators2025, and were extracted via the
 IHME GBD Compare / GBD Results tool on 4 June 2026 (age-specific rates), 9 June
 2026 (all-ages counts and crude rates), and 4 September 2026 (annual series,
-including GBD age-standardised rates and COVID-19).
+including GBD age-standardised rates, COVID-19, and the Level-3 components of
+self-harm and interpersonal violence).
 
 // ── References ───────────────────────────────────────────────────────────────
 #set text(size: 10pt)

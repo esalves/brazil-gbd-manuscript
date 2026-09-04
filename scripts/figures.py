@@ -15,6 +15,8 @@ figures/fig2_increased.jpg  -- causes with rising standardised burden
 figures/fig3_trajectory.jpg -- GBD age-standardised rates by year, 1990-2023
                                (GBD world standard; all causes, Level-1 groups,
                                and respiratory infections & TB with/without COVID-19)
+figures/fig4_selfharm.jpg   -- self-harm and interpersonal violence and its Level-3
+                               components, GBD age-standardised rates by year
 
 Usage
 -----
@@ -36,7 +38,7 @@ from analysis_standardised import (
     load_data,
     standardised_change,
 )
-from gbd_series import YEARS, load_series
+from gbd_series import YEARS, SELF_HARM_L2, SELF_HARM_L3, load_series
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIG_DIR = os.path.join(BASE_DIR, "figures")
@@ -233,6 +235,54 @@ def make_trajectory_figure(outpath):
     print(f"Saved -> {outpath}")
 
 
+def make_selfharm_figure(outpath):
+    """Figure 4: Level-3 components of self-harm and interpersonal violence."""
+    series = load_series()
+    yrs = np.array([int(y) for y in YEARS])
+
+    def asr(cause, y):
+        return series.get((cause, y, "Age-standardized", "Rate"), (0.0,))[0]
+
+    def band(cause):
+        v = np.array([series[(cause, y, "Age-standardized", "Rate")] for y in YEARS])
+        return v[:, 0], v[:, 1], v[:, 2]
+
+    fig, ax = plt.subplots(figsize=(7.2, 4.4), layout="constrained")
+    ax.set_facecolor(GREY_BG)
+    ax.axvspan(2019.5, 2022.5, color="#e8e8e8", zorder=0, lw=0)
+    ax.axvline(2019, color="#888888", lw=0.8, ls=":", zorder=1)
+    ax.grid(axis="y", color="#dddddd", linewidth=0.5, zorder=0)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.tick_params(labelsize=8)
+    ax.set_xlim(1989, 2024)
+    ax.set_xlabel("Year", fontsize=8.5)
+
+    styles = {
+        SELF_HARM_L2: ("#1a1a1a", "-", 2.0, "Self-harm & interpersonal violence (Level 2 total)"),
+        "Interpersonal violence": ("#d95f02", "-", 1.7, "Interpersonal violence"),
+        "Self-harm": ("#7570b3", "--", 1.7, "Self-harm"),
+        "Police conflict and executions": ("#1b9e77", "-.", 1.7, "Police conflict and executions"),
+    }
+    for cause, (col, ls, lw, label) in styles.items():
+        v, lo, hi = band(cause)
+        ax.plot(yrs, v, color=col, ls=ls, lw=lw, label=label, zorder=3)
+        ax.fill_between(yrs, lo, hi, color=col, alpha=0.15, lw=0, zorder=2)
+    # Conflict and terrorism is omitted from the plot: essentially zero
+    # throughout (it is included in the Level-2 total).
+    ax.set_yscale("log")
+    ax.set_ylim(0.1, 80)
+    ax.set_ylabel("Age-standardised deaths / 100,000 (log scale)", fontsize=8.5)
+    ax.legend(fontsize=7.5, framealpha=0.9, edgecolor="#cccccc", loc="lower left")
+    ax.set_title("Brazil — Self-harm and interpersonal violence and its Level-3 components,\n"
+                 "GBD age-standardised death rates by year, 1990–2023 (GBD world standard; shading = 95% UI)",
+                 fontsize=9.5, fontweight="bold", loc="left")
+    fig.savefig(outpath, dpi=150, bbox_inches="tight", format="jpeg",
+                pil_kwargs={"quality": 92})
+    plt.close(fig)
+    print(f"Saved -> {outpath}")
+
+
 if __name__ == "__main__":
     print("Age-standardised figures (WHO World Standard, Monte Carlo n=10,000)")
     make_figure(
@@ -252,4 +302,5 @@ if __name__ == "__main__":
         ncols=3,
     )
     make_trajectory_figure(os.path.join(FIG_DIR, "fig3_trajectory.jpg"))
+    make_selfharm_figure(os.path.join(FIG_DIR, "fig4_selfharm.jpg"))
     print("\nAll figures generated.")

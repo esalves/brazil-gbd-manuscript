@@ -36,6 +36,12 @@ changes for all 21 categories, differing by at most 3.1 percentage points;
 and (iv) the all-cause age-standardised rate peaked in 2021 and by 2023 was
 1.2% below its 2019 value.
 
+**Self-harm vs interpersonal violence.** The flat Level-2 category (−1.8%,
+GBD standard) hides opposite trends in its Level-3 components: self-harm
++35.2% (6.3 → 8.5 per 100,000), interpersonal violence −13.0% (27.0 → 23.5,
+after a 2016 peak of 30.6), and police conflict and executions +230% (0.3 →
+1.0, after a 2019 peak of 3.3). Conflict and terrorism contributes no deaths.
+
 Every number in the manuscript — every table cell and in-text figure — is
 produced by the code in `scripts/` from the data in `data/` and read into the
 Typst source at compile time from `build/results.json`. Nothing is typed by
@@ -55,12 +61,14 @@ brazil-gbd-manuscript/
 │   ├── GBD_Compare_Data1990.csv         # Age-specific death rates + 95% UIs, Brazil, 1990
 │   ├── GBD_Compare_Data2023.csv         # Age-specific death rates + 95% UIs, Brazil, 2023
 │   ├── IHME-GBD_2023_DATA-94d42f74-1.csv# All-ages death counts, crude rates & DALYs, 1990 & 2023
-│   └── IHME-GBD_2023_DATA-64ec5dbd-1.csv# Annual series 1990–2023: 22 Level-2 causes + COVID-19 + all causes,
-│                                        #   deaths & DALYs, all-ages and GBD age-standardised (Table 3, Fig 3)
+│   └── IHME-GBD_2023_DATA-19250f2f-1.csv# Annual series 1990–2023: 22 Level-2 causes + COVID-19 + all causes
+│                                        #   + Level-3 components of self-harm & interpersonal violence; deaths &
+│                                        #   DALYs, all-ages and GBD age-standardised (Tables 3–4, Figs 3–4)
 ├── figures/
 │   ├── fig1_decreased.jpg         # Figure 1: greatest age-standardised reductions
 │   ├── fig2_increased.jpg         # Figure 2: rising age-standardised burden
-│   └── fig3_trajectory.jpg        # Figure 3: GBD age-standardised rates by year, 1990–2023
+│   ├── fig3_trajectory.jpg        # Figure 3: GBD age-standardised rates by year, 1990–2023
+│   └── fig4_selfharm.jpg          # Figure 4: self-harm & interpersonal violence, Level-3 components
 ├── references/
 │   └── references.bib             # Bibliography (single source; rendered by Typst; Zotero-ready)
 ├── build/

@@ -24,10 +24,10 @@ refer to `manuscript.typ`.
 | 12c | Missing data | §2.1 (sense organ diseases excluded — no estimate; mental disorders ≈0) |
 | 12d | (Sensitivity / quantitative uncertainty) | §2.4 (Monte Carlo, n = 10,000; per-cause deterministic seeding; independence assumptions stated) |
 | 13 | Participants / descriptive | §3.1, Table 1 (all 21 categories, both years) |
-| 14 | Descriptive data | Tables 1–3; Figures 1–3 |
+| 14 | Descriptive data | Tables 1–4; Figures 1–4 |
 | 15 | Outcome data | Table 1 (ASR 1990, ASR 2023, Δ% with 95% UI) |
 | 16 | Main results with precision | Table 1; §3.2–3.4 (estimates with 95% UIs; decrease/increase classified only when UI excludes zero) |
-| 17 | Other analyses | §3.4 premature NCD mortality; §3.5 external validation against GBD ASRs and annual trajectory (Table 3, Figure 3); unweighted-mean comparison; direction-discordant causes |
+| 17 | Other analyses | §3.4 premature NCD mortality; §3.5 external validation against GBD ASRs and annual trajectory (Table 3, Figure 3); unweighted-mean comparison; direction-discordant causes; §3.9 Level-3 disaggregation of self-harm and interpersonal violence (Table 4, Figure 4) |
 | 18 | Key results | §4.1 Principal findings |
 | 19 | Limitations | §4 (Strengths and limitations) |
 | 20 | Interpretation | §4.2–4.6 |
