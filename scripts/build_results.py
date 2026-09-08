@@ -388,6 +388,17 @@ def main() -> None:
         "ct_deaths_total": thou(sum(gbd_deaths(series, "Conflict and terrorism", y) for y in YEARS)),
     }
 
+    hiv_series = {y: gbd_asr(series, "HIV/AIDS and sexually transmitted infections", y) for y in YEARS}
+    hiv_peak_year = max(hiv_series, key=hiv_series.get)
+    hiv_rec = {
+        "peak_year": hiv_peak_year,
+        "peak_asr": f1(hiv_series[hiv_peak_year]),
+        "asr2000": f1(hiv_series["2000"]),
+        "asr2023": f1(hiv_series["2023"]),
+        "pct_2023_vs_peak": p1((hiv_series["2023"] - hiv_series[hiv_peak_year]) / hiv_series[hiv_peak_year] * 100.0),
+        "pct_2023_vs_2000": p1((hiv_series["2023"] - hiv_series["2000"]) / hiv_series["2000"] * 100.0),
+    }
+
     def join_words(items):
         return items[0] if len(items) == 1 else ", ".join(items[:-1]) + ", and " + items[-1]
 
@@ -409,6 +420,7 @@ def main() -> None:
         "validation": validation,
         "allcause": allcause_rec,
         "covid": covid_rec,
+        "hiv": hiv_rec,
         "gbd": gbd_summary,
         "table3": table3,
         "selfharm": selfharm,

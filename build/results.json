@@ -63,6 +63,14 @@
     "resp_asr2023": "47.4",
     "covid_asr2023": "4.3"
   },
+  "hiv": {
+    "peak_year": "1995",
+    "peak_asr": "10.5",
+    "asr2000": "8.4",
+    "asr2023": "5.8",
+    "pct_2023_vs_peak": "−44.4%",
+    "pct_2023_vs_2000": "−30.3%"
+  },
   "gbd": {
     "max_abs_diff": "3.1",
     "max_abs_diff_cause": "unintentional injuries",

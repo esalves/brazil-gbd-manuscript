@@ -35,6 +35,9 @@
 #show ref: it => text(fill: link-blue, it)
 #show cite: it => text(fill: link-blue, it)
 
+// Tables: place caption before (above) the table body
+#show figure.where(kind: table): set figure.caption(position: top)
+
 // ── Colour helpers ───────────────────────────────────────────────────────────
 #let green-dark = rgb("#1a7a4a")
 #let red-dark = rgb("#c0392b")
@@ -56,6 +59,7 @@
 #let S = R.summary
 #let P = R.premature       // probability of death at 30–69 from four NCD groups
 #let H = R.selfharm.rows   // Level-3 components of self-harm & interpersonal violence
+#let HIV = R.hiv           // HIV trajectory metrics from GBD series
 
 // Colour a preformatted change string by its sign (− green, + red).
 #let vcol(s) = if s.starts-with("−") { green-dark } else if s.starts-with("+") { red-dark } else { rgb("#333333") }
@@ -191,7 +195,7 @@ para todos os anos de 1990 a 2023 foram usadas para validação externa e para
 descrever a trajetória durante a pandemia de COVID-19.
 
 *Resultados.* Das #S.n_causes categorias, #S.n_decreased_sig apresentaram
-redução e cinco, aumento da mortalidade padronizada com II de 95% que excluem o
+redução e #S.n_increased_sig, aumento da mortalidade padronizada com II de 95% que excluem o
 zero; três (transtornos mentais, autoagressão e violência interpessoal, e
 doenças neurológicas) não apresentaram variação detectável.
 As maiores reduções padronizadas ocorreram em infecções entéricas
@@ -264,7 +268,7 @@ its 2023 round estimated the burden of 375 diseases and injuries across 204
 countries and territories (and 660 subnational locations) within a common
 comparative framework @GBD2023Collaborators2025.
 
-Monitoring these shifts has direct policy salience. NCDs account for about
+Monitoring these shifts has direct policy importance. NCDs account for about
 three-quarters of deaths worldwide @WHO2023NCDFacts. The World Health
 Organization's Global Action Plan for the Prevention and Control of NCDs set a
 target of a 25% relative reduction in premature NCD mortality by 2025
@@ -275,7 +279,7 @@ whether age-standardised mortality is in fact falling, and for which causes, is
 therefore essential to assessing progress against these commitments.
 
 A central methodological issue motivates this analysis. Brazil's population
-aged markedly between 1990 and 2023: the median age rose by roughly half, from
+aged considerably between 1990 and 2023: the median age rose by roughly half, from
 about 22 to about 33 years, and the share of the population aged 60 years and
 over more than doubled @UN2024. Because mortality rates for most chronic
 diseases and many injuries rise steeply with age, any summary measure that does
@@ -541,13 +545,16 @@ and increases in non-communicable categories.
     hcell[Cause of death or injury], hcell[ASR 1990], hcell[ASR 2023],
     hcell[Δ% ASR (95% UI)], hcell[Δ% mean],
 
-    ..R.causes.map(c => (
-      name-cell(c),
-      [#c.asr90],
-      [#c.asr23],
-      cv(c.asr_pct_ci_tbl),
-      cv(c.mean_pct_tbl),
-    )).flatten()
+    ..R
+      .causes
+      .map(c => (
+        name-cell(c),
+        [#c.asr90],
+        [#c.asr23],
+        cv(c.asr_pct_ci_tbl),
+        cv(c.mean_pct_tbl),
+      ))
+      .flatten(),
   )
   #v(0.3em)
   #text(size: 8pt, fill: rgb("#555555"))[
@@ -576,7 +583,7 @@ increases in smaller NCD categories.
 
 == Absolute burden: deaths and crude rates versus standardised rates
 
-The number of deaths and the crude death rate tell a markedly different story
+The number of deaths and the crude death rate tell a different story
 from the age-standardised rate (@tab:burden). Across the #S.n_causes categories
 combined, the number of deaths rose #cv(G.all.deaths_pct), from
 #G.all.deaths90 in 1990 to #G.all.deaths23 in 2023, and the crude death rate
@@ -615,14 +622,17 @@ age-specific risk.
     hcell[Cause / group], hcell[Deaths 1990], hcell[Deaths 2023],
     hcell[Δ deaths], hcell[Δ crude], hcell[Δ ASR],
 
-    ..R.table2.map(r => (
-      t2-name(r),
-      [#r.deaths90],
-      [#r.deaths23],
-      cv(r.dn),
-      cv(r.dc),
-      cv(r.da),
-    )).flatten()
+    ..R
+      .table2
+      .map(r => (
+        t2-name(r),
+        [#r.deaths90],
+        [#r.deaths23],
+        cv(r.dn),
+        cv(r.dc),
+        cv(r.da),
+      ))
+      .flatten(),
   )
 ] <tab:burden>
 
@@ -638,40 +648,34 @@ decline is of the same order as the fall in the NCD age-standardised rate.
 
 @fig:decreased shows the cause categories with the largest age-standardised
 declines, together with the three categories that fall only after
-standardisation.
-
-*Enteric infections* (#cv(C.enteric.asr_pct)) showed the most pronounced
+standardisation. Enteric infections (#cv(C.enteric.asr_pct)) showed the most pronounced
 improvement. Death rates that were very high in early infancy in 1990 (peaking
 near 1,500 per 100,000 in the 1–5-month group) collapsed to near-zero across
 all paediatric groups by 2023, so the standardised rate fell from
 #C.enteric.asr90 to #C.enteric.asr23 per 100,000.
 
-*Maternal and neonatal disorders* (#cv(C.maternal.asr_pct)) showed extreme
+Maternal and neonatal disorders (#cv(C.maternal.asr_pct)) showed high
 concentration of risk in the neonatal period, with the standardised rate
 falling from #C.maternal.asr90 to #C.maternal.asr23 per 100,000; maternal
 mortality at reproductive ages, visible on the logarithmic scale of
-@fig:decreased, also fell. *Nutritional deficiencies*
-(#cv(C.nutritional.asr_pct)) and *neglected tropical diseases and malaria*
+@fig:decreased, also fell. Nutritional deficiencies
+(#cv(C.nutritional.asr_pct)) and neglected tropical diseases and malaria
 (#cv(C.ntd.asr_pct)) showed similarly large reductions concentrated in early
-childhood.
-
-*Cardiovascular diseases* (#cv(C.cvd.asr_pct)), the largest single contributor
+childhood. Cardiovascular diseases (#cv(C.cvd.asr_pct)), the largest single contributor
 to standardised mortality in both years (ASR #C.cvd.asr90 per 100,000 in 1990),
 declined by more than half, with reductions at every age and the steepest
-absolute reductions in the older age bands.
-
-*Respiratory infections and tuberculosis* declined more modestly
+absolute reductions in the older age bands. Respiratory infections and tuberculosis declined more modestly
 (#cv(C.resp_tb.asr_pct), 95% UI #C.resp_tb.asr_ci), with reductions in younger
 and middle-aged groups partly offset by higher 2023 rates from age 65 upward.
 The 2023 rates for this category include COVID-19 deaths, which GBD nests
 within it (see below).
 
 The three categories that rose on the unweighted-mean metric but declined once
-age-standardised were *unintentional injuries* (unweighted
+age-standardised were unintentional injuries (unweighted
 #cv(C.unintentional.mean_pct); standardised #cv(C.unintentional.asr_pct), 95% UI
-#C.unintentional.asr_ci), *diabetes and kidney diseases* (unweighted
+#C.unintentional.asr_ci), diabetes and kidney diseases (unweighted
 #cv(C.diabetes.mean_pct); standardised #cv(C.diabetes.asr_pct), 95% UI
-#C.diabetes.asr_ci), and *neoplasms* (unweighted #cv(C.neoplasms.mean_pct);
+#C.diabetes.asr_ci), and neoplasms (unweighted #cv(C.neoplasms.mean_pct);
 standardised #cv(C.neoplasms.asr_pct), 95% UI #C.neoplasms.asr_ci). For
 unintentional injuries and diabetes and kidney diseases, 2023 age-specific
 rates exceeded 1990 rates only from age 60 and age 85 upward, respectively;
@@ -698,9 +702,7 @@ standardised, the broad-based reductions at younger and middle ages dominate.
 == Causes with rising mortality burden
 
 @fig:increased shows the six categories whose age-standardised point estimate
-rose; for one of them (neurological disorders) the interval includes zero.
-
-*Skin and subcutaneous diseases* showed by far the largest relative increase
+rose; for one of them (neurological disorders) the interval includes zero. Skin and subcutaneous diseases showed by far the largest relative increase
 (#cv(C.skin.asr_pct), 95% UI #C.skin.asr_ci), with the standardised rate rising
 from #C.skin.asr90 to #C.skin.asr23 per 100,000. In the GBD hierarchy this
 category comprises non-malignant conditions (principally bacterial skin
@@ -711,23 +713,17 @@ and over, the age pattern expected of pressure ulcers and skin infections in
 frail, bed-bound, or institutionalised older people. Because the category is
 small and its assignment depends on certification and garbage-code
 redistribution practices that may have changed over time, the estimate should
-be interpreted with caution.
-
-*Other non-communicable diseases* increased by #cv(C.other_ncd.asr_pct) (95% UI
+be interpreted with caution. Other non-communicable diseases increased by #cv(C.other_ncd.asr_pct) (95% UI
 #C.other_ncd.asr_ci). This residual category is heterogeneous, and the rise
 should be read as a signal to disaggregate rather than as a single coherent
 trend.
 
-*Substance use disorders* increased by #cv(C.substance.asr_pct) (95% UI
+Substance use disorders increased by #cv(C.substance.asr_pct) (95% UI
 #C.substance.asr_ci). Rates fell at 30–44 years and rose from 45 years upward,
 with the largest absolute rises at 55–69 years, an age pattern more consistent
 with alcohol-related mortality in older adults than with illicit drug use among
-the young; Level-3 disaggregation into alcohol and drug use disorders is needed
-to confirm this.
-
-*HIV/AIDS and sexually transmitted infections* (#cv(C.hiv.asr_pct)) and
-*musculoskeletal disorders* (#cv(C.musculo.asr_pct)) showed smaller but
-precisely estimated increases. *Neurological disorders* rose modestly in the
+the young. HIV/AIDS and sexually transmitted infections (#cv(C.hiv.asr_pct)) and
+musculoskeletal disorders (#cv(C.musculo.asr_pct)) showed smaller estimated increases. Neurological disorders rose modestly in the
 point estimate (#cv(C.neuro.asr_pct)) but with an interval spanning zero (95% UI
 #C.neuro.asr_ci), so the direction of change for this heterogeneous category is
 uncertain.
@@ -791,12 +787,19 @@ contrast, fell before 2010 (#R.gbd.unint_asr2010 in 2010), was flat to 2019
     hcell[Cause / group], hcell[1990], hcell[2000], hcell[2010], hcell[2019],
     hcell[2023], hcell[Δ% GBD std], hcell[Δ% WHO std],
 
-    ..R.table3.map(r => (
-      t2-name(r),
-      [#r.a1990], [#r.a2000], [#r.a2010], [#r.a2019], [#r.a2023],
-      cv(r.gbd_pct),
-      cv(r.who_pct),
-    )).flatten()
+    ..R
+      .table3
+      .map(r => (
+        t2-name(r),
+        [#r.a1990],
+        [#r.a2000],
+        [#r.a2010],
+        [#r.a2019],
+        [#r.a2023],
+        cv(r.gbd_pct),
+        cv(r.who_pct),
+      ))
+      .flatten(),
   )
 ] <tab:gbd>
 
@@ -860,14 +863,20 @@ in any year.
     hcell[Cause], hcell[ASR 1990 \ (95% UI)], hcell[ASR \ 2019], hcell[ASR 2023 \ (95% UI)],
     hcell[Δ% \ ASR], hcell[Deaths \ 1990], hcell[Deaths \ 2023], hcell[Δ \ deaths], hcell[Share \ 2023],
 
-    ..R.table4.map(r => (
-      t2-name(r),
-      [#r.asr90], [#r.asr2019], [#r.asr23],
-      cv(r.pct),
-      [#r.deaths90], [#r.deaths23],
-      cv(r.dpct),
-      [#r.share23],
-    )).flatten()
+    ..R
+      .table4
+      .map(r => (
+        t2-name(r),
+        [#r.asr90],
+        [#r.asr2019],
+        [#r.asr23],
+        cv(r.pct),
+        [#r.deaths90],
+        [#r.deaths23],
+        cv(r.dpct),
+        [#r.share23],
+      ))
+      .flatten(),
   )
 ] <tab:selfharm>
 
@@ -889,7 +898,7 @@ in any year.
 == Principal findings
 
 Between 1990 and 2023, Brazil's age-standardised mortality burden shifted
-markedly: communicable diseases, nutritional deficiencies, and perinatal
+considerably: communicable diseases, nutritional deficiencies, and perinatal
 conditions declined steeply, while several non-communicable categories rose.
 This pattern is consistent with the epidemiological-transition and
 double-burden literature @Frenk1991 @Schramm2004 and with previous national
@@ -924,8 +933,8 @@ The large rise in skin and subcutaneous disease mortality (#cv(C.skin.asr_pct))
 is concentrated in the very old, has been monotonic across every decade since
 1990 (@tab:gbd), and, given the composition of the GBD category, plausibly
 reflects deaths from pressure ulcers and severe skin infections in frail older
-people. However, the magnitude of this increase (+206.8% in the age-standardised
-rate and an 855% rise in absolute deaths) strongly points to certification and
+people. However, the magnitude of this increase (#cv(C.skin.asr_pct) in the age-standardised
+rate and #cv(C.skin.deaths_pct) in absolute deaths) strongly points to certification and
 coding artifacts alongside genuine geriatric frailty. In earlier decades of
 Brazil's Mortality Information System (SIM), terminal events in bed-bound
 elderly individuals were frequently assigned to non-specific garbage codes such
@@ -947,8 +956,11 @@ This positive relative change does not signify an uncontrolled epidemic. In
 by substantial under-notification. Brazil subsequently emerged as a global
 pioneer in HIV response through Federal Law 9,313/1996, which established free,
 universal access to antiretroviral therapy (ART) through the SUS @Greco2007
-@Victora2011. AIDS mortality in Brazil peaked in 1995–1996 and collapsed by
-roughly half by the late 1990s as ART coverage expanded. By 2023, the mortality
+@Victora2011. In GBD's annual age-standardised series (@tab:gbd), mortality for this
+category peaked at #HIV.peak_asr per 100,000 in #HIV.peak_year and collapsed
+by roughly half as ART coverage expanded, falling to #HIV.asr2023 by 2023
+(#cv(HIV.pct_2023_vs_peak) relative to the peak; #cv(HIV.pct_2023_vs_2000)
+relative to 2000). By 2023, the mortality
 profile reflects a mature, chronic epidemic where people living with HIV survive
 to older ages, while persistent challenges remain in late clinical presentation
 among historically marginalized groups (including men who have sex with men,
